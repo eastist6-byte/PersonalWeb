@@ -3,7 +3,7 @@
 # 这是独立的 GitHub Pages 静态副本，不影响原完整网站。
 
 # 左上角站名、浏览器标签标题后缀、页脚站名
-siteTitle: "临时或永远"
+siteTitle: "临时的永久站点"
 
 # 网页默认描述（meta description），用于摘要；不显示在正文，也不是站名下方的小字
 pageDescription: "欢迎访问"
@@ -12,7 +12,7 @@ pageDescription: "欢迎访问"
 brandLabel: "{title}首页"
 
 # 左上角站名下方的小字
-brandTagline: "理性不产生终极目的。"
+brandTagline: "持续进化中…"
 
 # 键盘操作时出现的“跳到正文”链接
 skip: "跳到正文"
