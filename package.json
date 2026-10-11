@@ -1,0 +1,30 @@
+{
+  "name": "personal-site-pages",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24.13.0"
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "build:pages": "node scripts/build.mjs",
+    "start": "node scripts/preview.mjs",
+    "preview": "node scripts/preview.mjs",
+    "test": "node --test tests/static.test.mjs",
+    "test:browser": "playwright test",
+    "check": "astro check"
+  },
+  "dependencies": {
+    "astro": "7.3.8",
+    "cheerio": "1.2.0",
+    "mathjax": "4.1.3",
+    "yaml": "2.9.1"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.9",
+    "@playwright/test": "1.64.0",
+    "@types/node": "24.19.2",
+    "typescript": "^5.9.3"
+  }
+}

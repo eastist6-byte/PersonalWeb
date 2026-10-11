@@ -1,0 +1,32 @@
+---
+import '../styles/global.css';
+import Icon from '../components/Icon.astro';
+import {site,url} from '../lib/content';
+import {text,format} from '../lib/copy';
+interface Props {title?:string;description?:string;active?:string;math?:boolean;}
+const {title,description=site.subtitle,active='',math=false}=Astro.props;
+const links=[{label:text.common.home,id:'home'},{label:text.common.library,id:'library'},{label:text.common.downloads,id:'downloads'},{label:text.common.messages,id:'messages'},{label:text.common.about,id:'about'}];
+---
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content={description}/>
+  <meta name="theme-color" content="#f8f7f3"/>
+  <title>{title?title+' · ':''}{site.title}</title>
+  <link rel="icon" href={url('favicon.svg?v=infinity')} type="image/svg+xml"/>
+  {math&&<><script is:inline src={url('assets/math-settings.js')}></script><script is:inline defer src={url('vendor/mathjax/tex-svg.js')}></script></>}
+</head>
+<body data-mode="pages">
+  <a class="skip-link" href="#main">{text.common.skip}</a>
+  <header class="site-header"><div class="header-inner">
+    <a class="brand" href={url()} aria-label={format(text.common.brandLabel,{title:site.title})}><span class="brand-icon"><Icon name="infinity" size={24}/></span><span>{site.title}<small>{text.common.brandTagline}</small></span></a>
+    <button class="nav-toggle" aria-label={text.common.navToggle} aria-expanded="false" aria-controls="primary-nav"><span></span><span></span></button>
+    <nav id="primary-nav" aria-label={text.common.navLabel}>{links.map(({label,id})=><a href={id==='home'?url():url(id+'/')} aria-current={active===id?'page':undefined}>{label}</a>)}</nav>
+  </div></header>
+  <main id="main"><slot/></main>
+  <footer class="site-footer"><div class="footer-inner"><span>{text.common.footer}</span><div><span>© {new Date().getFullYear()} {site.title}</span></div></div></footer>
+  <script>import '../scripts/site';</script>
+</body>
+</html>

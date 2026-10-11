@@ -1,0 +1,36 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Icon from '../components/Icon.astro';
+import ArticleRow from '../components/ArticleRow.astro';
+import {site,url} from '../lib/content';
+import {text} from '../lib/copy';
+const publicArticles=site.articles;
+const entries=[
+  {id:'library',title:text.common.library,description:text.home.libraryDescription,icon:'book'},
+  {id:'messages',title:text.common.messages,description:text.home.messagesDescription,icon:'mail'},
+  {id:'downloads',title:text.common.downloads,description:text.home.downloadsDescription,icon:'download'},
+];
+---
+<Layout active="home">
+  <section id="profile" class="profile-intro page-width reveal" aria-labelledby="profile-heading">
+    <div class="profile-copy">
+      <h1 id="profile-heading">{site.profile.heading}</h1>
+      <p class="profile-description">{site.intro}</p>
+      <p class="profile-note">{site.profile.contact}</p>
+      <a class="text-link" href={url('about/')}>{text.home.aboutLink}<Icon name="arrow" size={17}/></a>
+    </div>
+    <img class="profile-avatar" src={url('assets/avatar.png')} alt={text.home.avatarAlt} width="960" height="961" decoding="async"/>
+  </section>
+  <section id="home-entries" class="home-entries page-width" aria-labelledby="entries-heading">
+    <div class="section-heading"><h2 id="entries-heading">{text.home.entries}</h2></div>
+    <div class="entry-grid">{entries.map(entry=><a class="entry-card" id={'home-'+entry.id} href={url(entry.id+'/')}>
+      <span class="entry-icon"><Icon name={entry.icon} size={25}/></span>
+      <div><h3>{entry.title}</h3><p>{entry.description}</p></div>
+      <Icon name="arrow" size={20}/>
+    </a>)}</div>
+  </section>
+  <section class="latest page-width">
+    <div class="section-heading"><h2>{text.home.latest}</h2><a class="text-link" href={url('library/')}>{text.common.allArticles}<Icon name="arrow" size={17}/></a></div>
+    <div class="article-list">{publicArticles.slice(0,3).map((a,i)=><ArticleRow article={a} index={i}/>)}</div>
+  </section>
+</Layout>

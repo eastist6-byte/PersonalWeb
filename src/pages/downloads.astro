@@ -1,0 +1,7 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Icon from '../components/Icon.astro';
+import {site,url,downloadUrl} from '../lib/content';
+import {text} from '../lib/copy';
+---
+<Layout title={text.downloads.title} active="downloads"><div class="page-width"><header class="page-intro"><h1>{text.downloads.title}</h1><p>{text.downloads.description}</p></header><div class="download-list">{site.articles.map(a=><section class="download-group"><div class="download-heading"><h2><a href={url('articles/'+a.id+'/')}>{a.title}</a></h2><p>{a.summary}</p></div><div class="download-items">{[{id:'pdf',title:text.downloads.articlePdf,extension:'.pdf'},...(a.attachments||[])].map(f=><a class="download-item" href={downloadUrl(a,f.id==='pdf'?undefined:f)} download={a.title+f.extension}><span class="file-type">{f.extension.slice(1).toUpperCase()}</span><span>{f.title}<small>{text.downloads.directDownload}</small></span><Icon name="download" size={19}/></a>)}</div></section>)}</div></div></Layout>

@@ -1,0 +1,163 @@
+
+   <h3 class="sectionHead" id="section-1"><span class="titlemark">1   </span> <a id="x1-10001"></a>李群及其表示</h3>
+<!-- l. 29 --><p class="noindent">
+</p>
+   <h4 class="subsectionHead" id="section-2"><span class="titlemark">1.7   </span> <a id="x1-20001.7"></a>李群和李代数同态</h4>
+<!-- l. 30 --><p class="noindent">设<span class="inline-math">\(G\)</span>和<span class="inline-math">\(H\)</span>是两个闭线性群，<span class="inline-math">\(\mathfrak{g}\)</span>和<span class="inline-math">\(\mathfrak{h}\)</span>为对应李代数，<span class="inline-math">\(\pi:G\to H\)</span>为李群同态（意味着既是一个群同态又是一个光滑映射）。从而诱导映射<span class="inline-math">\(d\pi: \mathfrak{g}\to \mathfrak{h}\)</span>，是李代数同态。接下来说明这件事。
+</p>
+   <div class="newtheorem">
+<!-- l. 32 --><p class="noindent"><span class="head">
+<a id="x1-2001r26"></a>
+<span class="ec-lmbx-10">定义 1.26.</span>  </span>设<span class="inline-math">\(X\in \mathfrak{g}\)</span>，存在<span class="inline-math">\(G\)</span>中光滑曲线<span class="inline-math">\(c(t)\)</span>使<span class="inline-math">\(c(0)=I,c^{\prime}(0)=X\)</span>，那么合成得到<span class="inline-math">\(t\mapsto \pi(c(t))\)</span>是<span class="inline-math">\(H\)</span>中的一条光滑曲线，满足<span class="inline-math">\(\pi(c(0))=I\)</span>。定义<span class="inline-math">\(d\pi\)</span>的作用为<span class="inline-math">\(d\pi(X)=(\pi c)^{\prime}(0)=\frac{d}{dt}(\pi(c(t)))\bigg|_{t=0}\)</span><span class="ec-lmri-10">.</span>
+</p>
+   </div>
+<!-- l. 34 --><p class="indent">
+</p><!-- l. 36 --><p class="indent">   这个定义借助于<span class="inline-math">\(c(t)\)</span>，但可以证明其不依赖于<span class="inline-math">\(c(t)\)</span>的选取。
+</p>
+   <div class="proof">
+<!-- l. 39 --><p class="indent">   <span class="head">
+<span class="ec-lmri-10">证明.</span> </span>设<span class="inline-math">\(c_1(t),c_2(t)\)</span>为<span class="inline-math">\(G\)</span>中两条光滑曲线，满足<span class="inline-math">\(c_1(0)=c_2(0)=I,c_1^{\prime}(0)=c_2^{\prime}(0)=X\)</span>. 利用<span class="inline-math">\(\pi\)</span>作为群同态有
+</p><!-- l. 40 --><p class="indent">   </p><div class="math-block">\[\begin{aligned}
+(\pi c_2)^{\prime}(0)&amp;=\frac{d}{dt} \pi(c_2(t)) \bigg |_{t=0}=\frac{d}{dt} \pi(c_2(t)c_1(t)c_1(t)^{-1}) \bigg |_{t=0}\\
+&amp;=\frac{d}{dt} \pi(c_2(t)c_1(t)^{-1})\pi(c_1(t)) \bigg |_{t=0}\\
+&amp;=\frac{d}{dt} \pi(c_2(t)c_1(t)^{-1}) \bigg |_{t=0} \pi(c_1(t)) + \pi(c_2(t)c_1(t)^{-1})\frac{d}{dt} \pi(c_1(t)) \bigg |_{t=0}\\
+&amp;=\frac{d}{dt} \pi(c_2(t)c_1(t)^{-1}) \bigg |_{t=0}+\frac{d}{dt} \pi(c_1(t)) \bigg |_{t=0}.
+\end{aligned}\]</div>
+<p></p><!-- l. 42 --><p class="indent">   最后一个等号代入了<span class="inline-math">\(c_1(0)=c_2(0)=I\)</span>。只要证明<span class="inline-math">\(\frac{d}{dt} \pi(c_2(t)c_1(t)^{-1}) \bigg |_{t=0}=0\)</span>即可得到<span class="inline-math">\((\pi c_2)^{\prime}(0)=\frac{d}{dt} \pi(c_1(t)) \bigg |_{t=0}=(\pi c_1)^{\prime}(0)\)</span>，从而与曲线选取无关。
+</p><!-- l. 44 --><p class="indent">   利用局部坐标来证明这件事。令<span class="inline-math">\(c(t)=c_2(t)c_-1^{-1}(t)\)</span>，则<span class="inline-math">\(c(0)=I\)</span>，<span class="inline-math">\(c^{\prime}(0)=XI+I(-X)=0\)</span>.
+</p><!-- l. 46 --><p class="indent">   在 <span class="inline-math">\(I\in G\)</span> 附近取局部坐标 <span class="inline-math">\((x^1,\dots,x^n)\)</span>，满足 <span class="inline-math">\(x^i(I)=0\)</span>；在 <span class="inline-math">\(I\in H\)</span> 附近取局部坐标 <span class="inline-math">\((y^1,\dots,y^m)\)</span>，满足 <span class="inline-math">\(y^j(I)=0\)</span>。曲线 <span class="inline-math">\(c(t)\)</span> 的坐标为 <span class="inline-math">\(x^i(c(t))\)</span>，则 <span class="inline-math">\(x^i(c(0))=x^i(I)=0\)</span>，且由 <span class="inline-math">\(c'(0)=0\)</span> 得 <span class="inline-math">\(\frac{dx^i(c(t))}{dt}\bigg |_{t=0}=0\)</span>。映射 <span class="inline-math">\(\pi\)</span> 的局部表示为：存在光滑函数 <span class="inline-math">\(\pi^j(x^1,\dots,x^n)\)</span>，<span class="inline-math">\(\pi^j(0,\dots,0)=0\)</span>，使得对于 <span class="inline-math">\(g\)</span> 靠近 <span class="inline-math">\(I\)</span>，<span class="inline-math">\(y^j(\pi(g))=\pi^j(x^1(g),\dots,x^n(g))\)</span>。于是 <span class="inline-math">\(\pi(c(t))\)</span> 的坐标为 <span class="inline-math">\(y^j(t)=\pi^j(x^1(c(t)),\dots,x^n(c(t)))\)</span>，求导得
+</p><!-- l. 47 --><p class="indent">   </p><div class="math-block">\[
+\frac{dy^j}{dt}(0)=\sum_{i=1}^n\frac{\partial\pi^j}{\partial x^i}\bigg |_{x=0}\cdot \frac{dx^i(c(t))}{dt}\bigg |_{t=0}=0,
+\]</div>
+<p></p><!-- l. 48 --><p class="indent">   因此 <span class="inline-math">\((\pi\circ c)'(0)=0\)</span>。得证。                                                                                                □
+</p>
+   </div>
+<!-- l. 51 --><p class="indent">   <span class="inline-math">\(d\pi\)</span>具有如下性质。
+</p>
+   <div class="newtheorem">
+<!-- l. 53 --><p class="noindent"><span class="head">
+<a id="x1-2002r18"></a>
+<span class="ec-lmbx-10">命题 1.18.</span>  </span><span class="inline-math">\(d\pi\)</span>是线性映射。
+                                                                  
+
+                                                                  
+</p>
+   </div>
+<!-- l. 55 --><p class="indent">
+</p>
+   <div class="proof">
+<!-- l. 58 --><p class="indent">   <span class="head">
+<span class="ec-lmri-10">证明.</span> </span><span class="inline-math">\(\forall \lambda\in \mathbb{R}, d\pi(\lambda X)=\frac{d}{dt}\pi(c(\lambda t))\bigg |_{t=0}=\lambda d\pi(X)\)</span>。                                                                                      □
+</p>
+   </div>
+   <div class="newtheorem">
+<!-- l. 61 --><p class="noindent"><span class="head">
+<a id="x1-2003r19"></a>
+<span class="ec-lmbx-10">命题 1.19.</span>  </span><span class="inline-math">\(d\pi\)</span>是李代数同态。
+</p>
+   </div>
+<!-- l. 63 --><p class="indent">
+</p>
+   <div class="proof">
+<!-- l. 66 --><p class="indent">   <span class="head">
+<span class="ec-lmri-10">证明.</span> </span>设<span class="inline-math">\(g\in G\)</span>，<span class="inline-math">\(G\)</span>中光滑曲线<span class="inline-math">\(c(t)\)</span>满足<span class="inline-math">\(c(0)=I, c^{\prime}(0)=X\)</span>. 有
+</p><!-- l. 67 --><p class="indent">   </p><div class="math-block">\[\begin{aligned}
+    \frac{d}{dt}(gc(t)g^{-1})\bigg |_{t=0}&amp;=\lim_{t\to\infty}\frac{gc(t)g^{-1}-gc(0)g^{-1}}{t}\\
+    &amp;=g\lim_{t\to\infty}\frac{c(t)-0}{t}g^{-1}=gXg^{-1}=Ad(g)X.
+   \end{aligned}\]</div>
+<p></p><!-- l. 68 --><p class="indent">   这里的<span class="inline-math">\(Ad\)</span>就是所谓的伴随作用。进而
+</p><!-- l. 69 --><p class="indent">   </p><div class="math-block">\[\begin{aligned}
+    d\pi (Ad(g)X)&amp;=\frac{d}{dt}\pi(gc(t)g^{-1})\bigg |_{t=0}=\frac{d}{dt}(\pi(g)\pi(c(t))\pi(g^{-1}))\bigg |_{t=0}\\
+    &amp;=\pi(g)\frac{d}{dt}\pi(c(t))\bigg |_{t=0}\pi(g^{-1})=\pi(g)d\pi(X)\pi(g)^{-1}.
+   \end{aligned}\]</div>
+<p></p><!-- l. 70 --><p class="indent">   由<span class="inline-math">\(g\)</span>和<span class="inline-math">\(X\)</span>的任意性，对任意<span class="inline-math">\(t\in \mathbb{R}, Y\in\mathfrak{g}\)</span>，有
+</p><!-- l. 71 --><p class="indent">   </p><div class="math-block">\[d\pi(Ad(c(t))Y)=\pi(c(t))d\pi(Y)\pi(c(t))^{-1}, Ad(c(t))Y \in \mathfrak{g}. \quad (*)\]</div>
+<p></p><!-- l. 72 --><p class="indent">   注意到
+</p><!-- l. 73 --><p class="indent">   </p><div class="math-block">\[\begin{aligned}
+    \frac{d}{dt}Ad(c(t))Y\bigg |_{t=0}&amp;=\lim_{t\to \infty}\frac{Ad(c(t))Y-Ad(c(0))Y}{t}=\frac{d}{dt}(c(t)Yc(t)^{-1})\bigg |_{t=0}\\
+    &amp;=c^{\prime}(0)Yc(0)^{-1}+c(0)Yc(0)^{-1}(-c^{\prime}(0))\\
+    &amp;=XYI+IY(-X)=XY-YX=[X,Y]\in \mathfrak{g}.
+\end{aligned}\]</div>
+<p></p><!-- l. 74 --><p class="indent">   因<span class="inline-math">\(d\pi :\mathfrak{g}\to \mathfrak{h}\)</span>是线性映射，所以与求导可交换。对<span class="inline-math">\((*)\)</span>等式两边同时求导：
+</p><!-- l. 75 --><p class="indent">   </p><div class="math-block">\[
+\text{左边}=\frac{d}{dt}d\pi(Ad(c(t))Y)\bigg |_{t=0}=d\pi\left (\frac{d}{dt}Ad(c(t))Y\bigg |_{t=0}\right )=d\pi[X,Y].
+\]</div>
+<p></p><!-- l. 76 --><p class="indent">   </p><div class="math-block">\[\begin{aligned}
+    \text{右边}&amp;=\frac{d}{dt}\pi(c(t))d\pi(Y)\pi(c(t))^{-1} \bigg |_{t=0}\\
+    &amp;=(\pi c)^{\prime}(0)d\pi(Y)(\pi c)(0)^{-1}+(\pi c)(0)d\pi(Y)\frac{d}{dt}(\pi c(t))^{-1} \bigg |_{t=0}\\
+    &amp;=d\pi(X) d\pi (Y)\pi(c(0))^{-1}+\pi(c(0))d\pi(Y)(-(\pi c)^{\prime}(0))\\
+    &amp;=d\pi(X)d\pi(Y)I+Id\pi(Y)(-d(X))\\
+    &amp;=d\pi(X)d\pi(Y)-d\pi(Y)d(X)=[d\pi(X),d\pi(Y)].
+\end{aligned}\]</div>
+<p></p><!-- l. 78 --><p class="indent">   得到<span class="inline-math">\(d\pi[X,Y]=[d\pi(X),d\pi(Y)]\)</span>，<span class="inline-math">\(d\pi\)</span>是李代数同态.                                                                                                 □
+</p>
+   </div>
+   <div class="newtheorem">
+<!-- l. 81 --><p class="noindent"><span class="head">
+<a id="x1-2004r20"></a>
+                                                                  
+
+                                                                  
+<span class="ec-lmbx-10">命题 1.20.</span>  </span><span class="inline-math">\(d\pi \)</span>就是<span class="inline-math">\(\pi\)</span>的切映射。
+</p>
+   </div>
+<!-- l. 83 --><p class="indent">
+</p>
+   <div class="proof">
+<!-- l. 85 --><p class="indent">   <span class="head">
+<span class="ec-lmri-10">证明.</span> </span>对任意光滑函数 <span class="inline-math">\(\varphi\in C^\infty(H)\)</span>，<span class="inline-math">\(T_e\pi(X)\)</span> 作用在 <span class="inline-math">\(\varphi\)</span> 上的值为
+</p><!-- l. 86 --><p class="indent">   </p><div class="math-block">\[
+\bigl(T_e\pi(X)\bigr)(\varphi) = X(\varphi\circ\pi).
+\]</div>
+<p></p><!-- l. 87 --><p class="indent">   由于 <span class="inline-math">\(X\)</span> 是 <span class="inline-math">\(e\)</span> 处的切向量，沿曲线 <span class="inline-math">\(c(t)\)</span> 计算该值：
+</p><!-- l. 88 --><p class="indent">   </p><div class="math-block">\[
+X(\varphi\circ\pi) = \left.\frac{d}{dt} (\varphi\circ\pi)(c(t))\right|_{t=0} = \left.\frac{d}{dt}\varphi\bigl(\pi(c(t))\bigr) \right|_{t=0} .
+\]</div>
+<p></p><!-- l. 89 --><p class="indent">   而根据 <span class="inline-math">\(d\pi(X)\)</span> 的定义，上式右端正是 <span class="inline-math">\(d\pi(X)\)</span> 作用在 <span class="inline-math">\(\varphi\)</span> 上的值：
+</p><!-- l. 90 --><p class="indent">   </p><div class="math-block">\[
+d\pi(X)(\varphi) = \left.\frac{d}{dt}\varphi\bigl(\pi(c(t))\bigr)\right|_{t=0} .
+\]</div>
+<p></p><!-- l. 91 --><p class="indent">   因此对任意 <span class="inline-math">\(\varphi\)</span> 有 <span class="inline-math">\(T_e\pi(X)(\varphi)=d\pi(X)(\varphi)\)</span>，故 <span class="inline-math">\(T_e\pi(X)=d\pi(X)\)</span> 作为 <span class="inline-math">\(T_eH\)</span> 中的切向量。由 <span class="inline-math">\(X\)</span> 的任意性得 <span class="inline-math">\(d\pi = T_e\pi\)</span>。                                                                                 □
+</p>
+   </div>
+<div class="center">
+<!-- l. 93 --><p class="noindent">
+</p><!-- l. 94 --><p class="noindent"></p><figure class="tex-diagram"><a href="__ASSET__/d0000.svg" target="_blank" rel="noopener" aria-label="在新窗口放大交换图"><img src="__ASSET__/d0000.svg" alt="交换图" loading="lazy"></a></figure>
+<p></p>
+</div>
+<div class="newtheorem">
+<!-- l. 96 --><p class="noindent"><span class="head">
+<a id="x1-2005r6"></a>
+<span class="ec-lmbx-10">注 1.6.</span>  </span>在左不变向量场与切空间的自然等同 <span class="inline-math">\(\mathfrak{g}\cong T_eG\)</span>、<span class="inline-math">\(\mathfrak{h}\cong T_eH\)</span> 下，<span class="inline-math">\(d\pi\)</span> 也诱导了左不变向量场之间的映射，且该映射为李代数同态。
+</p>
+</div>
+<!-- l. 98 --><p class="indent">
+</p>
+<div class="newtheorem">
+<!-- l. 100 --><p class="noindent"><span class="head">
+<a id="x1-2006r21"></a>
+<span class="ec-lmbx-10">命题 1.21.</span>  </span>如果<span class="inline-math">\(\pi_1,\pi_2\)</span>是<span class="inline-math">\(G\to H\)</span>李群同态，并且<span class="inline-math">\(d\pi_1=d\pi_2\)</span>，则在<span class="inline-math">\(G_0\)</span>（单位元分支<span class="footnote-mark"><a href="#fn3x0" id="fn3x0-bk"><sup class="textsuperscript">3</sup></a></span><a id="x1-2007f3"></a>）上<span class="inline-math">\(\pi_1=\pi_2\)</span>。
+                                                                  
+
+                                                                  
+</p>
+</div>
+<!-- l. 102 --><p class="indent">
+</p>
+<div class="newtheorem">
+<!-- l. 104 --><p class="noindent"><span class="head">
+<a id="x1-2009r22"></a>
+<span class="ec-lmbx-10">命题 1.22.</span>  </span>设<span class="inline-math">\(\pi:G\to H\)</span>是李群同态，<span class="inline-math">\(d\pi:\mathfrak{g}\to \mathfrak{h}\)</span>，有
+     </p><ol class="enumerate1">
+<li class="enumerate" id="x1-2011x1">若<span class="inline-math">\(d\pi\)</span>满，则<span class="inline-math">\(\pi|_{G_0}:G_0\to H_0\)</span>满<span class="ec-lmri-10">;</span>
+     </li>
+<li class="enumerate" id="x1-2013x2">若<span class="inline-math">\(d\pi\)</span>单，则<span class="inline-math">\(\pi|_{G_0}:G_0\to H_0\)</span>局部单；
+     </li>
+<li class="enumerate" id="x1-2015x3">若<span class="inline-math">\(d\pi\)</span>为同构，则<span class="inline-math">\(\pi|_{G_0}:G_0\to H_0\)</span>为局部同构<span class="ec-lmri-10">.</span></li></ol>
+</div>
+<!-- l. 111 --><p class="indent">
+</p>
+   <div class="footnotes"><a id="x1-2008x3"></a>
+<!-- l. 101 --><p class="indent">    <span class="footnote-mark"><a href="#fn3x0-bk" id="fn3x0"><sup class="textsuperscript">3</sup></a></span>单位元所在的连通分支，是李群的正规闭（开）子群，其他分支只是它的陪集<span class="ec-lmr-8">.</span></p>                                                                                                              </div>
+ 
+ 

@@ -1,0 +1,5 @@
+---
+import Layout from '../layouts/Layout.astro';
+import {text} from '../lib/copy';
+---
+<Layout title={text.about.title} active="about"><div class="page-width narrow"><header class="page-intro"><h1>{text.about.title}</h1></header><section class="about-prose"><p class="lead">{text.about.intro}</p><h2>{text.about.contentHeading}</h2><p>{text.about.libraryDescription}</p><p>{text.about.publicDownloads}</p><h2>{text.about.demoHeading}</h2><p>{text.about.demoDescription}</p></section></div></Layout>

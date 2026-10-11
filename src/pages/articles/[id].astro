@@ -1,0 +1,29 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Icon from '../../components/Icon.astro';
+import {site,url,date,directoryPath,downloadUrl,readArticle,type Article} from '../../lib/content';
+import {text} from '../../lib/copy';
+export function getStaticPaths(){return site.articles.map(article=>({params:{id:article.id},props:{article}}));}
+interface Props {article:Article;}
+const {article:a}=Astro.props;
+const reading=readArticle(a.id);
+const html=reading.html.replaceAll('__ASSET__',url('media/'+a.id));
+const siblings=site.articles.filter(item=>item.directory===a.directory);
+const position=siblings.findIndex(item=>item.id===a.id);
+const previous=siblings[position-1],next=siblings[position+1];
+---
+<Layout title={a.title} description={a.summary} active="library" math>
+<div class="page-width article-page" data-article={a.id}>
+  <a class="back-link" href={url('library/')}><span>←</span>{text.article.back}</a>
+  <header class="article-header"><div class="meta"><span>{directoryPath(a.directory)}</span></div><h1>{a.title}</h1><p>{a.summary}</p><div class="article-meta"><time>{date(a.date)}</time><span>{text.article.formats}</span></div></header>
+  <div class="reading-layout" id="reading-layout">
+    <article id="article-body" class="tex-prose" set:html={html}></article>
+    <aside class="reading-sidebar"><details class="toc" open><summary>{text.article.toc}<span>⌄</span></summary><nav id="article-toc" aria-label={text.article.tocLabel}>{reading.toc.map(t=><a href={'#'+t.id} class:list={['toc-link',{'toc-sub':t.level>1}]}>{t.title}</a>)}</nav></details><div class="reading-tools"><a href={downloadUrl(a)} download={a.title+'.pdf'}><Icon name="download" size={16}/>{text.article.downloadPdf}</a><a href="#main">↑ {text.article.top}</a></div></aside>
+  </div>
+  <section class="article-downloads" id="article-downloads"><div class="section-heading"><h2>{text.article.resources}</h2></div><div class="resource-grid"><a class="download-item" href={downloadUrl(a)} download={a.title+'.pdf'}><span class="file-type">PDF</span><span>{text.article.articlePdf}<small>{text.article.pdfDescription}</small></span><Icon name="download" size={18}/></a>{a.attachments?.map(f=><a class="download-item" href={downloadUrl(a,f)} download={f.title+f.extension}><span class="file-type">{f.extension.slice(1).toUpperCase()}</span><span>{f.title}<small>{text.article.attachment}</small></span><Icon name="download" size={18}/></a>)}</div></section>
+  {(previous||next)&&<nav class="chapter-navigation" aria-label={text.article.adjacent}>
+    {previous?<a class="chapter-previous" href={url('articles/'+previous.id+'/')}><small>{text.article.previous}</small><span>{previous.title}</span></a>:<span aria-hidden="true"/>}
+    {next?<a class="chapter-next" href={url('articles/'+next.id+'/')}><small>{text.article.next}</small><span>{next.title}</span></a>:<span aria-hidden="true"/>}
+  </nav>}
+</div>
+</Layout>

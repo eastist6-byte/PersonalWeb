@@ -1,0 +1,169 @@
+
+   <h3 class="sectionHead" id="section-1"><span class="titlemark">1   </span> <a id="x1-10001"></a>李群及其表示</h3>
+<!-- l. 29 --><p class="noindent">
+</p>
+   <h4 class="subsectionHead" id="section-2"><span class="titlemark">1.1   </span> <a id="x1-20001.1"></a>SO(3)及其李代数</h4>
+   <div class="newtheorem">
+<!-- l. 31 --><p class="noindent"><span class="head">
+<a id="x1-2001r1"></a>
+<span class="ec-lmbx-10">定义 1.1 </span>(特殊正交群)<span class="ec-lmbx-10">.</span>  </span>特殊正交群 <span class="inline-math">\( SO(3) \)</span> 定义为所有行列式为 <span class="ec-lmri-10">1 </span>的 <span class="inline-math">\( 3 \times 3 \)</span> 实正交矩阵的集合：
+</p><!-- l. 33 --><p class="indent">   </p><div class="math-block">\[
+SO(3) = \{ R \in \mathrm{GL}(3, \mathbb{R}) \mid R^T R = I,\; \det(R) = 1 \}.
+\]</div>
+<p></p>
+   </div>
+<!-- l. 34 --><p class="indent">
+</p>
+   <div class="newtheorem">
+<!-- l. 36 --><p class="noindent"><span class="head">
+<a id="x1-2002r1"></a>
+<span class="ec-lmbx-10">命题 1.1.</span>  </span><span class="inline-math">\( SO(3) \)</span> 具有以下性质：
+     </p><ol class="enumerate1">
+<li class="enumerate" id="x1-2004x1"><span class="inline-math">\( SO(3) \)</span> 是 <span class="inline-math">\( \mathbb{R}^{3 \times 3} \cong \mathbb{R}^9 \)</span> 中的有界子集，因此是紧集<span class="ec-lmri-10">.</span>
+     </li>
+<li class="enumerate" id="x1-2006x2">矩阵乘法 <span class="inline-math">\( m : SO(3) \times SO(3) \to SO(3) \)</span> 和求逆运算 <span class="inline-math">\( i : SO(3) \to SO(3) \)</span> 都是无穷可微的（光滑的）<span class="ec-lmri-10">.</span></li></ol>
+   </div>
+<!-- l. 42 --><p class="indent">
+</p>
+   <div class="newtheorem">
+<!-- l. 44 --><p class="noindent"><span class="head">
+<a id="x1-2007r2"></a>
+                                                                  
+
+                                                                  
+<span class="ec-lmbx-10">定义 1.2.</span>  </span><span class="inline-math">\( SO(3) \)</span> 的李代数 <span class="inline-math">\( \mathfrak{so}(3) \)</span> 定义为过单位元 <span class="inline-math">\( I \)</span> 的光滑曲线的切向量空间：
+</p><!-- l. 46 --><p class="indent">   </p><div class="math-block">\[
+\mathfrak{so}(3) = \{ c'(0) \mid c : \mathbb{R} \to SO(3) \text{ 是光滑的}, \; c(0) = I \}.
+\]</div>
+<p></p>
+   </div>
+<!-- l. 47 --><p class="indent">
+</p>
+   <div class="newtheorem">
+<!-- l. 49 --><p class="noindent"><span class="head">
+<a id="x1-2008r2"></a>
+<span class="ec-lmbx-10">命题 1.2.</span>  </span><span class="inline-math">\( \mathfrak{so}(3) \)</span> 是一个线性空间<span class="ec-lmri-10">.</span>
+</p>
+   </div>
+<!-- l. 51 --><p class="indent">
+</p>
+   <div class="proof">
+<!-- l. 54 --><p class="indent">   <span class="head">
+<span class="ec-lmri-10">证明.</span> </span>若 <span class="inline-math">\( X, Y \in \mathfrak{so}(3) \)</span>，则存在光滑曲线 <span class="inline-math">\( b, c : \mathbb{R} \to SO(3) \)</span> 使得 <span class="inline-math">\( b'(0) = X \)</span>, <span class="inline-math">\( c'(0) = Y \)</span>. 考虑 <span class="inline-math">\( t \mapsto b(t)c(t) \)</span> 在 <span class="inline-math">\( t = 0 \)</span> 处的导数：
+</p><!-- l. 55 --><p class="indent">   </p><div class="math-block">\[
+\frac{d}{dt}(b(t)c(t)) \bigg|_{t=0} = b'(0)c(0) + b(0)c'(0) = b'(0) + c'(0).
+\]</div>
+<p></p><!-- l. 56 --><p class="indent">   从而对加法封闭，再结合 <span class="inline-math">\( \frac{d}{dt}c(\lambda t) \big|_{t=0} = \lambda c'(0) \)</span> 及其自身的群性质可知其构成线性空间.                                                                                               □
+</p>
+   </div>
+   <div class="newtheorem">
+<!-- l. 59 --><p class="noindent"><span class="head">
+<a id="x1-2009r3"></a>
+<span class="ec-lmbx-10">命题 1.3.</span>  </span><span class="inline-math">\( \mathfrak{so}(3) \)</span> 恰好由所有 <span class="inline-math">\( 3 \times 3 \)</span> 实反对称矩阵组成：
+</p><!-- l. 61 --><p class="indent">   </p><div class="math-block">\[
+\mathfrak{so}(3) = \{ X \in M_3(\mathbb{R}) \mid X^T + X = 0 \}.
+\]</div>
+<p></p>
+   </div>
+<!-- l. 62 --><p class="indent">
+</p>
+   <div class="proof">
+<!-- l. 65 --><p class="indent">   <span class="head">
+                                                                  
+
+                                                                  
+<span class="ec-lmri-10">证明.</span> </span>设 <span class="inline-math">\( c : \mathbb{R} \to SO(3) \)</span> 是光滑曲线且 <span class="inline-math">\( c(0) = I \)</span>. 对于任意 <span class="inline-math">\( t \)</span>，有 <span class="inline-math">\( c(t)^T c(t) = I \)</span>. 对该式关于 <span class="inline-math">\( t \)</span> 求导：
+</p><!-- l. 66 --><p class="indent">   </p><div class="math-block">\[
+\frac{d}{dt}\bigl( c(t)^T c(t) \bigr) = c'(t)^T c(t) + c(t)^T c'(t) = 0.
+\]</div>
+<p></p><!-- l. 67 --><p class="indent">   令 <span class="inline-math">\( t = 0 \)</span>，代入 <span class="inline-math">\( c(0) = I \)</span>，得：
+</p><!-- l. 68 --><p class="indent">   </p><div class="math-block">\[
+c'(0)^T + c'(0) = 0.
+\]</div>
+<p></p><!-- l. 69 --><p class="indent">   这表明切向量 <span class="inline-math">\( X = c'(0) \)</span> 必须是反对称矩阵.
+</p><!-- l. 71 --><p class="indent">   反之，对于任意反对称矩阵 <span class="inline-math">\( X \)</span>，定义曲线 <span class="inline-math">\( c(t) = \exp(tX) \)</span>. 由于
+</p><!-- l. 72 --><p class="indent">   </p><div class="math-block">\[
+(e^{tX})^T e^{tX} = e^{tX^T} e^{tX} = e^{-tX} e^{tX} = I,
+\]</div>
+<p></p><!-- l. 73 --><p class="indent">   且 <span class="inline-math">\( \det(e^{tX}) = e^{\operatorname{tr}(tX)} = e^0 = 1 \)</span>，故 <span class="inline-math">\( c(t) \in SO(3) \)</span>. 而 <span class="inline-math">\( c'(0) = X \)</span>. 因此 <span class="inline-math">\( \mathfrak{so}(3) \)</span> 恰好是反对称矩阵空间.                                                                                        □
+</p>
+   </div>
+   <div class="newtheorem">
+<!-- l. 76 --><p class="noindent"><span class="head">
+<a id="x1-2010r3"></a>
+<span class="ec-lmbx-10">定义 1.3 </span>(伴随作用)<span class="ec-lmbx-10">.</span>  </span>对于 <span class="inline-math">\( g \in SO(3) \)</span> 和 <span class="inline-math">\( X \in \mathfrak{so}(3) \)</span>，定义伴随作用 <span class="inline-math">\( \operatorname{Ad}(g)X \)</span> 为：
+</p><!-- l. 78 --><p class="indent">   </p><div class="math-block">\[
+\operatorname{Ad}(g)X = gXg^{-1}.
+\]</div>
+<p></p>
+   </div>
+<!-- l. 79 --><p class="indent">
+</p>
+   <div class="newtheorem">
+<!-- l. 81 --><p class="noindent"><span class="head">
+<a id="x1-2011r4"></a>
+<span class="ec-lmbx-10">命题 1.4.</span>  </span>设 <span class="inline-math">\( c : \mathbb{R} \to SO(3) \)</span> 是一条光滑曲线，满足 <span class="inline-math">\( c(0) = I \)</span>，<span class="inline-math">\( c'(0) = Y \)</span><span class="ec-lmri-10">. </span>对于固定的 <span class="inline-math">\( X \in \mathfrak{so}(3) \)</span>，有：
+</p><!-- l. 83 --><p class="indent">   </p><div class="math-block">\[
+\frac{d}{dt}\bigg|_{t=0} \operatorname{Ad}(c(t))X = YX - XY.
+\]</div>
+<p></p>
+   </div>
+<!-- l. 84 --><p class="indent">
+</p>
+   <div class="proof">
+<!-- l. 87 --><p class="indent">   <span class="head">
+<span class="ec-lmri-10">证明.</span> </span>计算导数：
+</p><!-- l. 88 --><p class="indent">   </p><div class="math-block">\[
+\frac{d}{dt}\bigg|_{t=0} \bigl( c(t) X c(t)^{-1} \bigr) = c'(0) X c(0)^{-1} + c(0) X (c^{-1})'(0).
+\]</div>
+<p></p><!-- l. 89 --><p class="indent">   由 <span class="inline-math">\( c(0)=I \)</span> 得 <span class="inline-math">\( c(0)^{-1}=I \)</span>，且 <span class="inline-math">\( c'(0)=Y \)</span>. 又由 <span class="inline-math">\( c(t)c(t)^{-1}=I \)</span> 求导得：
+</p><!-- l. 90 --><p class="indent">   </p><div class="math-block">\[
+c'(0)c(0)^{-1} + c(0)(c^{-1})'(0)=0 \quad\Longrightarrow\quad (c^{-1})'(0) = -c'(0) = -Y.
+\]</div>
+<p></p><!-- l. 91 --><p class="indent">   代入得：
+</p><!-- l. 92 --><p class="indent">   </p><div class="math-block">\[
+Y X I + I X (-Y) = YX - XY.
+\]</div>
+                                                                 □
+                                                                  
+
+                                                                  
+<p></p>
+   </div>
+   <div class="newtheorem">
+<!-- l. 95 --><p class="noindent"><span class="head">
+<a id="x1-2012r4"></a>
+<span class="ec-lmbx-10">定义 1.4 </span>(李括号)<span class="ec-lmbx-10">.</span>  </span>对于 <span class="inline-math">\( X, Y \in \mathfrak{so}(3) \)</span>，定义李括号为矩阵换位子：
+</p><!-- l. 97 --><p class="indent">   </p><div class="math-block">\[
+[X, Y] = XY - YX.
+\]</div>
+<p></p>
+   </div>
+<!-- l. 98 --><p class="indent">
+</p>
+   <div class="newtheorem">
+<!-- l. 100 --><p class="noindent"><span class="head">
+<a id="x1-2013r5"></a>
+<span class="ec-lmbx-10">命题 1.5.</span>  </span>李括号满足 <span class="ec-lmri-10">Jacobi </span>恒等式：对于任意 <span class="inline-math">\( X, Y, Z \in \mathfrak{so}(3) \)</span>，
+</p><!-- l. 102 --><p class="indent">   </p><div class="math-block">\[
+[X, [Y, Z]] + [Y, [Z, X]] + [Z, [X, Y]] = 0.
+\]</div>
+<p></p>
+   </div>
+<!-- l. 103 --><p class="indent">
+</p>
+   <div class="proof">
+<!-- l. 106 --><p class="indent">   <span class="head">
+<span class="ec-lmri-10">证明.</span> </span>直接展开计算：
+</p><!-- l. 107 --><p class="indent">   </p><div class="math-block">\[
+\begin{aligned}
+[X, [Y, Z]] &amp;= X(YZ - ZY) - (YZ - ZY)X = XYZ - XZY - YZX + ZYX,\\
+[Y, [Z, X]] &amp;= Y(ZX - XZ) - (ZX - XZ)Y = YZX - YXZ - ZXY + XZY,\\
+[Z, [X, Y]] &amp;= Z(XY - YX) - (XY - YX)Z = ZXY - ZYX - XYZ + YXZ.
+\end{aligned}
+\]</div>
+<p></p><!-- l. 108 --><p class="indent">   将三式相加，所有项互相抵消，结果为 <span class="inline-math">\(0\)</span>.                                                                                                □
+</p>
+   </div>
+    
+ 

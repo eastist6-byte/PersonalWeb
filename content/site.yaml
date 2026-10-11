@@ -1,0 +1,96 @@
+nodes:
+  - id: lie-groups
+    title: 李群和李代数
+    description: 李群与李代数笔记，按原稿章节和主题整理。
+accessGroups: []
+articles:
+  - id: lie-so3
+    title: 1.1 SO(3)及其李代数
+    summary: 特殊正交群、切向量、伴随作用及李括号。
+    directory: lie-groups
+    date: 2026-10-11
+    source: articles/lie-groups/lie-so3/main.tex
+    status: published
+    demo: false
+    attachments: []
+  - id: lie-matrix-series
+    title: 1.2 矩阵的级数
+    summary: 矩阵指数的级数定义、基本性质及其与李群的关系。
+    directory: lie-groups
+    date: 2026-10-11
+    source: articles/lie-groups/lie-matrix-series/main.tex
+    status: published
+    demo: false
+    attachments: []
+  - id: lie-closed-linear-groups
+    title: 1.3 闭线性群
+    summary: 闭线性群的定义、常见例子及相应李代数。
+    directory: lie-groups
+    date: 2026-10-11
+    source: articles/lie-groups/lie-closed-linear-groups/main.tex
+    status: published
+    demo: false
+    attachments: []
+  - id: lie-manifolds
+    title: 1.4 流形与李群
+    summary: 拓扑流形、光滑结构、光滑映射和李群的定义。
+    directory: lie-groups
+    date: 2026-10-11
+    source: articles/lie-groups/lie-manifolds/main.tex
+    status: published
+    demo: false
+    attachments: []
+  - id: lie-linear-groups-as-lie-groups
+    title: 1.5 闭线性群作为李群
+    summary: 闭线性群的流形结构、相关定理及交换图。
+    directory: lie-groups
+    date: 2026-10-11
+    source: articles/lie-groups/lie-linear-groups-as-lie-groups/main.tex
+    status: published
+    demo: false
+    attachments: []
+  - id: lie-tangent-bundles
+    title: 1.6（一）切映射与切丛
+    summary: 映射芽、拉回、切映射、向量丛、截面与切丛。
+    directory: lie-groups
+    date: 2026-10-11
+    source: articles/lie-groups/lie-tangent-bundles/main.tex
+    status: published
+    demo: false
+    attachments: []
+  - id: lie-invariant-fields
+    title: 1.6（二）左不变向量场与李括号
+    summary: 左不变向量场对函数的作用，以及向量场的李括号。
+    directory: lie-groups
+    date: 2026-10-11
+    source: articles/lie-groups/lie-invariant-fields/main.tex
+    status: published
+    demo: false
+    attachments: []
+  - id: lie-algebras
+    title: 1.6（三）李代数与矩阵李代数
+    summary: 李代数的定义、左不变向量场李代数及矩阵李代数的联系。
+    directory: lie-groups
+    date: 2026-10-11
+    source: articles/lie-groups/lie-algebras/main.tex
+    status: published
+    demo: false
+    attachments: []
+  - id: lie-homomorphisms
+    title: 1.7 李群和李代数同态
+    summary: 李群同态诱导的李代数同态、指数映射及相关性质。
+    directory: lie-groups
+    date: 2026-10-11
+    source: articles/lie-groups/lie-homomorphisms/main.tex
+    status: published
+    demo: false
+    attachments: []
+  - id: lie-compact-representations
+    title: 2 紧李群的表示
+    summary: 群表示、特征标、正交关系和 Frobenius–Schur 指标。保留原稿尚未完成的 Haar 积分小节。
+    directory: lie-groups
+    date: 2026-10-11
+    source: articles/lie-groups/lie-compact-representations/main.tex
+    status: published
+    demo: false
+    attachments: []

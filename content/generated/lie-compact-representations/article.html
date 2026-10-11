@@ -1,0 +1,137 @@
+
+   <h3 class="sectionHead" id="section-1"><span class="titlemark">2   </span> <a id="x1-10002"></a>紧李群的表示</h3>
+<!-- l. 29 --><p class="noindent">开始本章之前，先来回顾一下有限群表示的部分知识。
+</p>
+   <div class="newtheorem">
+<!-- l. 32 --><p class="noindent"><span class="head">
+<a id="x1-1001r1"></a>
+<span class="ec-lmbx-10">定义 2.1 </span>(群表示)<span class="ec-lmbx-10">.</span>  </span>设 <span class="inline-math">\(G\)</span> 是一个群，<span class="inline-math">\(V\)</span> 是域 <span class="inline-math">\(\mathbb{F}\)</span> 上的向量空间（通常 <span class="inline-math">\(\mathbb{F}=\mathbb{C}\)</span>）。一个 （线性）表示 是群同态
+</p><!-- l. 34 --><p class="indent">   </p><div class="math-block">\[
+    \rho : G \longrightarrow \mathrm{GL}(V),
+  \]</div>
+<p></p><!-- l. 35 --><p class="indent">   其中 <span class="inline-math">\(\mathrm{GL}(V)\)</span> 是 <span class="inline-math">\(V\)</span> 上所有可逆线性变换构成的群。 若 <span class="inline-math">\(\dim V = n &lt; \infty\)</span>，则称 <span class="inline-math">\(\rho\)</span> 为 有限维表示；此时选取基可将 <span class="inline-math">\(\rho(g)\)</span> 写成 <span class="inline-math">\(n\times n\)</span> 可逆矩阵，从而得到同态 <span class="inline-math">\(G\to \mathrm{GL}(n,\mathbb{F})\)</span>。
+</p>
+   </div>
+<!-- l. 37 --><p class="indent">
+</p>
+   <div class="newtheorem">
+<!-- l. 39 --><p class="noindent"><span class="head">
+<a id="x1-1002r2"></a>
+<span class="ec-lmbx-10">定义 2.2 </span>(等价表示)<span class="ec-lmbx-10">.</span>  </span>两个表示 <span class="inline-math">\((\rho, V)\)</span> 与 <span class="inline-math">\((\rho', V')\)</span> 称为等价的，如果存在线性同构 <span class="inline-math">\(\varphi: V\to V'\)</span> 使得
+</p><!-- l. 41 --><p class="indent">   </p><div class="math-block">\[
+    \varphi \circ \rho(g) = \rho'(g) \circ \varphi \quad (\forall g\in G).
+  \]</div>
+<p></p>
+   </div>
+<!-- l. 42 --><p class="indent">
+</p>
+   <div class="newtheorem">
+<!-- l. 44 --><p class="noindent"><span class="head">
+<a id="x1-1003r3"></a>
+<span class="ec-lmbx-10">定义 2.3 </span>(不变子空间与不可约表示)<span class="ec-lmbx-10">.</span>  </span>设 <span class="inline-math">\((\rho,V)\)</span> 是一个表示。子空间 <span class="inline-math">\(W\subseteq V\)</span> 称为 <span class="inline-math">\(\rho(G)\)</span><span class="ec-lmbxi-10">-</span>不变子空间，若 <span class="inline-math">\(\rho(g)W\subseteq W\)</span> 对所有 <span class="inline-math">\(g\in G\)</span> 成立。 若 <span class="inline-math">\(V\)</span> 没有非平凡的不变子空间（即只有 <span class="inline-math">\(\{0\}\)</span> 和 <span class="inline-math">\(V\)</span> 自身），则称 <span class="inline-math">\(\rho\)</span> 是 不可约表示。
+</p>
+   </div>
+<!-- l. 47 --><p class="indent">
+</p>
+   <div class="newtheorem">
+<!-- l. 49 --><p class="noindent"><span class="head">
+<a id="x1-1004r4"></a>
+                                                                  
+
+                                                                  
+<span class="ec-lmbx-10">定义 2.4 </span>(特征标（特征函数）)<span class="ec-lmbx-10">.</span>  </span>设 <span class="inline-math">\((\rho,V)\)</span> 是 <span class="inline-math">\(G\)</span> 的一个有限维复表示。定义函数
+</p><!-- l. 51 --><p class="indent">   </p><div class="math-block">\[
+    \chi_\rho : G \xrightarrow{\rho} \mathrm{GL}(V)\xrightarrow{\mathrm{Tr}}\mathbb{C},\qquad \chi_\rho(g) = \mathrm{Tr}(\rho(g)),
+  \]</div>
+<p></p><!-- l. 52 --><p class="indent">   其中 <span class="inline-math">\(\mathrm{Tr}\)</span> 表示线性变换的迹。<span class="inline-math">\(\chi_\rho\)</span> 称为表示 <span class="inline-math">\(\rho\)</span> 的 特征标（特征函数）。
+</p>
+   </div>
+<!-- l. 53 --><p class="indent">
+</p>
+   <div class="newtheorem">
+<!-- l. 55 --><p class="noindent"><span class="head">
+<a id="x1-1005r1"></a>
+<span class="ec-lmbx-10">命题 2.1 </span>(特征标的基本性质)<span class="ec-lmbx-10">.</span>  </span>设 <span class="inline-math">\(\chi\)</span> 是表示 <span class="inline-math">\(\rho\)</span> 的特征标，则：
+     </p><ol class="enumerate1">
+<li class="enumerate" id="x1-1007x1"><span class="inline-math">\(\chi(e) = \dim V\)</span>（<span class="inline-math">\(e\)</span> 为单位元）；
+     </li>
+<li class="enumerate" id="x1-1009x2"><span class="inline-math">\(\chi(ghg^{-1}) = \chi(h)\)</span>，即特征标在共轭类上为常值（类函数）；
+     </li>
+<li class="enumerate" id="x1-1011x3">若 <span class="inline-math">\(\rho \cong \rho'\)</span>，则 <span class="inline-math">\(\chi_\rho = \chi_{\rho'}\)</span>；
+     </li>
+<li class="enumerate" id="x1-1013x4"><span class="inline-math">\(\chi(g^{-1}) = \overline{\chi(g)}\)</span>（对酉表示特别成立）；
+     </li>
+<li class="enumerate" id="x1-1015x5"><span class="inline-math">\(
+    \chi_{\rho \oplus \sigma}(g) = \chi_\rho(g) + \chi_\sigma(g), \quad \forall g \in G.
+    \)</span></li></ol>
+   </div>
+<!-- l. 64 --><p class="indent">
+</p><!-- l. 66 --><p class="indent">   对于有限群，特征标具有重要的正交关系。
+</p>
+   <div class="newtheorem">
+<!-- l. 68 --><p class="noindent"><span class="head">
+<a id="x1-1016r2"></a>
+                                                                  
+
+                                                                  
+<span class="ec-lmbx-10">定理 2.2 </span>(第一正交关系)<span class="ec-lmbx-10">.</span>  </span>设 <span class="inline-math">\(G\)</span> 为有限群，<span class="inline-math">\(\chi, \psi\)</span> 分别是两个不可约表示的特征标，则
+</p><!-- l. 70 --><p class="indent">   </p><div class="math-block">\[
+    \frac{1}{|G|}\sum_{g\in G} \chi(g)\overline{\psi(g)} =
+    \begin{cases}
+      1, &amp; \chi = \psi,\\
+      0, &amp; \chi \neq \psi.
+    \end{cases}
+  \]</div>
+<p></p>
+   </div>
+<!-- l. 71 --><p class="indent">
+</p>
+   <div class="newtheorem">
+<!-- l. 73 --><p class="noindent"><span class="head">
+<a id="x1-1017r5"></a>
+<span class="ec-lmbx-10">定义 2.5 </span>(Frobenius–Schur 指标)<span class="ec-lmbx-10">.</span>  </span>设 <span class="inline-math">\(G\)</span> 为有限群，<span class="inline-math">\(\chi\)</span> 是 <span class="inline-math">\(G\)</span> 的一个不可约复特征标，定义
+</p><!-- l. 75 --><p class="indent">   </p><div class="math-block">\[
+    \nu_2(\chi) := \frac{1}{|G|}\sum_{g\in G} \chi(g^2).
+  \]</div>
+<p></p><!-- l. 76 --><p class="indent">   称 <span class="inline-math">\(\nu_2(\chi)\)</span> 为 <span class="inline-math">\(\chi\)</span> 的 <span class="ec-lmbxi-10">Frobenius</span>–<span class="ec-lmbxi-10">Schur </span>指标（或 <span class="ec-lmri-10">FS </span>指标）。
+</p>
+   </div>
+<!-- l. 77 --><p class="indent">
+</p>
+   <div class="newtheorem">
+<!-- l. 79 --><p class="noindent"><span class="head">
+<a id="x1-1018r3"></a>
+<span class="ec-lmbx-10">定理 2.3 </span>(Frobenius–Schur)<span class="ec-lmbx-10">.</span>  </span>对于有限群 <span class="inline-math">\(G\)</span> 的任意不可约复特征标 <span class="inline-math">\(\chi\)</span>，其 <span class="ec-lmri-10">FS </span>指标只能取三个值：<span class="inline-math">\(+1,\,-1,\,0\)</span>。具体地，
+</p><!-- l. 81 --><p class="indent">   </p><div class="math-block">\[
+    \nu_2(\chi) =
+    \begin{cases}
+      +1, &amp; \text{表示是 \textbf{实型} (real type)},\\[2mm]
+      -1, &amp; \text{表示是 \textbf{四元数型} (quaternionic type)},\\[2mm]
+      0,  &amp; \text{表示是 \textbf{复型} (complex type)}.
+    \end{cases}
+  \]</div>
+<p></p><!-- l. 82 --><p class="indent">   其中： </p>
+     <ul class="itemize1">
+     <li class="itemize">实型：表示可以定义在实数域上（即存在一个 <span class="inline-math">\(G\)</span><span class="ec-lmri-10">-</span>不变的非退化对称双线性型）；
+     </li>
+     <li class="itemize">四元数型：表示可以定义在四元数体上（等价地，存在一个 <span class="inline-math">\(G\)</span><span class="ec-lmri-10">-</span>不变的非退化反对称双线性型）；
+     </li>
+     <li class="itemize">复型：表示本质上是复的，不能实化或四元数化。</li></ul>
+   </div>
+<!-- l. 88 --><p class="indent">
+                                                                  
+
+                                                                  
+</p><!-- l. 90 --><p class="noindent">
+</p>
+   <h4 class="subsectionHead" id="section-2"><span class="titlemark">2.1   </span> <a id="x1-20002.1"></a>Haar积分</h4>
+   <div class="newtheorem">
+<!-- l. 91 --><p class="noindent"><span class="head">
+<a id="x1-2001r6"></a>
+<span class="ec-lmbx-10">定义 2.6 </span>(质量中心)<span class="ec-lmbx-10">.</span>  </span>
+</p>
+   </div>
+<!-- l. 93 --><p class="indent">
+</p>
+    
+ 

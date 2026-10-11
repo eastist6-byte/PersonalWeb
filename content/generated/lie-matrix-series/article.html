@@ -1,0 +1,69 @@
+
+   <h3 class="sectionHead" id="section-1"><span class="titlemark">1   </span> <a id="x1-10001"></a>李群及其表示</h3>
+<!-- l. 29 --><p class="noindent">
+</p>
+   <h4 class="subsectionHead" id="section-2"><span class="titlemark">1.2   </span> <a id="x1-20001.2"></a>矩阵的级数</h4>
+   <div class="newtheorem">
+<!-- l. 30 --><p class="noindent"><span class="head">
+<a id="x1-2001r5"></a>
+<span class="ec-lmbx-10">定义 1.5 </span>(矩阵指数)<span class="ec-lmbx-10">.</span>  </span>对于复方阵 <span class="inline-math">\( A \in M_n(\mathbb{C}) \)</span>，定义 <span class="inline-math">\( \exp(A) \)</span> 为幂级数：
+</p><!-- l. 32 --><p class="indent">   </p><div class="math-block">\[
+e^A = \sum_{k=0}^{\infty} \frac{A^k}{k!} = I + A + \frac{A^2}{2!} + \cdots.
+\]</div>
+<p></p>
+   </div>
+<!-- l. 33 --><p class="indent">
+</p>
+   <div class="newtheorem">
+<!-- l. 35 --><p class="noindent"><span class="head">
+<a id="x1-2002r6"></a>
+<span class="ec-lmbx-10">命题 1.6.</span>  </span>由 <span class="inline-math">\( M \)</span> 判别法易知 <span class="inline-math">\( \exp \)</span> 是良定义且无穷阶可导的<span class="ec-lmri-10">.</span>
+     </p><ol class="enumerate1">
+<li class="enumerate" id="x1-2004x1">若 <span class="inline-math">\(AB = BA\)</span>，则 <span class="inline-math">\(e^{A} e^{B} = e^{A+B}\)</span><span class="ec-lmri-10">.</span>
+     </li>
+<li class="enumerate" id="x1-2006x2"><span class="inline-math">\(det(e^X)=e^{tr(X)}.\)</span>
+     </li>
+<li class="enumerate" id="x1-2008x3"><span class="inline-math">\( (e^{A})^{-1} = e^{-A} \)</span>，且 <span class="inline-math">\(e^{A} \in \mathrm{GL}(n,\mathbb{C})\)</span><span class="ec-lmri-10">.</span>
+     </li>
+<li class="enumerate" id="x1-2010x4">映射 <span class="inline-math">\(t \mapsto e^{tA}\)</span> 是光滑曲线，满足 <span class="inline-math">\(e^{0}=I\)</span><span class="ec-lmri-10">.</span>
+                                                                  
+
+                                                                  
+     </li>
+<li class="enumerate" id="x1-2012x5"><span class="inline-math">\(\frac{d}{dt} e^{tA} = A e^{tA}.\)</span>
+     </li>
+<li class="enumerate" id="x1-2014x6"><span class="inline-math">\(X \to e^X\)</span>是<span class="inline-math">\(\mathbb{R}^{2n^2}\)</span>到<span class="inline-math">\(\mathbb{R}^{2n^2}\)</span>的光滑映射<span class="ec-lmri-10">.</span></li></ol>
+   </div>
+<!-- l. 45 --><p class="indent">
+</p><!-- l. 47 --><p class="noindent">对于<span class="inline-math">\(G=SO(3)\)</span>，矩阵指数确实将<span class="inline-math">\(\mathfrak{g}\)</span>射到<span class="inline-math">\(G\)</span>中：若<span class="inline-math">\(X\in \mathfrak{g}\)</span>，则<span class="inline-math">\(X\)</span>反对称，有<span class="inline-math">\(e^X\cdot (e^X)^T =e^X\cdot e^{X^T}=e^{X+X^T}=e^0=I\)</span>，<span class="inline-math">\(det(e^X)=e^{tr(X)}=e^0=1\)</span>. 这个映射不一定是满射，但在0处是局部满射. 对任意的<span class="inline-math">\(X\in \mathfrak{g}\)</span>，<span class="inline-math">\(e^{(tX)}\)</span>为<span class="inline-math">\(G\)</span>中光滑曲线，在<span class="inline-math">\(t=0\)</span>时为单位元<span class="inline-math">\(I\)</span>，微分为<span class="inline-math">\(X\)</span>. 从而切映射为恒同，由反函数定理，映射在0处局部同胚，自然局部满. 另外，<span class="inline-math">\(G\)</span>是连通紧李群时，指数映射是满射.
+</p>
+   <div class="newtheorem">
+<!-- l. 49 --><p class="noindent"><span class="head">
+<a id="x1-2015r1"></a>
+<span class="ec-lmbx-10">注 1.1.</span>  </span>微分几何中，一个映射 <span class="inline-math">\(F: M \to N\)</span> 在 <span class="inline-math">\(p\)</span> 点的微分 <span class="inline-math">\(dF_p\)</span> 作用于切向量 <span class="inline-math">\(v \in T_p M\)</span> 的定义是：取一条光滑曲线 <span class="inline-math">\(\gamma: (-\varepsilon,\varepsilon) \to M\)</span> 满足 <span class="inline-math">\(\gamma(0)=p\)</span>，<span class="inline-math">\(\gamma'(0)=v\)</span>，则
+</p><!-- l. 51 --><p class="indent">   </p><div class="math-block">\[
+dF_p(v) = \left. \frac{d}{dt} \right|_{t=0} F(\gamma(t)) \in T_{F(p)} N.
+\]</div>
+<p></p><!-- l. 53 --><p class="indent">   现在令 <span class="inline-math">\(M = \mathfrak{g}\)</span>，<span class="inline-math">\(N = G\)</span>，<span class="inline-math">\(F = \exp\)</span>，<span class="inline-math">\(p = 0\)</span><span class="ec-lmri-10">. </span>取一个特定的 <span class="inline-math">\(X \in \mathfrak{g}\)</span>，我们希望计算 <span class="inline-math">\(d\exp_0(X)\)</span><span class="ec-lmri-10">. </span>为此，我们需要一条经过 <span class="inline-math">\(0\)</span> 的曲线，其切向量为 <span class="inline-math">\(X\)</span><span class="ec-lmri-10">. </span>最简单的选择是直线：
+</p><!-- l. 55 --><p class="indent">   </p><div class="math-block">\[
+\gamma(t) = tX \in \mathfrak{g}.
+\]</div>
+<p></p><!-- l. 56 --><p class="indent">   显然 <span class="inline-math">\(\gamma(0)=0\)</span>，且 <span class="inline-math">\(\gamma'(0) = X\)</span>（因为 <span class="inline-math">\(\frac{d}{dt}(tX)=X\)</span>）<span class="ec-lmri-10">. </span>于是
+</p><!-- l. 58 --><p class="indent">   </p><div class="math-block">\[
+d\exp_0(X) = \left. \frac{d}{dt} \right|_{t=0} \exp(\gamma(t)) = \left. \frac{d}{dt} \right|_{t=0} \exp(tX).
+\]</div>
+<p></p><!-- l. 60 --><p class="indent">   由指数映射的定义，曲线 <span class="inline-math">\(t \mapsto \exp(tX)\)</span> 是单参数子群，其切向量满足
+</p><!-- l. 61 --><p class="indent">   </p><div class="math-block">\[
+\left. \frac{d}{dt} \right|_{t=0} \exp(tX) = X \quad (\text{这里的 } X \text{ 看作 } T_e G \text{ 中的元素}).
+\]</div>
+<p></p><!-- l. 62 --><p class="indent">   因此
+</p><!-- l. 63 --><p class="indent">   </p><div class="math-block">\[
+d\exp_0(X) = X.
+\]</div>
+<p></p><!-- l. 65 --><p class="indent">   于是在同构 <span class="inline-math">\(T_0(\mathfrak{g}) \cong \mathfrak{g}\)</span> 与 <span class="inline-math">\(T_e G \cong \mathfrak{g}\)</span> 下，<span class="inline-math">\(d\exp_0\)</span> 就是恒等映射<span class="ec-lmri-10">.</span>
+</p>
+   </div>
+<!-- l. 66 --><p class="indent">
+</p>
+    
+ 

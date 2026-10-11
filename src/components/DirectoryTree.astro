@@ -1,0 +1,9 @@
+---
+import Icon from './Icon.astro';
+import {site} from '../lib/content';
+interface Props {parent?:string;}
+const {parent}=Astro.props;
+const nodes=site.nodes.filter(n=>n.parent===parent);
+function descendants(id:string):string[] {return [id,...site.nodes.filter(n=>n.parent===id).flatMap(n=>descendants(n.id))];}
+---
+<ul class="directory-tree">{nodes.map(n=><li>{site.nodes.some(p=>p.parent===n.id)?<details open><summary><Icon name="folder" size={16}/>{n.title}<span>{site.articles.filter(a=>descendants(n.id).includes(a.directory)).length}</span></summary><Astro.self parent={n.id}/></details>:<button type="button" class="directory-filter" data-directories={descendants(n.id).join(',')}><Icon name="folder" size={16}/>{n.title}<span>{site.articles.filter(a=>a.directory===n.id).length}</span></button>}</li>)}</ul>

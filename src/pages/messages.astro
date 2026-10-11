@@ -1,0 +1,12 @@
+---
+import Layout from '../layouts/Layout.astro';
+import {text} from '../lib/copy';
+---
+<Layout title={text.messages.title} active="messages">
+  <div class="page-width">
+    <header class="page-intro"><h1>{text.messages.title}</h1></header>
+    <section class="messages-board" aria-label={text.messages.publicHeading}>
+      <div id="public-messages" class="message-list"></div>
+    </section>
+  </div>
+</Layout>

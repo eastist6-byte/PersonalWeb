@@ -1,0 +1,177 @@
+
+   <h3 class="sectionHead" id="section-1"><span class="titlemark">1   </span> <a id="x1-10001"></a>李群及其表示</h3>
+<!-- l. 29 --><p class="noindent">
+</p>
+   <h4 class="subsectionHead" id="section-2"><span class="titlemark">1.6   </span> <a id="x1-20001.6"></a>左不变向量场</h4>
+<!-- l. 30 --><p class="noindent">先介绍一些微分流形的概念.
+</p>
+   <div class="newtheorem">
+<!-- l. 32 --><p class="noindent"><span class="head">
+<a id="x1-2001r14"></a>
+<span class="ec-lmbx-10">定义 1.14 </span>(映射芽)<span class="ec-lmbx-10">.</span>  </span>设<span class="inline-math">\(f,g\)</span>是两个<span class="inline-math">\(M\to N\)</span>的光滑映射，<span class="inline-math">\(f\)</span>与<span class="inline-math">\(g\)</span>等价当且仅当存在<span class="inline-math">\(p\)</span>的开邻域<span class="inline-math">\(U\)</span>使得<span class="inline-math">\(f|_U =g|_U\)</span><span class="ec-lmri-10">. </span>等价类记为<span class="inline-math">\(f\)</span>，称为一个映射芽<span class="inline-math">\(f\)</span>（也可以定义其他阶可微的）<span class="ec-lmri-10">.</span>
+</p>
+   </div>
+<!-- l. 34 --><p class="indent">
+</p>
+   <div class="newtheorem">
+<!-- l. 36 --><p class="noindent"><span class="head">
+<a id="x1-2002r15"></a>
+<span class="ec-lmbx-10">定义 1.15 </span>(（伪）拉回映射)<span class="ec-lmbx-10">.</span>  </span>设<span class="inline-math">\(f:(M,p)\to (N,q)\)</span>为光滑映射芽<span class="ec-lmri-10">. </span>定义拉回映射<span class="inline-math">\(f^{*}:\varepsilon(q) \to \varepsilon(p)\)</span>为（注意此处的方向）：
+</p><!-- l. 37 --><p class="indent">   </p><div class="math-block">\[ f^{*}(\alpha)=\alpha \circ f,\quad \forall \alpha \in \varepsilon(q)\]</div>
+<p></p>
+   </div>
+<!-- l. 38 --><p class="indent">
+</p><!-- l. 40 --><p class="indent">   拉回映射是一个环同态、代数同态，具备函子性质：<span class="inline-math">\((g\circ f)^{*}=f^{*}\circ g^{*}\)</span>. 并且若<span class="inline-math">\(\alpha\)</span>为恒同映射芽，则拉回映射也为恒同同态. 拉回映射相当于为<span class="inline-math">\(N\)</span>上的函数芽的定义域利用<span class="inline-math">\(f\)</span>补上一节，延申到<span class="inline-math">\(M\)</span>，从而成为<span class="inline-math">\(M\)</span>的函数芽.
+</p>
+   <div class="newtheorem">
+<!-- l. 42 --><p class="noindent"><span class="head">
+<a id="x1-2003r16"></a>
+<span class="ec-lmbx-10">定义 1.16 </span>(切映射)<span class="ec-lmbx-10">.</span>  </span>设<span class="inline-math">\(f:(M,p)\to (N,q)\)</span>为光滑映射芽，<span class="inline-math">\(f\)</span>在点<span class="inline-math">\(p\)</span>处的切映射（或称为微分映射）<span class="inline-math">\((df)_p:T_pM \to p T_qN\)</span>定义为：
+</p><!-- l. 43 --><p class="indent">   </p><div class="math-block">\[ (df)_p(X)=X\circ f^{*},\quad \forall X \in T_pM.\]</div>
+<p></p>
+   </div>
+<!-- l. 44 --><p class="indent">
+                                                                  
+
+                                                                  
+</p><!-- l. 46 --><p class="indent">   切映射将一个<span class="inline-math">\(M\)</span>上的导子的作用范围从<span class="inline-math">\(M\)</span>上的函数芽延展到了<span class="inline-math">\(N\)</span>上的函数芽，从而得到一个<span class="inline-math">\(N\)</span>中的导子，所以有
+</p><!-- l. 46 --><p class="indent">   </p><div class="math-block">\[\forall \alpha \in \varepsilon(p),\quad (df)_p(X)(\alpha)=X\circ f^{*}(\alpha)=X(\alpha \circ f)\]</div>
+<p></p><!-- l. 48 --><p class="indent">   切映射是两个向量空间之间的映射，也是一个线性映射，因此也有更分析的表示方式.
+</p>
+   <div class="newtheorem">
+<!-- l. 50 --><p class="noindent"><span class="head">
+<a id="x1-2004r17"></a>
+<span class="ec-lmbx-10">定义 1.17 </span>(切映射的坐标定义)<span class="ec-lmbx-10">.</span>  </span>对于给定的光滑映射<span class="inline-math">\(f:M\to N\)</span>，定义<span class="inline-math">\(p\)</span>点的切映射为如下的线性映射：
+</p><!-- l. 51 --><p class="indent">   </p><div class="math-block">\[(df)_p=(d\psi)^{-1} \circ dF \circ d\varphi\]</div>
+<p></p>
+   </div>
+<!-- l. 52 --><p class="indent">
+</p><!-- l. 54 --><p class="indent">   因为有局部坐标卡，切映射可以延展到两个欧氏空间之间. 用坐标表示切向量，则切映射是两个切向量之间的变换矩阵.
+</p>
+   <div class="newtheorem">
+<!-- l. 56 --><p class="noindent"><span class="head">
+<a id="x1-2005r13"></a>
+<span class="ec-lmbx-10">定理 1.13 </span>(切映射对基向量的变换)<span class="ec-lmbx-10">.</span>  </span>设光滑流形<span class="inline-math">\(M^{l},N^{k}\)</span>，光滑映射<span class="inline-math">\(f:M\to N\)</span>，若<span class="inline-math">\((U,\varphi;x^{i})\)</span>和<span class="inline-math">\((V,\psi;y^{j})\)</span>分别为包含点<span class="inline-math">\(p\)</span>和<span class="inline-math">\(f(p)\)</span>的局部坐标卡（角标写到右上角），则：
+</p><!-- l. 57 --><p class="indent">   </p><div class="math-block">\[(df)_p \left (\frac{\partial}{\partial x^{j}}\right )\bigg|_p =\sum_{i=1}^{k} \frac{\partial (y^{i}\circ f)}{\partial x^j}\bigg|_p \cdot \frac{\partial}{\partial y^{j}}\bigg|_p .\]</div>
+<p></p>
+   </div>
+<!-- l. 58 --><p class="indent">
+</p><!-- l. 60 --><p class="indent">   这个定理表明了切映射对基向量的变换，注意这里作为基向量，定理只提示了如何处理运算这些基向量的分量值，但是没有赋值. 矩阵<span class="inline-math">\(Df=\left ( \frac{\partial (y^i \circ f)}{\partial x^j}\right )\)</span>称为<span class="inline-math">\(f\)</span>的Jacobi矩阵. 对于任意的切向量<span class="inline-math">\(v=\sum_{i=1}^{l} v^i \left .\frac{\partial}{\partial x^i}\right |_p\)</span>，有：
+</p><!-- l. 61 --><p class="indent">   </p><div class="math-block">\[
+\begin{bmatrix}
+w^1 \\
+w^2 \\
+\vdots \\
+w^k
+\end{bmatrix}
+=
+\begin{bmatrix}
+\frac{\partial (y^1 \circ f)}{\partial x^1} &amp; \frac{\partial (y^1 \circ f)}{\partial x^2} &amp; \cdots &amp; \frac{\partial (y^1 \circ f)}{\partial x^l} \\
+\frac{\partial (y^2 \circ f)}{\partial x^1} &amp; \frac{\partial (y^2 \circ f)}{\partial x^2} &amp; \cdots &amp; \frac{\partial (y^2 \circ f)}{\partial x^l} \\
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+\frac{\partial (y^k \circ f)}{\partial x^1} &amp; \frac{\partial (y^k \circ f)}{\partial x^2} &amp; \cdots &amp; \frac{\partial (y^k \circ f)}{\partial x^l}
+\end{bmatrix}_p
+\begin{bmatrix}
+v^1 \\
+v^2 \\
+\vdots \\
+v^l
+\end{bmatrix}.
+\]</div>
+<p></p>
+   <div class="newtheorem">
+<!-- l. 63 --><p class="noindent"><span class="head">
+<a id="x1-2006r18"></a>
+<span class="ec-lmbx-10">定义 1.18 </span>(秩为 <span class="inline-math">\(k\)</span> 的实向量丛)<span class="ec-lmbx-10">.</span>  </span>秩 为 <span class="inline-math">\(k\)</span> 的 实 向量丛是一个三元组 <span class="inline-math">\( \xi = (E, M, \pi) \)</span>，其中： </p>
+     <ul class="itemize1">
+     <li class="itemize"><span class="inline-math">\( E = E(\xi) \)</span> 是一个光滑流形，称为全空间；
+     </li>
+     <li class="itemize"><span class="inline-math">\( M \)</span> 是一个光滑流形，称为底空间；
+                                                                  
+
+                                                                  
+     </li>
+     <li class="itemize"><span class="inline-math">\( \pi : E \to M \)</span> 是一个光滑满射，称为投影<span class="ec-lmri-10">.</span></li></ul>
+<!-- l. 70 --><p class="noindent">满足如下条件：
+     </p><ol class="enumerate1">
+<li class="enumerate" id="x1-2008x1">对每一点 <span class="inline-math">\( p \in M \)</span>，纤维 <span class="inline-math">\( E_p := \pi^{-1}(p) \)</span> 是一个 <span class="inline-math">\( k \)</span> 维实向量空间<span class="ec-lmri-10">.</span>
+     </li>
+<li class="enumerate" id="x1-2010x2">
+     <!-- l. 73 --><p class="noindent">对每一点 <span class="inline-math">\( p \in M \)</span>，存在一个 <span class="inline-math">\( p \)</span> 的邻域 <span class="inline-math">\( U \subset M \)</span> 及一个微分同胚
+     </p><!-- l. 74 --><p class="noindent"></p><div class="math-block">\[
+\Phi : \pi^{-1}(U) \to U \times \mathbb{R}^k
+\]</div>
+     <p></p><!-- l. 75 --><p class="noindent">使得对任意 <span class="inline-math">\( q \in U \)</span>，<span class="inline-math">\( \Phi \)</span> 限制在纤维上
+     </p><!-- l. 76 --><p class="noindent"></p><div class="math-block">\[
+\Phi|_{E_q} : E_q \to \{q\} \times \mathbb{R}^k
+\]</div>
+     <p></p><!-- l. 77 --><p class="noindent">是向量空间的同构，并且 <span class="inline-math">\( \pi = \operatorname{pr}_1 \circ \Phi \)</span><span class="ec-lmri-10">.</span></p></li></ol>
+<!-- l. 79 --><p class="noindent">这样的局部同构族<span class="inline-math">\( \{\Phi\} \)</span>称为局部平凡化<span class="ec-lmri-10">. </span>如果 <span class="inline-math">\( U = M \)</span>，则称该向量丛是平凡丛<span class="ec-lmri-10">.</span>
+</p>
+   </div>
+<!-- l. 80 --><p class="indent">
+</p>
+   <div class="newtheorem">
+<!-- l. 82 --><p class="noindent"><span class="head">
+<a id="x1-2011r19"></a>
+<span class="ec-lmbx-10">定义 1.19 </span>(光滑截面)<span class="ec-lmbx-10">.</span>  </span>设 <span class="inline-math">\( \xi = (E, M, \pi) \)</span> 为一个向量丛，则 <span class="inline-math">\( \xi \)</span> 的一个光滑截面是一个光滑映射
+</p><!-- l. 84 --><p class="indent">   </p><div class="math-block">\[
+s : M \to E,
+\]</div>
+<p></p><!-- l. 85 --><p class="indent">   使得对每个 <span class="inline-math">\( p \in M \)</span>，有 <span class="inline-math">\( s(p) \in E_p \)</span><span class="ec-lmri-10">. </span>向量丛 <span class="inline-math">\( \xi \)</span> 的所有光滑截面的全体记为 <span class="inline-math">\( \Gamma(\xi) \)</span> 或 <span class="inline-math">\( \Gamma(E) \)</span><span class="ec-lmri-10">.</span>
+</p>
+   </div>
+<!-- l. 86 --><p class="indent">
+</p>
+   <div class="newtheorem">
+<!-- l. 88 --><p class="noindent"><span class="head">
+<a id="x1-2012r20"></a>
+                                                                  
+
+                                                                  
+<span class="ec-lmbx-10">定义 1.20 </span>(丛映射)<span class="ec-lmbx-10">.</span>  </span>设 <span class="inline-math">\( (E, M, \pi_E) \)</span> 和 <span class="inline-math">\( (F, N, \pi_F) \)</span> 是两个纤维丛<span class="ec-lmri-10">. </span>一个丛映射由一对光滑映射
+</p><!-- l. 90 --><p class="indent">   </p><div class="math-block">\[
+(\Phi, f): (E \xrightarrow{\pi_E} M) \to (F \xrightarrow{\pi_F} N)
+\]</div>
+<p></p><!-- l. 91 --><p class="indent">   组成，其中
+</p><!-- l. 92 --><p class="indent">   </p><div class="math-block">\[
+\Phi : E \to F, \quad f : M \to N
+\]</div>
+<p></p><!-- l. 93 --><p class="indent">   满足交换图表
+</p><!-- l. 94 --><p class="indent">   </p><figure class="tex-diagram"><a href="__ASSET__/d0000.svg" target="_blank" rel="noopener" aria-label="在新窗口放大交换图"><img src="__ASSET__/d0000.svg" alt="交换图" loading="lazy"></a></figure>
+<p></p><!-- l. 95 --><p class="indent">   如果 <span class="inline-math">\(E, F\)</span> 是同一个底空间上的向量丛，且 <span class="inline-math">\(\Phi\)</span> 限制在每个纤维上都是线性空间的同构，则称这两个向量丛是同构的<span class="ec-lmri-10">.</span>
+</p>
+   </div>
+<!-- l. 96 --><p class="indent">
+</p>
+   <div class="newtheorem">
+<!-- l. 98 --><p class="noindent"><span class="head">
+<a id="x1-2013r21"></a>
+<span class="ec-lmbx-10">定义 1.21 </span>(切丛)<span class="ec-lmbx-10">.</span>  </span>设 <span class="inline-math">\( M \)</span> 是一个 <span class="inline-math">\( n \)</span> 维光滑流形<span class="ec-lmri-10">. </span>定义 <span class="inline-math">\( M \)</span> 的切丛为三元组 <span class="inline-math">\( (TM, M, \pi) \)</span>，其中： </p>
+     <ul class="itemize1">
+     <li class="itemize">全空间 <span class="inline-math">\( TM = \bigsqcup_{p \in M} T_p M \)</span> 是所有切空间的并集，赋予适当的光滑结构；
+     </li>
+     <li class="itemize">底空间 <span class="inline-math">\( M \)</span> 是光滑流形；
+     </li>
+     <li class="itemize">投影 <span class="inline-math">\( \pi : TM \to M \)</span> 将切向量 <span class="inline-math">\( v \in T_p M \)</span> 映射到点 <span class="inline-math">\( p \)</span>，即 <span class="inline-math">\( \pi(v) = p \)</span><span class="ec-lmri-10">.</span></li></ul>
+<!-- l. 105 --><p class="noindent">切丛满足如下条件：
+     </p><ol class="enumerate1">
+<li class="enumerate" id="x1-2015x1">对每一点 <span class="inline-math">\( p \in M \)</span>，纤维 <span class="inline-math">\( \pi^{-1}(p) = T_p M \)</span> 是一个 <span class="inline-math">\( n \)</span> 维实向量空间<span class="ec-lmri-10">.</span>
+     </li>
+<li class="enumerate" id="x1-2017x2">
+     <!-- l. 108 --><p class="noindent">对每一点 <span class="inline-math">\( p \in M \)</span>，存在 <span class="inline-math">\( p \)</span> 的邻域 <span class="inline-math">\( U \subset M \)</span> 及坐标卡 <span class="inline-math">\( (U, \varphi = (x^1, \dots, x^n)) \)</span>，使得映射
+     </p><!-- l. 109 --><p class="noindent"></p><div class="math-block">\[
+\Phi : \pi^{-1}(U) \to U \times \mathbb{R}^n, \quad
+\Phi\left( v^i \frac{\partial}{\partial x^i}\bigg|_q \right) = (q, (v^1, \dots, v^n))
+\]</div>
+     <p></p><!-- l. 110 --><p class="noindent">是微分同胚，且对任意 <span class="inline-math">\( q \in U \)</span>，<span class="inline-math">\( \Phi|_{T_q M} : T_q M \to \{q\} \times \mathbb{R}^n \)</span> 是向量空间的同构，并满足 <span class="inline-math">\( \pi = \operatorname{pr}_1 \circ \Phi \)</span><span class="ec-lmri-10">.</span></p></li></ol>
+<!-- l. 112 --><p class="noindent">因此，切丛<span class="inline-math">\( TM \)</span>是秩为<span class="inline-math">\( n \)</span>的实向量丛<span class="ec-lmri-10">. </span>切丛的光滑截面称为 <span class="inline-math">\( M \)</span> 上的向量场，其全体记为 <span class="inline-math">\(\Gamma(TM) \)</span><span class="ec-lmri-10">.</span>
+                                                                  
+
+                                                                  
+</p>
+   </div>
+<!-- l. 113 --><p class="indent">
+</p>
+    
+ 

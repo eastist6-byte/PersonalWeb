@@ -1,0 +1,132 @@
+
+   <h3 class="sectionHead" id="section-1"><span class="titlemark">1   </span> <a id="x1-10001"></a>李群及其表示</h3>
+<!-- l. 29 --><p class="noindent">
+</p>
+   <h4 class="subsectionHead" id="section-2"><span class="titlemark">1.4   </span> <a id="x1-20001.4"></a>流形与李群</h4>
+   <div class="newtheorem">
+<!-- l. 30 --><p class="noindent"><span class="head">
+<a id="x1-2001r8"></a>
+<span class="ec-lmbx-10">定义 1.8 </span>(拓扑流形)<span class="ec-lmbx-10">.</span>  </span>设<span class="inline-math">\(M\)</span>是一个<span class="ec-lmri-10">Hausdorff</span>拓扑空间<span class="ec-lmri-10">. </span>若对<span class="inline-math">\(M\)</span>内的每一点<span class="inline-math">\(p\)</span>，存在点<span class="inline-math">\(p\)</span>的开邻域<span class="inline-math">\(U\)</span>和映射
+</p><!-- l. 31 --><p class="indent">   </p><div class="math-block">\[\phi : U\to \mathbb{R}^m\]</div>
+<p></p><!-- l. 31 --><p class="indent">   使得<span class="inline-math">\(\phi\)</span>为<span class="inline-math">\(U\)</span>到<span class="inline-math">\(\mathbb{R}^m\)</span>开子集<span class="inline-math">\(\phi(U)\)</span>的同胚，则称<span class="inline-math">\(M\)</span>为一个<span class="inline-math">\(m\)</span>维拓扑流形<span class="ec-lmri-10">. </span><span class="inline-math">\(\phi\)</span>为坐标映射， <span class="inline-math">\((U,\phi)\)</span>称为局部坐标卡，<span class="inline-math">\((\phi(M),\phi^{-1})\)</span>称为局部参数化<span class="ec-lmri-10">.</span>
+</p>
+   </div>
+<!-- l. 32 --><p class="indent">
+</p>
+   <div class="newtheorem">
+<!-- l. 34 --><p class="noindent"><span class="head">
+<a id="x1-2002r9"></a>
+<span class="ec-lmbx-10">定义 1.9 </span>(光滑流形（微分流形）)<span class="ec-lmbx-10">.</span>  </span>考虑一个满足第二可数性的拓扑流形<span class="inline-math">\(M\)</span><span class="ec-lmri-10">. </span>若存在一族坐标卡<span class="inline-math">\(\{(U_{\alpha},\phi_{\alpha})\}\)</span>覆盖<span class="inline-math">\(U\)</span><span class="ec-lmri-10">. </span>且转移映射
+</p><!-- l. 35 --><p class="indent">   </p><div class="math-block">\[\phi_{\beta}\phi_{\alpha}^{-1}:\phi_{\alpha}(U_{\alpha}\cap U_{\beta}) \to \phi_{\beta}(U_{\alpha}\cap U_{\beta})\]</div>
+<p></p><!-- l. 35 --><p class="indent">   都是光滑的，则这一组坐标卡称为一个光滑图册，<span class="inline-math">\(M\)</span>称为<span class="inline-math">\(n\)</span>维光滑流形<span class="ec-lmri-10">.</span>
+</p>
+   </div>
+<!-- l. 36 --><p class="indent">
+</p>
+   <div class="newtheorem">
+<!-- l. 38 --><p class="noindent"><span class="head">
+<a id="x1-2003r10"></a>
+<span class="ec-lmbx-10">定义 1.10 </span>(光滑结构（微分结构）)<span class="ec-lmbx-10">.</span>  </span>若<span class="inline-math">\(M^{n}\)</span>为一个光滑流形，一族局部坐标卡<span class="inline-math">\(\mathcal{D}=\{(U_{\alpha},\varphi_{\alpha})|\alpha \in \Lambda\}\)</span>满足条件：
+</p><!-- l. 41 --><p class="indent">   <span class="ec-lmri-10">(1)</span><span class="inline-math">\(\mathcal{D}\)</span>是一个图册<span class="inline-math">\(\bigcup_{\alpha \in \Lambda}U_{\alpha}=M\)</span><span class="ec-lmri-10">.</span>
+</p><!-- l. 43 --><p class="indent">   <span class="ec-lmri-10">(2)</span>任意两个局部坐标卡相容，即<span class="inline-math">\(\varphi_1 \circ \varphi_2^{-1}\)</span>和<span class="inline-math">\(\varphi_2 \circ \varphi_1^{-1}\)</span>都光滑<span class="ec-lmri-10">.</span>
+</p><!-- l. 45 --><p class="indent">   <span class="ec-lmri-10">(3)</span><span class="inline-math">\(\mathcal{D}\)</span>是极大的，任何与<span class="inline-math">\(\mathcal{D}\)</span>中所有坐标卡相容的坐标卡，都必定被包含在<span class="inline-math">\(\mathcal{D}\)</span>中<span class="ec-lmri-10">.</span>
+</p><!-- l. 47 --><p class="indent">   称为光滑流形<span class="inline-math">\(M^{n}\)</span>的光滑结构<span class="ec-lmri-10">.</span>
+                                                                  
+
+                                                                  
+</p>
+   </div>
+<!-- l. 48 --><p class="indent">
+</p><!-- l. 50 --><p class="noindent">任意给定一个光滑图册，包含其的微分结构是唯一的. 存在不相容的两个光滑图册，得到两个不同的微分结构，但不同的微分结构可能是微分同胚意义下相同的. 1，2，3维拓扑流形都分别具有唯一的光滑结构.
+</p>
+   <div class="newtheorem">
+<!-- l. 52 --><p class="noindent"><span class="head">
+<a id="x1-2004r11"></a>
+<span class="ec-lmbx-10">定义 1.11 </span>(微分流形间的光滑映射)<span class="ec-lmbx-10">.</span>  </span>设<span class="inline-math">\(M,N\)</span>为微分流形，<span class="inline-math">\(f:M\to N\)</span>为连续映射，取定<span class="inline-math">\(p\in M,f(p)\in N\)</span>，若存在包含这两点的局部坐标卡<span class="inline-math">\((U,\varphi),(V,\psi)\)</span>，使得<span class="inline-math">\(\psi \circ f \circ \varphi^{-1}:\varphi(U)\to \psi(V)\)</span>作为欧式空间上的多元函数在点<span class="inline-math">\(\varphi(p)\)</span>光滑（不妨<span class="inline-math">\(f(U)\subset V\)</span>），则<span class="inline-math">\(f\)</span>在<span class="inline-math">\(p\)</span>点附近光滑<span class="ec-lmri-10">. </span>若对在<span class="inline-math">\(U\)</span>上每一点光滑，则称<span class="inline-math">\(f\)</span>是光滑的<span class="ec-lmri-10">.</span>
+</p>
+   </div>
+<!-- l. 54 --><p class="indent">
+</p>
+   <div class="newtheorem">
+<!-- l. 56 --><p class="noindent"><span class="head">
+<a id="x1-2005r12"></a>
+<span class="ec-lmbx-10">定义 1.12 </span>(微分同胚)<span class="ec-lmbx-10">.</span>  </span><span class="inline-math">\(M,N\)</span>均为微分流形，若<span class="inline-math">\(f:M\to N\)</span>为双射，且<span class="inline-math">\(f\)</span>与其逆都是光滑映射<span class="ec-lmri-10">.</span>
+</p>
+   </div>
+<!-- l. 58 --><p class="indent">
+</p>
+   <div class="newtheorem">
+<!-- l. 60 --><p class="noindent"><span class="head">
+<a id="x1-2006r3"></a>
+<span class="ec-lmbx-10">例 1.3.</span>  </span>闭线性群<span class="inline-math">\(SU(2)\)</span>是一个光滑流形，其定义
+</p><!-- l. 62 --><p class="indent">   </p><div class="math-block">\[
+SU(2) = \left\{ \begin{pmatrix} \alpha &amp; \beta \\ -\overline{\beta} &amp; \overline{\alpha} \end{pmatrix} \;\middle|\; \alpha,\beta \in \mathbb{C},\ |\alpha|^2 + |\beta|^2 = 1 \right\}.
+\]</div>
+<p></p><!-- l. 64 --><p class="indent">   这是因为 <span class="inline-math">\(SU(2) \cong S^3\)</span><span class="ec-lmri-10">.</span>
+</p>
+   </div>
+<!-- l. 65 --><p class="indent">
+</p>
+   <div class="newtheorem">
+<!-- l. 67 --><p class="noindent"><span class="head">
+<a id="x1-2007r13"></a>
+<span class="ec-lmbx-10">定义 1.13 </span>(李群)<span class="ec-lmbx-10">.</span>  </span>一个李群 <span class="inline-math">\(G\)</span> 是一个集合，它同时满足以下性质：
+                                                                  
+
+                                                                  
+     </p><ol class="enumerate1">
+<li class="enumerate" id="x1-2009x1"><span class="inline-math">\(G\)</span> 是一个光滑流形；
+     </li>
+<li class="enumerate" id="x1-2011x2"><span class="inline-math">\(G\)</span> 是一个群；
+     </li>
+<li class="enumerate" id="x1-2013x3">
+     <!-- l. 72 --><p class="noindent">群运算是光滑的<span class="ec-lmri-10">. </span>具体而言，乘法映射 <span class="inline-math">\(\mu : G \times G \to G\)</span>
+     </p><!-- l. 73 --><p class="noindent"></p><div class="math-block">\[
+    \mu(g, h) = gh
+    \]</div>
+     <p></p><!-- l. 74 --><p class="noindent">和求逆映射 <span class="inline-math">\(\iota : G \to G\)</span>
+     </p><!-- l. 75 --><p class="noindent"></p><div class="math-block">\[
+    \iota(g) = g^{-1}
+    \]</div>
+     <p></p><!-- l. 76 --><p class="noindent">都是光滑映射<span class="ec-lmri-10">.</span></p></li></ol>
+   </div>
+<!-- l. 78 --><p class="indent">
+</p><!-- l. 80 --><p class="indent">   我们可以将乘法和求逆的光滑性条件合并为一个条件.
+</p>
+   <div class="newtheorem">
+<!-- l. 82 --><p class="noindent"><span class="head">
+<a id="x1-2014r10"></a>
+<span class="ec-lmbx-10">命题 1.10.</span>  </span>设 <span class="inline-math">\(G\)</span> 是一个光滑流形且具有群结构<span class="ec-lmri-10">. </span><span class="inline-math">\(G\)</span> 是李群当且仅当映射 <span class="inline-math">\(\Phi : G \times G \to G\)</span>
+</p><!-- l. 84 --><p class="indent">   </p><div class="math-block">\[
+\Phi(g, h) = gh^{-1}
+\]</div>
+<p></p><!-- l. 85 --><p class="indent">   是光滑的<span class="ec-lmri-10">.</span>
+</p>
+   </div>
+<!-- l. 86 --><p class="indent">
+</p>
+   <div class="proof">
+<!-- l. 89 --><p class="indent">   <span class="head">
+<span class="ec-lmri-10">证明.</span> </span>若 <span class="inline-math">\(G\)</span> 是李群，则 <span class="inline-math">\(\Phi(g, h) = \mu(g, \iota(h))\)</span>. 由于 <span class="inline-math">\(\mu\)</span> 和 <span class="inline-math">\(\iota\)</span> 是光滑的，且复合映射保持光滑性，故 <span class="inline-math">\(\Phi\)</span> 是光滑的. 反之，若 <span class="inline-math">\(\Phi\)</span> 是光滑的，取 <span class="inline-math">\(e\)</span> 为 <span class="inline-math">\(G\)</span> 的单位元. 求逆映射 <span class="inline-math">\(\iota(g) = e g^{-1} = \Phi(e, g)\)</span> 是光滑的（因为它是 <span class="inline-math">\(\Phi\)</span> 在第一分量固定为 <span class="inline-math">\(e\)</span> 时的限制）. 乘法映射 <span class="inline-math">\(\mu(g, h) = g (h^{-1})^{-1} = \Phi(g, h^{-1}) = \Phi(g, \iota(h))\)</span>. 由于 <span class="inline-math">\(\Phi\)</span> 和 <span class="inline-math">\(\iota\)</span> 光滑，故 <span class="inline-math">\(\mu\)</span> 光滑.                                                       □
+                                                                  
+
+                                                                  
+</p>
+   </div>
+   <div class="newtheorem">
+<!-- l. 92 --><p class="noindent"><span class="head">
+<a id="x1-2015r4"></a>
+<span class="ec-lmbx-10">例 1.4.</span>  </span>以下是一些基本的李群例子<span class="ec-lmri-10">.</span> </p>
+     <ul class="itemize1">
+     <li class="itemize">欧几里得空间<span class="ec-lmri-10">: </span><span class="inline-math">\(\mathbb{R}^n\)</span> 在向量加法下构成一个李群<span class="ec-lmri-10">. </span>其单位元是 <span class="inline-math">\(0\)</span>，逆元是 <span class="inline-math">\(-x\)</span><span class="ec-lmri-10">. </span>加法和取负显然是光滑的<span class="ec-lmri-10">.</span>
+     </li>
+     <li class="itemize">非零实数<span class="ec-lmbxi-10">/</span>复数群<span class="ec-lmri-10">: </span>乘法群 <span class="inline-math">\(\mathbb{R}^* = \mathbb{R} \setminus \{0\}\)</span> 和 <span class="inline-math">\(\mathbb{C}^* = \mathbb{C} \setminus \{0\}\)</span> 都是李群<span class="ec-lmri-10">.</span>
+     </li>
+     <li class="itemize">圆群<span class="ec-lmri-10">: </span><span class="inline-math">\(S^1 = \{z \in \mathbb{C} \mid |z| = 1\}\)</span> 是 <span class="inline-math">\(\mathbb{C}^*\)</span> 的子群，也是一个紧致李群<span class="ec-lmri-10">.</span>
+     </li>
+     <li class="itemize">一般线性群<span class="ec-lmri-10">: </span><span class="inline-math">\(\mathrm{GL}(n, \mathbb{R})\)</span> 是 <span class="inline-math">\(\mathbb{R}^{n \times n}\)</span> 的开子集（由 <span class="inline-math">\(\det A \neq 0\)</span> 定义），因此它自然是一个 <span class="inline-math">\(n^2\)</span> 维的光滑流形<span class="ec-lmri-10">. </span>矩阵乘法和求逆运算的分量都是矩阵元素的有理函数（分母为非零的行列式），因此是光滑的<span class="ec-lmri-10">.</span></li></ul>
+   </div>
+<!-- l. 100 --><p class="indent">
+</p>
+    
+ 

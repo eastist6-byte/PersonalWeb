@@ -1,0 +1,13 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Icon from '../components/Icon.astro';
+import ArticleRow from '../components/ArticleRow.astro';
+import DirectoryTree from '../components/DirectoryTree.astro';
+import {site} from '../lib/content';
+import {text,format} from '../lib/copy';
+---
+<Layout title={text.library.title} active="library"><div class="page-width">
+<header class="page-intro"><h1>{text.library.title}</h1><p>{text.library.description}</p></header>
+<div class="library-layout"><aside class="library-sidebar"><div class="sidebar-title">{text.library.directory}<span>{format(text.common.shortCount,{count:site.articles.length})}</span></div><button class="directory-filter is-active all-filter" data-directories="all"><Icon name="book" size={17}/>{text.common.allArticles}</button><DirectoryTree/><p class="sidebar-note">{text.library.searchNote}</p></aside>
+<section class="library-content" aria-label={text.library.listLabel}><label class="search-box"><Icon name="search"/><span class="sr-only">{text.library.searchLabel}</span><input id="library-search" type="search" placeholder={text.library.searchPlaceholder} autocomplete="off"/><kbd>/</kbd></label><div class="list-topline"><span id="filter-label">{text.common.allArticles}</span><span id="result-count">{format(text.common.articleCount,{count:site.articles.length})}</span></div><div id="library-list" class="article-list">{site.articles.map(a=><ArticleRow article={a}/>)}</div><div id="search-empty" class="empty-state" hidden><Icon name="search" size={30}/><h2>{text.library.emptyHeading}</h2><p>{text.library.emptyDescription}</p><button class="button quiet" id="search-reset">{text.library.reset}</button></div></section></div>
+</div></Layout>

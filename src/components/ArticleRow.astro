@@ -1,0 +1,11 @@
+---
+import Icon from './Icon.astro';
+import {url,date,directoryPath,type Article} from '../lib/content';
+interface Props {article:Article;index?:number;}
+const {article:a,index}=Astro.props;
+---
+<a class="article-row" href={url('articles/'+a.id+'/')} data-title={a.title+' '+a.summary} data-directory={a.directory}>
+  {index!==undefined&&<span class="row-number">{String(index+1).padStart(2,'0')}</span>}
+  <div class="row-content"><div class="meta"><span>{directoryPath(a.directory)}</span></div><h3>{a.title}</h3><p>{a.summary}</p><time datetime={String(a.date).slice(0,10)}>{date(a.date)}</time></div>
+  <span class="row-arrow"><Icon name="arrow" size={22}/></span>
+</a>

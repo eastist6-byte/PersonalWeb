@@ -1,0 +1,10 @@
+node_modules/
+work/
+outputs/
+.astro/
+.env
+.env.*
+*.db
+*.sqlite*
+credentials*
+public/media/
