@@ -1,105 +1,105 @@
 
    <h3 class="sectionHead" id="section-1"><span class="titlemark">1   </span> <a id="x1-10001"></a>李群及其表示</h3>
-<!-- l. 29 --><p class="noindent">
+<!-- l. 30 --><p class="noindent">
 </p>
    <h4 class="subsectionHead" id="section-2"><span class="titlemark">1.6   </span> <a id="x1-20001.6"></a>左不变向量场</h4>
-<!-- l. 30 --><p class="noindent">回到李群上来. 李群也是一个光滑流形.
+<!-- l. 31 --><p class="noindent">回到李群上来. 李群也是一个光滑流形.
 </p>
    <div class="newtheorem">
-<!-- l. 32 --><p class="noindent"><span class="head">
+<!-- l. 33 --><p class="noindent"><span class="head">
 <a id="x1-2001r22"></a>
 <span class="ec-lmbx-10">定义 1.22 </span>(左不变向量场)<span class="ec-lmbx-10">.</span>  </span>设 <span class="inline-math">\(G\)</span> 是一个李群<span class="ec-lmri-10">. </span>对任意 <span class="inline-math">\(g \in G\)</span>，定义左平移映射 <span class="inline-math">\(L_g: G \to G\)</span> 为 <span class="inline-math">\(L_g(h) = gh\)</span><span class="ec-lmri-10">. </span>一个光滑向量场 <span class="inline-math">\(X\)</span> 称为左不变向量场，如果对任意 <span class="inline-math">\(g, h \in G\)</span>，
-</p><!-- l. 34 --><p class="indent">   </p><div class="math-block">\[
+</p><!-- l. 35 --><p class="indent">   </p><div class="math-block">\[
 d_hL_g (X_h) = X_{gh},
 \]</div>
-<p></p><!-- l. 35 --><p class="indent">   其中 <span class="inline-math">\(d_hL_g\)</span> 是 <span class="inline-math">\(L_g\)</span> 在 <span class="inline-math">\(h\)</span> 处的切映射<span class="ec-lmri-10">. </span>等价地，左不变向量场由它在单位元 <span class="inline-math">\(e \in G\)</span> 处的值唯一决定：
-</p><!-- l. 36 --><p class="indent">   </p><div class="math-block">\[
+<p></p><!-- l. 36 --><p class="indent">   其中 <span class="inline-math">\(d_hL_g\)</span> 是 <span class="inline-math">\(L_g\)</span> 在 <span class="inline-math">\(h\)</span> 处的切映射<span class="ec-lmri-10">. </span>等价地，左不变向量场由它在单位元 <span class="inline-math">\(e \in G\)</span> 处的值唯一决定：
+</p><!-- l. 37 --><p class="indent">   </p><div class="math-block">\[
 X_g = d_eL_g (X_e), \quad \forall g \in G.
 \]</div>
 <p></p>
    </div>
-<!-- l. 37 --><p class="indent">
-</p><!-- l. 39 --><p class="indent">   左不变向量场可以看作由左平移映射生成的，只需要一点处确定则处处可以由左平移的切映射得到. 所以<span class="inline-math">\(G\)</span>上的左不变向量场完全由单位元处的切向量<span class="inline-math">\(X_1\)</span> 所确定，映射： <span class="inline-math">\(X\mapsto X_1\)</span>诱导了<span class="inline-math">\(G\)</span>左不变向量场的空间和<span class="inline-math">\(T_1G\)</span>的同构.
+<!-- l. 38 --><p class="indent">
+</p><!-- l. 40 --><p class="indent">   左不变向量场可以看作由左平移映射生成的，只需要一点处确定则处处可以由左平移的切映射得到. 所以<span class="inline-math">\(G\)</span>上的左不变向量场完全由单位元处的切向量<span class="inline-math">\(X_1\)</span> 所确定，映射： <span class="inline-math">\(X\mapsto X_1\)</span>诱导了<span class="inline-math">\(G\)</span>左不变向量场的空间和<span class="inline-math">\(T_1G\)</span>的同构.
 </p>
    <div class="newtheorem">
-<!-- l. 42 --><p class="noindent"><span class="head">
+<!-- l. 43 --><p class="noindent"><span class="head">
 <a id="x1-2002r23"></a>
 <span class="ec-lmbx-10">定义 1.23 </span>(向量场的作用)<span class="ec-lmbx-10">.</span>  </span>设 <span class="inline-math">\( M \)</span> 为光滑流形，<span class="inline-math">\(\Gamma(TM)\)</span>为<span class="inline-math">\(M\)</span>上的全体光滑向量场<span class="ec-lmri-10">. </span>每个向量场<span class="inline-math">\(X\in\Gamma(TM)\)</span>可以视为一个映射
-</p><!-- l. 44 --><p class="indent">   </p><div class="math-block">\[
+</p><!-- l. 45 --><p class="indent">   </p><div class="math-block">\[
 X : C^\infty(M) \to C^\infty(M),
 \]</div>
-<p></p><!-- l. 45 --><p class="indent">   其定义为：对任意 <span class="inline-math">\( p \in M \)</span> 和 <span class="inline-math">\( f \in C^\infty(M) \)</span>，
-</p><!-- l. 46 --><p class="indent">   </p><div class="math-block">\[
+<p></p><!-- l. 46 --><p class="indent">   其定义为：对任意 <span class="inline-math">\( p \in M \)</span> 和 <span class="inline-math">\( f \in C^\infty(M) \)</span>，
+</p><!-- l. 47 --><p class="indent">   </p><div class="math-block">\[
 (Xf)(p) := X_p(f),
 \]</div>
-<p></p><!-- l. 47 --><p class="indent">   其中 <span class="inline-math">\( X_p \in T_pM \)</span> 作为切向量作用于光滑函数 <span class="inline-math">\( f \)</span> 得到实数 <span class="inline-math">\( X_p(f) \)</span><span class="ec-lmri-10">. </span>在局部坐标 <span class="inline-math">\( (U, (x^1, \dots, x^n)) \)</span> 下，若 <span class="inline-math">\( X \)</span> 的局部表达式为
-</p><!-- l. 48 --><p class="indent">   </p><div class="math-block">\[
+<p></p><!-- l. 48 --><p class="indent">   其中 <span class="inline-math">\( X_p \in T_pM \)</span> 作为切向量作用于光滑函数 <span class="inline-math">\( f \)</span> 得到实数 <span class="inline-math">\( X_p(f) \)</span><span class="ec-lmri-10">. </span>在局部坐标 <span class="inline-math">\( (U, (x^1, \dots, x^n)) \)</span> 下，若 <span class="inline-math">\( X \)</span> 的局部表达式为
+</p><!-- l. 49 --><p class="indent">   </p><div class="math-block">\[
 X = X^i \frac{\partial}{\partial x^i},
 \]</div>
-<p></p><!-- l. 49 --><p class="indent">   则对任意 <span class="inline-math">\( f \in C^\infty(M) \)</span>，
-</p><!-- l. 50 --><p class="indent">   </p><div class="math-block">\[
+<p></p><!-- l. 50 --><p class="indent">   则对任意 <span class="inline-math">\( f \in C^\infty(M) \)</span>，
+</p><!-- l. 51 --><p class="indent">   </p><div class="math-block">\[
 (Xf)(p) = X^i_p \left. \frac{\partial f}{\partial x^i} \right|_p,
 \]</div>
-<p></p><!-- l. 51 --><p class="indent">   这里 <span class="inline-math">\( \frac{\partial f}{\partial x^i} \)</span> 理解为复合函数 <span class="inline-math">\( f \circ \phi^{-1} : \phi(U) \to \mathbb{R} \)</span> 关于第 <span class="inline-math">\( i \)</span> 个坐标变量的偏导数<span class="ec-lmri-10">.</span>
+<p></p><!-- l. 52 --><p class="indent">   这里 <span class="inline-math">\( \frac{\partial f}{\partial x^i} \)</span> 理解为复合函数 <span class="inline-math">\( f \circ \phi^{-1} : \phi(U) \to \mathbb{R} \)</span> 关于第 <span class="inline-math">\( i \)</span> 个坐标变量的偏导数<span class="ec-lmri-10">.</span>
 </p>
    </div>
-<!-- l. 52 --><p class="indent">
-</p><!-- l. 54 --><p class="indent">   向量场的作用可理解为按某点的向量对函数求全微分后“点乘”. 左不变向量场对函数的作用有如下性质：
+<!-- l. 53 --><p class="indent">
+</p><!-- l. 55 --><p class="indent">   向量场的作用可理解为按某点的向量对函数求全微分后“点乘”. 左不变向量场对函数的作用有如下性质：
                                                                   
 
                                                                   
 </p>
    <div class="newtheorem">
-<!-- l. 57 --><p class="noindent"><span class="head">
+<!-- l. 58 --><p class="noindent"><span class="head">
 <a id="x1-2003r14"></a>
 <span class="ec-lmbx-10">命题 1.14.</span>  </span>设 <span class="inline-math">\(G\)</span> 是一个李群，<span class="inline-math">\(\mathfrak{g} = T_e G\)</span> 为其李代数<span class="ec-lmri-10">. </span>对任意左不变向量场 <span class="inline-math">\(X \in \mathfrak{g}\)</span>（即 <span class="inline-math">\(X_g = d(L_g)_e(X_e)\)</span>）以及任意光滑函数 <span class="inline-math">\(f: G \to \mathbb{R}\)</span>，下列等式成立：
-</p><!-- l. 59 --><p class="indent">   </p><div class="math-block">\[
+</p><!-- l. 60 --><p class="indent">   </p><div class="math-block">\[
 (Xf)(g) = X_g(f) = X_e(f \circ L_g), \qquad \forall g \in G.
 \]</div>
 <p></p>
    </div>
-<!-- l. 60 --><p class="indent">
+<!-- l. 61 --><p class="indent">
 </p>
    <div class="proof">
-<!-- l. 63 --><p class="indent">   <span class="head">
+<!-- l. 64 --><p class="indent">   <span class="head">
 <span class="ec-lmri-10">证明.</span> </span>由方向导数的定义，对任意切向量 <span class="inline-math">\(v \in T_g G\)</span>，<span class="inline-math">\(v(f) = \frac{d}{dt}\big|_{t=0} f(\gamma(t))\)</span>，其中 <span class="inline-math">\(\gamma(t)\)</span> 是任意满足 <span class="inline-math">\(\gamma(0)=g,\ \dot\gamma(0)=v\)</span> 的光滑曲线.
-</p><!-- l. 65 --><p class="indent">   取 <span class="inline-math">\(v = X_g\)</span>. 由于 <span class="inline-math">\(X\)</span> 左不变，有 <span class="inline-math">\(X_g = d(L_g)_e(X_e)\)</span>. 令 <span class="inline-math">\(\gamma_0(t)\)</span> 是 <span class="inline-math">\(G\)</span> 中满足 <span class="inline-math">\(\gamma_0(0)=e,\ \gamma_0^{\prime}(0)=X_e\)</span> 的积分曲线（例如 <span class="inline-math">\(\gamma_0(t)=\exp(tX_e)\)</span>）. 则曲线 <span class="inline-math">\(\gamma(t) = L_g(\gamma_0(t)) = g\gamma_0(t)\)</span> 满足 <span class="inline-math">\(\gamma(0)=g\)</span>，且由切映射的定义，
-</p><!-- l. 66 --><p class="indent">   </p><div class="math-block">\[
+</p><!-- l. 66 --><p class="indent">   取 <span class="inline-math">\(v = X_g\)</span>. 由于 <span class="inline-math">\(X\)</span> 左不变，有 <span class="inline-math">\(X_g = d(L_g)_e(X_e)\)</span>. 令 <span class="inline-math">\(\gamma_0(t)\)</span> 是 <span class="inline-math">\(G\)</span> 中满足 <span class="inline-math">\(\gamma_0(0)=e,\ \gamma_0^{\prime}(0)=X_e\)</span> 的积分曲线（例如 <span class="inline-math">\(\gamma_0(t)=\exp(tX_e)\)</span>）. 则曲线 <span class="inline-math">\(\gamma(t) = L_g(\gamma_0(t)) = g\gamma_0(t)\)</span> 满足 <span class="inline-math">\(\gamma(0)=g\)</span>，且由切映射的定义，
+</p><!-- l. 67 --><p class="indent">   </p><div class="math-block">\[
 \gamma^{\prime}(0) = d(L_g)_e(\gamma_0^{\prime}(0)) = d(L_g)_e(X_e) = X_g.
 \]</div>
-<p></p><!-- l. 67 --><p class="indent">   因此，可以用此曲线计算方向导数：
-</p><!-- l. 68 --><p class="indent">   </p><div class="math-block">\[
+<p></p><!-- l. 68 --><p class="indent">   因此，可以用此曲线计算方向导数：
+</p><!-- l. 69 --><p class="indent">   </p><div class="math-block">\[
 X_g(f) = \frac{d}{dt}\bigg|_{t=0} f(\gamma(t)) = \frac{d}{dt}\bigg|_{t=0} f(g\gamma_0(t)).
 \]</div>
-<p></p><!-- l. 69 --><p class="indent">   另一方面，考虑函数 <span class="inline-math">\(f \circ L_g: G \to \mathbb{R}\)</span>，其在单位元 <span class="inline-math">\(e\)</span> 处沿 <span class="inline-math">\(X_e\)</span> 的方向导数为
-</p><!-- l. 70 --><p class="indent">   </p><div class="math-block">\[
+<p></p><!-- l. 70 --><p class="indent">   另一方面，考虑函数 <span class="inline-math">\(f \circ L_g: G \to \mathbb{R}\)</span>，其在单位元 <span class="inline-math">\(e\)</span> 处沿 <span class="inline-math">\(X_e\)</span> 的方向导数为
+</p><!-- l. 71 --><p class="indent">   </p><div class="math-block">\[
 X_e(f \circ L_g) = \frac{d}{dt}\bigg|_{t=0} (f \circ L_g)(\gamma_0(t)) = \frac{d}{dt}\bigg|_{t=0} f(g\gamma_0(t)).
 \]</div>
-<p></p><!-- l. 71 --><p class="indent">   比较两式即得 <span class="inline-math">\(X_g(f) = X_e(f \circ L_g)\)</span>. 而 <span class="inline-math">\(X_g(f) = (Xf)(g)\)</span> 是标准记号.                                                                                            □
+<p></p><!-- l. 72 --><p class="indent">   比较两式即得 <span class="inline-math">\(X_g(f) = X_e(f \circ L_g)\)</span>. 而 <span class="inline-math">\(X_g(f) = (Xf)(g)\)</span> 是标准记号.                                                                                            □
 </p>
    </div>
    <div class="newtheorem">
-<!-- l. 74 --><p class="noindent"><span class="head">
+<!-- l. 75 --><p class="noindent"><span class="head">
 <a id="x1-2004r24"></a>
 <span class="ec-lmbx-10">定义 1.24 </span>(李括号)<span class="ec-lmbx-10">.</span>  </span>给定光滑流形<span class="inline-math">\(M\)</span>上的两个向量场<span class="inline-math">\(X,Y\)</span>及光滑函数<span class="inline-math">\(f\in C^{\infty}(M)\)</span>，其李括号为光滑向量场<span class="inline-math">\([X,Y]\)</span>，作用于光滑函数的形式如下：
-</p><!-- l. 76 --><p class="indent">   </p><div class="math-block">\[[X,Y](f):=X(Y(f))-Y(X(f)). \]</div>
+</p><!-- l. 77 --><p class="indent">   </p><div class="math-block">\[[X,Y](f):=X(Y(f))-Y(X(f)). \]</div>
 <p></p>
    </div>
-<!-- l. 77 --><p class="indent">
-</p><!-- l. 79 --><p class="indent">   两个向量场的李括号是按照其作用定义的，单纯地从定义来看，我们不能断言其“是光滑向量场”. 下面来补充说明这一点.
+<!-- l. 78 --><p class="indent">
+</p><!-- l. 80 --><p class="indent">   两个向量场的李括号是按照其作用定义的，单纯地从定义来看，我们不能断言其“是光滑向量场”. 下面来补充说明这一点.
 </p>
    <div class="newtheorem">
-<!-- l. 81 --><p class="noindent"><span class="head">
+<!-- l. 82 --><p class="noindent"><span class="head">
 <a id="x1-2005r3"></a>
                                                                   
 
                                                                   
 <span class="ec-lmbx-10">注 1.3.</span>  </span>
-</p><!-- l. 83 --><p class="indent">   <span class="ec-lmbxi-10">1.</span>验证导子性质： 对任意 <span class="inline-math">\(f,g \in C^\infty(M), a,b \in \mathbb{R}\)</span>， </p>
+</p><!-- l. 84 --><p class="indent">   <span class="ec-lmbxi-10">1.</span>验证导子性质： 对任意 <span class="inline-math">\(f,g \in C^\infty(M), a,b \in \mathbb{R}\)</span>， </p>
      <ul class="itemize1">
      <li class="itemize">
-     <!-- l. 86 --><p class="noindent">线性：
-     </p><!-- l. 87 --><p class="noindent"></p><div class="math-block">\[
+     <!-- l. 87 --><p class="noindent">线性：
+     </p><!-- l. 88 --><p class="noindent"></p><div class="math-block">\[
 \begin{aligned}
 [X,Y](af+bg) &amp;= X(Y(af+bg))-Y(X(af+bg)) \\
 &amp;= aX(Y(f))+bX(Y(g))-aY(X(f))-bY(X(g)) \\
@@ -108,8 +108,8 @@ X_e(f \circ L_g) = \frac{d}{dt}\bigg|_{t=0} (f \circ L_g)(\gamma_0(t)) = \frac{d
 \]</div>
      <p></p></li>
      <li class="itemize">
-     <!-- l. 88 --><p class="noindent">莱布尼兹律：
-     </p><!-- l. 89 --><p class="noindent"></p><div class="math-block">\[
+     <!-- l. 89 --><p class="noindent">莱布尼兹律：
+     </p><!-- l. 90 --><p class="noindent"></p><div class="math-block">\[
 \begin{aligned}
 [X,Y](fg) &amp;= X(Y(fg))-Y(X(fg)) \\
 &amp;= X(fY(g)+gY(f)) - Y(fX(g)+gX(f)) \\
@@ -121,27 +121,27 @@ X_e(f \circ L_g) = \frac{d}{dt}\bigg|_{t=0} (f \circ L_g)(\gamma_0(t)) = \frac{d
 \]</div>
 <p></p>
      </li></ul>
-<!-- l. 91 --><p class="noindent">所以<span class="inline-math">\([X,Y]\)</span>是<span class="inline-math">\(C^\infty(M)\)</span>上的一个导子<span class="ec-lmri-10">. </span>在微分几何中，光滑流形上的导子与光滑向量场一一对应（导子对应向量场的点态作用）<span class="ec-lmri-10">. </span>因此存在唯一的向量场 <span class="inline-math">\(Z\)</span> 使得 <span class="inline-math">\(Z(f)=[X,Y](f)\)</span> 对所有 <span class="inline-math">\(f\)</span> 成立<span class="ec-lmri-10">.</span>
-</p><!-- l. 93 --><p class="indent">   <span class="ec-lmbxi-10">2. </span>光滑性的局部坐标验证： 取局部坐标卡 <span class="inline-math">\((U, (x^1,\dots,x^n))\)</span>，设
-</p><!-- l. 95 --><p class="indent">   </p><div class="math-block">\[
+<!-- l. 92 --><p class="noindent">所以<span class="inline-math">\([X,Y]\)</span>是<span class="inline-math">\(C^\infty(M)\)</span>上的一个导子<span class="ec-lmri-10">. </span>在微分几何中，光滑流形上的导子与光滑向量场一一对应（导子对应向量场的点态作用）<span class="ec-lmri-10">. </span>因此存在唯一的向量场 <span class="inline-math">\(Z\)</span> 使得 <span class="inline-math">\(Z(f)=[X,Y](f)\)</span> 对所有 <span class="inline-math">\(f\)</span> 成立<span class="ec-lmri-10">.</span>
+</p><!-- l. 94 --><p class="indent">   <span class="ec-lmbxi-10">2. </span>光滑性的局部坐标验证： 取局部坐标卡 <span class="inline-math">\((U, (x^1,\dots,x^n))\)</span>，设
+</p><!-- l. 96 --><p class="indent">   </p><div class="math-block">\[
 X = \sum_{i=1}^n X^i \frac{\partial}{\partial x^i},\qquad Y = \sum_{j=1}^n Y^j \frac{\partial}{\partial x^j},
 \]</div>
-<p></p><!-- l. 96 --><p class="indent">   其中 <span class="inline-math">\(X^i, Y^j \in C^\infty(U)\)</span><span class="ec-lmri-10">. </span>对任意 <span class="inline-math">\(f \in C^\infty(M)\)</span>，计算
-</p><!-- l. 97 --><p class="indent">   </p><div class="math-block">\[
+<p></p><!-- l. 97 --><p class="indent">   其中 <span class="inline-math">\(X^i, Y^j \in C^\infty(U)\)</span><span class="ec-lmri-10">. </span>对任意 <span class="inline-math">\(f \in C^\infty(M)\)</span>，计算
+</p><!-- l. 98 --><p class="indent">   </p><div class="math-block">\[
 \begin{aligned}
 [X,Y]f &amp;= X(Y(f)) - Y(X(f)) \\
 &amp;= X\left( \sum_j Y^j \frac{\partial f}{\partial x^j} \right) - Y\left( \sum_i X^i \frac{\partial f}{\partial x^i} \right) \\
 &amp;= \sum_{i,j} X^i \frac{\partial}{\partial x^i}\left( Y^j \frac{\partial f}{\partial x^j} \right) - \sum_{j,i} Y^j \frac{\partial}{\partial x^j}\left( X^i \frac{\partial f}{\partial x^i} \right).
 \end{aligned}
 \]</div>
-<p></p><!-- l. 98 --><p class="indent">   利用乘积法则展开，注意到混合偏导项 <span class="inline-math">\(\frac{\partial^2 f}{\partial x^i \partial x^j}\)</span> 在两项中会相互抵消，最终得到
-</p><!-- l. 99 --><p class="indent">   </p><div class="math-block">\[
+<p></p><!-- l. 99 --><p class="indent">   利用乘积法则展开，注意到混合偏导项 <span class="inline-math">\(\frac{\partial^2 f}{\partial x^i \partial x^j}\)</span> 在两项中会相互抵消，最终得到
+</p><!-- l. 100 --><p class="indent">   </p><div class="math-block">\[
 [X,Y]f = \sum_{i=1}^n \left( X(Y^i) - Y(X^i) \right) \frac{\partial f}{\partial x^i}.
 \]</div>
-<p></p><!-- l. 100 --><p class="indent">   记 <span class="inline-math">\(Z^i = X(Y^i)-Y(X^i) \in C^\infty(U)\)</span>，则 <span class="inline-math">\([X,Y]\big|_U = \sum_i Z^i \frac{\partial}{\partial x^i}\)</span><span class="ec-lmri-10">. </span>由于 <span class="inline-math">\(Z^i\)</span> 光滑，<span class="inline-math">\(\sum_i Z^i \frac{\partial}{\partial x^i}\)</span> 是 <span class="inline-math">\(U\)</span> 上的光滑向量场<span class="ec-lmri-10">. </span>不同坐标卡上的表示通过向量场变换规则相容，因此 <span class="inline-math">\([X,Y]\)</span> 整体是 <span class="inline-math">\(M\)</span> 上的光滑向量场<span class="ec-lmri-10">.</span>
+<p></p><!-- l. 101 --><p class="indent">   记 <span class="inline-math">\(Z^i = X(Y^i)-Y(X^i) \in C^\infty(U)\)</span>，则 <span class="inline-math">\([X,Y]\big|_U = \sum_i Z^i \frac{\partial}{\partial x^i}\)</span><span class="ec-lmri-10">. </span>由于 <span class="inline-math">\(Z^i\)</span> 光滑，<span class="inline-math">\(\sum_i Z^i \frac{\partial}{\partial x^i}\)</span> 是 <span class="inline-math">\(U\)</span> 上的光滑向量场<span class="ec-lmri-10">. </span>不同坐标卡上的表示通过向量场变换规则相容，因此 <span class="inline-math">\([X,Y]\)</span> 整体是 <span class="inline-math">\(M\)</span> 上的光滑向量场<span class="ec-lmri-10">.</span>
 </p>
    </div>
-<!-- l. 101 --><p class="indent">
+<!-- l. 102 --><p class="indent">
 </p>
     
  

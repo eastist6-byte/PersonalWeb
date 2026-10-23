@@ -13,11 +13,16 @@ if(search) {
   document.querySelector('#search-reset')?.addEventListener('click',reset);
   document.addEventListener('keydown',e=>{if(e.key==='/'&&!['INPUT','TEXTAREA'].includes((e.target as HTMLElement).tagName)){e.preventDefault();search.focus();}});
 }
+let tocObserver:IntersectionObserver|undefined;
 function prepareToc(){
+  tocObserver?.disconnect();
   const details=document.querySelector<HTMLDetailsElement>('.toc');
   if(details&&window.matchMedia('(max-width: 900px)').matches)details.open=false;
   const links=[...document.querySelectorAll<HTMLAnchorElement>('.toc-link')];
-  const observer=new IntersectionObserver(entries=>{for(const entry of entries)if(entry.isIntersecting)links.forEach(a=>a.classList.toggle('is-current',a.hash==='#'+entry.target.id));},{rootMargin:'-100px 0px -65% 0px'});
-  document.querySelectorAll('.tex-prose h3,.tex-prose h4,.tex-prose h5').forEach(el=>observer.observe(el));
+  const mark=(hash:string)=>links.forEach(a=>{const current=a.hash===hash;a.classList.toggle('is-current',current);if(current)a.setAttribute('aria-current','location');else a.removeAttribute('aria-current');});
+  links.forEach(a=>a.addEventListener('click',()=>{if(details&&window.matchMedia('(max-width: 900px)').matches)details.open=false;mark(a.hash);}));
+  if(location.hash)mark(location.hash);
+  tocObserver=new IntersectionObserver(entries=>{for(const entry of entries)if(entry.isIntersecting)mark('#'+entry.target.id);},{rootMargin:'-100px 0px -65% 0px'});
+  document.querySelectorAll('.tex-prose h3,.tex-prose h4,.tex-prose h5').forEach(el=>tocObserver!.observe(el));
 }
 prepareToc();document.addEventListener('article-ready',prepareToc);

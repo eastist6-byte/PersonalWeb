@@ -1,13 +1,18 @@
 {
   "id": "lie-manifolds",
-  "hash": "372e9483a6e12c63acb60bc8acdcfc234875511aa97ba8a1f0ef7735235f3a5e",
+  "hash": "0c0b81eee17209215b0a7483354e948ae012a5352268dd6df2a2f74caa36ab6f",
+  "pdfHash": "126362e86bc8fbf2aadaef407da8302075bfc8a8621742421c35bad39c77bcb6",
+  "pdfReferences": {},
   "validatedMaths": 85,
   "validationVersion": "mathjax-4.1.3-adapter-1",
   "sections": 2,
+  "sectionHeadings": 2,
+  "bibliographies": 0,
   "definitions": 6,
   "actualDefinitions": 6,
   "maths": 85,
   "diagrams": 0,
+  "numberingVerified": true,
   "converted": true,
-  "generatedAt": "2026-10-11T09:10:06.454Z"
+  "generatedAt": "2026-10-23T15:06:11.991Z"
 }

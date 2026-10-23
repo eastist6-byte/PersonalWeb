@@ -1,9 +1,9 @@
 import {defineConfig} from '@playwright/test';
 import fs from 'node:fs';
-const port=Number(process.env.TEST_PORT??4334);
+const port=Number(process.env.TEST_PORT??4434);
 const build=JSON.parse(fs.readFileSync('work/generated/build.json','utf8'));
 export default defineConfig({
-  testDir:'./tests',testMatch:'pages.spec.ts',workers:1,
+  testDir:'./tests',testMatch:['pages.spec.ts','article-navigation.spec.ts'],workers:1,
   outputDir:'./work/tests/browser',
   reporter:[['list'],['json',{outputFile:'./work/qa/browser-tests.json'}]],
   use:{channel:'chrome',baseURL:'http://127.0.0.1:'+port+build.base,

@@ -45,3 +45,14 @@
 .chapter-navigation span{font:500 18px/1.6 var(--serif)}
 .chapter-next{text-align:right}
 @media(max-width:700px){.chapter-navigation{gap:12px;margin-top:25px}.chapter-navigation a{padding:15px 13px}.chapter-navigation span{font-size:15px}.chapter-navigation small{font-size:11px}}
+
+/* Long articles: scrollable three-level navigation and unobscured anchors. */
+.toc-subsub{padding-left:22px;font-size:9px}
+.tex-prose :is(h3,h4,h5,[id]){scroll-margin-top:112px}
+.tex-prose h5{font-size:17px;font-weight:600;margin:25px 0 15px;line-height:1.8}
+.tex-prose .figure{margin:24px 0;text-align:center}
+.tex-prose .figure .caption{font:12px/1.8 var(--sans);color:var(--muted)}
+.tex-prose .thebibliography{text-align:left;font-size:14px;line-height:1.9}
+@media(min-width:901px){.reading-sidebar{max-height:calc(100dvh - 145px);overflow-y:auto;overscroll-behavior-y:contain;scrollbar-width:thin}}
+@media(max-width:900px){.toc nav{max-height:50dvh;overflow-y:auto;overscroll-behavior-y:contain}}
+@media(max-width:700px){.tex-prose :is(h3,h4,h5,[id]){scroll-margin-top:92px}}

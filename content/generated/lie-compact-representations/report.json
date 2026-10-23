@@ -1,13 +1,18 @@
 {
   "id": "lie-compact-representations",
-  "hash": "14e91884ff2278e8ac70a5238ddd36413ee89c6847664aafb5a4b587596a4550",
+  "hash": "fa18134beb4e7190f84baa59441778f4d3cca2ea382604b42543f7c6af8571a9",
+  "pdfHash": "845fa46141ed9f8ad0dc54eee08345eee460bdfb5a54b520f2711a48e37ce672",
+  "pdfReferences": {},
   "validatedMaths": 55,
   "validationVersion": "mathjax-4.1.3-adapter-1",
   "sections": 2,
+  "sectionHeadings": 2,
+  "bibliographies": 0,
   "definitions": 6,
   "actualDefinitions": 6,
   "maths": 55,
   "diagrams": 0,
+  "numberingVerified": true,
   "converted": true,
-  "generatedAt": "2026-10-11T09:12:11.197Z"
+  "generatedAt": "2026-10-23T15:07:20.478Z"
 }

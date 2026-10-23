@@ -27,12 +27,13 @@ test('文库搜索与清除筛选工作正常',async({page})=>{
   await page.goto('library/');
   await expect(page.locator('.article-row')).toHaveCount(manifest.articles.length);
   const input=page.locator('#library-search');
-  await input.fill('切丛');await expect(page.locator('.article-row:visible')).toHaveCount(1);
+  await input.fill('切丛');await expect(page.locator('.article-row:visible')).toHaveCount(manifest.articles.filter(a=>(a.title+' '+a.summary).includes('切丛')).length);
   await input.fill('不存在的关键词');await expect(page.locator('.article-row:visible')).toHaveCount(0);
   await page.locator('#search-reset').click();
   await expect(page.locator('.article-row:visible')).toHaveCount(manifest.articles.length);
 });
 test('每篇文章的公式、图示、目录和下载均可用',async({page,request})=>{
+  test.setTimeout(Math.max(120000,manifest.articles.length*6000));
   const errors:string[]=[];page.on('pageerror',e=>errors.push(e.message));
   let maths=0,diagrams=0;
   for(const a of manifest.articles){

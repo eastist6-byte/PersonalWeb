@@ -1,7 +1,11 @@
 nodes:
+  - id: mathematics
+    title: 数学
+    description: 数学文章与笔记。
   - id: lie-groups
     title: 李群和李代数
     description: 李群与李代数笔记，按原稿章节和主题整理。
+    parent: mathematics
 accessGroups: []
 articles:
   - id: lie-so3
@@ -9,7 +13,7 @@ articles:
     summary: 特殊正交群、切向量、伴随作用及李括号。
     directory: lie-groups
     date: 2026-10-11
-    source: articles/lie-groups/lie-so3/main.tex
+    source: articles/lie-so3/main.tex
     status: published
     demo: false
     attachments: []
@@ -18,7 +22,7 @@ articles:
     summary: 矩阵指数的级数定义、基本性质及其与李群的关系。
     directory: lie-groups
     date: 2026-10-11
-    source: articles/lie-groups/lie-matrix-series/main.tex
+    source: articles/lie-matrix-series/main.tex
     status: published
     demo: false
     attachments: []
@@ -27,7 +31,7 @@ articles:
     summary: 闭线性群的定义、常见例子及相应李代数。
     directory: lie-groups
     date: 2026-10-11
-    source: articles/lie-groups/lie-closed-linear-groups/main.tex
+    source: articles/lie-closed-linear-groups/main.tex
     status: published
     demo: false
     attachments: []
@@ -36,7 +40,7 @@ articles:
     summary: 拓扑流形、光滑结构、光滑映射和李群的定义。
     directory: lie-groups
     date: 2026-10-11
-    source: articles/lie-groups/lie-manifolds/main.tex
+    source: articles/lie-manifolds/main.tex
     status: published
     demo: false
     attachments: []
@@ -45,7 +49,7 @@ articles:
     summary: 闭线性群的流形结构、相关定理及交换图。
     directory: lie-groups
     date: 2026-10-11
-    source: articles/lie-groups/lie-linear-groups-as-lie-groups/main.tex
+    source: articles/lie-linear-groups-as-lie-groups/main.tex
     status: published
     demo: false
     attachments: []
@@ -54,7 +58,7 @@ articles:
     summary: 映射芽、拉回、切映射、向量丛、截面与切丛。
     directory: lie-groups
     date: 2026-10-11
-    source: articles/lie-groups/lie-tangent-bundles/main.tex
+    source: articles/lie-tangent-bundles/main.tex
     status: published
     demo: false
     attachments: []
@@ -63,7 +67,7 @@ articles:
     summary: 左不变向量场对函数的作用，以及向量场的李括号。
     directory: lie-groups
     date: 2026-10-11
-    source: articles/lie-groups/lie-invariant-fields/main.tex
+    source: articles/lie-invariant-fields/main.tex
     status: published
     demo: false
     attachments: []
@@ -72,7 +76,7 @@ articles:
     summary: 李代数的定义、左不变向量场李代数及矩阵李代数的联系。
     directory: lie-groups
     date: 2026-10-11
-    source: articles/lie-groups/lie-algebras/main.tex
+    source: articles/lie-algebras/main.tex
     status: published
     demo: false
     attachments: []
@@ -81,7 +85,7 @@ articles:
     summary: 李群同态诱导的李代数同态、指数映射及相关性质。
     directory: lie-groups
     date: 2026-10-11
-    source: articles/lie-groups/lie-homomorphisms/main.tex
+    source: articles/lie-homomorphisms/main.tex
     status: published
     demo: false
     attachments: []
@@ -90,7 +94,16 @@ articles:
     summary: 群表示、特征标、正交关系和 Frobenius–Schur 指标。保留原稿尚未完成的 Haar 积分小节。
     directory: lie-groups
     date: 2026-10-11
-    source: articles/lie-groups/lie-compact-representations/main.tex
+    source: articles/lie-compact-representations/main.tex
+    status: published
+    demo: false
+    attachments: []
+  - id: matrix-diagonalization
+    title: 浅谈矩阵的对角化
+    summary: 从斐波那契数列和椭圆方程出发，讨论矩阵表示、相似与合同、递推解空间和正交对角化。
+    directory: mathematics
+    date: 2026-10-23
+    source: articles/matrix-diagonalization/main.tex
     status: published
     demo: false
     attachments: []

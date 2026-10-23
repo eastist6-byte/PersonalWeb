@@ -1,0 +1,773 @@
+
+   <h3 class="sectionHead" id="section-1"><span class="titlemark">1   </span> <a id="x1-10001"></a>两个例子</h3>
+<!-- l. 26 --><p class="noindent">本文谈谈两个和矩阵对角化例子相关的问题。问题的做法是普遍知晓的，但是做法的合理性和背景值得提出来。需要的前置知识是线性代数和解析几何。
+</p><!-- l. 28 --><p class="noindent">
+</p>
+   <h4 class="subsectionHead" id="section-2"><span class="titlemark">1.1   </span> <a id="x1-20001.1"></a>求斐波那契数列的通项</h4>
+   <div class="newtheorem">
+<!-- l. 29 --><p class="noindent"><span class="head">
+<a id="x1-2001r1"></a>
+<span class="ec-lmbx-10">例 1.1 </span>(斐波那契数列的通项)<span class="ec-lmbx-10">.</span>  </span>设斐波那契数列满足 <span class="inline-math">\(F_0=0,\ F_1=1\)</span>，且
+</p><!-- l. 31 --><p class="indent">   </p><div class="math-block">\[
+F_{n+1}=F_n+F_{n-1}\qquad(n\geqslant1).
+\]</div>
+<p></p><!-- l. 32 --><p class="indent">   求 <span class="inline-math">\(F_n\)</span> 的通项公式。
+</p>
+   </div>
+<!-- l. 33 --><p class="indent">
+</p>
+   <div class="proof">
+<!-- l. 35 --><p class="indent">   <span class="head">
+<span class="ec-lmri-10">解.</span> </span> 递推式可以用矩阵乘法表示为
+</p><!-- l. 37 --><p class="indent">   </p><div class="math-block">\[
+\begin{pmatrix}F_{n+1}\\F_n\end{pmatrix}
+=
+\begin{pmatrix}1&amp;1\\1&amp;0\end{pmatrix}
+\begin{pmatrix}F_n\\F_{n-1}\end{pmatrix}.
+\]</div>
+<p></p><!-- l. 38 --><p class="indent">   记
+</p><!-- l. 39 --><p class="indent">   </p><div class="math-block">\[
+A=\begin{pmatrix}1&amp;1\\1&amp;0\end{pmatrix},
+\]</div>
+<p></p><!-- l. 40 --><p class="indent">   则
+<a id="x1-2002r1"></a>
+</p><!-- l. 41 --><p class="indent">   </p><div class="math-block">\[
+\begin{pmatrix}F_{n+1}\\F_n\end{pmatrix}
+=A\begin{pmatrix}F_n\\F_{n-1}\end{pmatrix}
+=\cdots
+=A^n\begin{pmatrix}F_1\\F_0\end{pmatrix}
+=A^n\begin{pmatrix}1\\0\end{pmatrix}.
+\tag{1.1}\]</div>
+<p></p><!-- l. 42 --><p class="indent">   问题转化为求矩阵 <span class="inline-math">\(A\)</span> 的 <span class="inline-math">\(n\)</span> 次幂。计算特征多项式，
+</p><!-- l. 43 --><p class="indent">   </p><div class="math-block">\[
+f_A(t)=
+\begin{vmatrix}t-1&amp;-1\\-1&amp;t\end{vmatrix}
+=t^2-t-1
+=\left(t-\frac{1+\sqrt5}{2}\right)
+ \left(t-\frac{1-\sqrt5}{2}\right).
+\]</div>
+<p></p><!-- l. 44 --><p class="indent">   两个不同的特征值为
+</p><!-- l. 45 --><p class="indent">   </p><div class="math-block">\[
+\lambda_1=\frac{1+\sqrt5}{2},\qquad
+\lambda_2=\frac{1-\sqrt5}{2}.
+\]</div>
+<p></p><!-- l. 46 --><p class="indent">   解 <span class="inline-math">\((A-\lambda_i I)\eta=0\)</span>，可分别取特征向量
+</p><!-- l. 47 --><p class="indent">   </p><div class="math-block">\[
+\eta_1=\begin{pmatrix}\lambda_1\\1\end{pmatrix},
+\qquad
+\eta_2=\begin{pmatrix}\lambda_2\\1\end{pmatrix}.
+\]</div>
+<p></p><!-- l. 48 --><p class="indent">   将它们按列排成
+</p><!-- l. 49 --><p class="indent">   </p><div class="math-block">\[
+T=(\eta_1,\eta_2)
+=\begin{pmatrix}\lambda_1&amp;\lambda_2\\1&amp;1\end{pmatrix},
+\qquad
+T^{-1}=\frac1{\lambda_1-\lambda_2}
+\begin{pmatrix}1&amp;-\lambda_2\\-1&amp;\lambda_1\end{pmatrix}.
+\]</div>
+<p></p><!-- l. 50 --><p class="indent">   由 <span class="inline-math">\(A\eta_i=\lambda_i\eta_i\)</span>，得到
+</p><!-- l. 51 --><p class="indent">   </p><div class="math-block">\[
+AT=T\begin{pmatrix}\lambda_1&amp;0\\0&amp;\lambda_2\end{pmatrix},
+\qquad
+A=T\begin{pmatrix}\lambda_1&amp;0\\0&amp;\lambda_2\end{pmatrix}T^{-1}.
+\]</div>
+                                                                  
+
+                                                                  
+<p></p><!-- l. 52 --><p class="indent">   因此对 <span class="inline-math">\(n\geqslant1\)</span>，
+</p><!-- l. 53 --><p class="indent">   </p><div class="math-block">\[\begin{aligned}
+A^n
+&amp;=T\begin{pmatrix}\lambda_1^n&amp;0\\0&amp;\lambda_2^n\end{pmatrix}T^{-1}\\
+&amp;=\frac1{\lambda_1-\lambda_2}
+\begin{pmatrix}
+\lambda_1^{n+1}-\lambda_2^{n+1}
+&amp;\lambda_1\lambda_2^{n+1}-\lambda_2\lambda_1^{n+1}\\
+\lambda_1^n-\lambda_2^n
+&amp;\lambda_1\lambda_2^n-\lambda_2\lambda_1^n
+\end{pmatrix}.
+\end{aligned}\]</div>
+<p></p><!-- l. 54 --><p class="indent">   利用 <span class="inline-math">\(\lambda_1\lambda_2=-1\)</span>，右上角也可写成 <span class="inline-math">\(\lambda_1^n-\lambda_2^n\)</span>，右下角可写成 <span class="inline-math">\(\lambda_1^{n-1}-\lambda_2^{n-1}\)</span>。 由式 (<a href="#x1-2002r1">1.1<!-- tex4ht:ref: eq:fibonacci-matrix  --></a>) 取第二个分量，便得
+<a id="x1-2003r2"></a>
+</p><!-- l. 58 --><p class="indent">   </p><div class="math-block">\[
+F_n=\frac{\lambda_1^n-\lambda_2^n}{\lambda_1-\lambda_2}
+=\frac1{\sqrt5}
+\left[
+\left(\frac{1+\sqrt5}{2}\right)^n
+-\left(\frac{1-\sqrt5}{2}\right)^n
+\right].
+\tag{1.2}\]</div>
+<p></p><!-- l. 59 --><p class="indent">   该式在 <span class="inline-math">\(n=0\)</span> 时也成立。<span class="cite">[<a href="#Xtang">2</a>]</span> 下文也将这两个根记为 <span class="inline-math">\(\alpha=\lambda_1,\ \beta=\lambda_2\)</span>。                                                                                          □
+</p>
+   </div>
+<!-- l. 64 --><p class="noindent">这个例子利用矩阵的特征值、特征向量进行对角化，把矩阵的幂次运算简化了。中学里，对于类似形式的递推公式有所谓的“特征方程法”。具体做法就是直接根据递推式写出对应矩阵（在这个例子里就是<span class="inline-math">\(A\)</span>）的特征方程，解得两根<span class="inline-math">\(\alpha,\beta\)</span>后，通项公式就必定是<span class="inline-math">\(k_1\alpha^n+k_2\beta^n\)</span>的形式，再用初值条件求出待定系数<span class="inline-math">\(k_1,k_2\)</span>。
+</p><!-- l. 66 --><p class="indent">   矩阵对角化的办法是可以理解的。但还存在的疑点：第一步将递推式转化为了矩阵乘法。这里蕴含的信息是：<span class="inline-math">\(F_{n+1}=F_n+F_{n-1}\)</span>和<span class="inline-math">\(F_n=F_n\)</span>。后者是不言自明的事实，信息量为0，但是和前者一起凑成了矩阵乘法。这种做法是令人不满意的，仿佛单腿残疾人拿空气当拐杖，然后装模做样地成功地跑了一百米。
+</p><!-- l. 68 --><p class="noindent">
+</p>
+   <h4 class="subsectionHead" id="section-3"><span class="titlemark">1.2   </span> <a id="x1-30001.2"></a>椭圆的旋转与平移</h4>
+   <div class="newtheorem">
+<!-- l. 69 --><p class="noindent"><span class="head">
+<a id="x1-3001r2"></a>
+<span class="ec-lmbx-10">例 1.2 </span>(椭圆的标准方程)<span class="ec-lmbx-10">.</span>  </span> 在欧氏平面的一组直角坐标 <span class="inline-math">\((x,y)\)</span> 中，给定二次曲线
+<a id="x1-3002r3"></a>
+</p><!-- l. 71 --><p class="indent">   </p><div class="math-block">\[
+13x^2-10xy+13y^2-62x+46y+13=0.
+\tag{1.3}\]</div>
+<p></p><!-- l. 72 --><p class="indent">   求它的标准方程。
+</p>
+   </div>
+<!-- l. 73 --><p class="indent">
+</p>
+   <div class="proof">
+<!-- l. 75 --><p class="indent">   <span class="head">
+<span class="ec-lmri-10">解.</span> </span> 先处理二次项中的交叉项。二次型 <span class="inline-math">\(13x^2-10xy+13y^2\)</span> 的矩阵为
+</p><!-- l. 78 --><p class="indent">   </p><div class="math-block">\[
+A=\begin{pmatrix}13&amp;-5\\-5&amp;13\end{pmatrix}.
+\]</div>
+<p></p><!-- l. 79 --><p class="indent">   其特征多项式为
+</p><!-- l. 80 --><p class="indent">   </p><div class="math-block">\[
+f_A(t)=
+\begin{vmatrix}t-13&amp;5\\5&amp;t-13\end{vmatrix}
+=(t-13)^2-25=(t-8)(t-18).
+\]</div>
+<p></p><!-- l. 81 --><p class="indent">   所以特征值为 <span class="inline-math">\(8,18\)</span>。当 <span class="inline-math">\(\lambda=8\)</span> 时，
+</p><!-- l. 82 --><p class="indent">   </p><div class="math-block">\[
+(A-8I)\begin{pmatrix}a\\b\end{pmatrix}=0
+\quad\Longleftrightarrow\quad a=b,
+\]</div>
+<p></p><!-- l. 83 --><p class="indent">   可取特征向量 <span class="inline-math">\(\eta_1=(1,1)^T\)</span>。 当 <span class="inline-math">\(\lambda=18\)</span> 时，
+</p><!-- l. 85 --><p class="indent">   </p><div class="math-block">\[
+(A-18I)\begin{pmatrix}a\\b\end{pmatrix}=0
+\quad\Longleftrightarrow\quad a=-b,
+\]</div>
+<p></p><!-- l. 86 --><p class="indent">   可取特征向量 <span class="inline-math">\(\eta_2=(-1,1)^T\)</span>。
+</p><!-- l. 88 --><p class="indent">   这两个向量互相垂直，模长均为 <span class="inline-math">\(\sqrt2\)</span>。 将模长化为 <span class="inline-math">\(1\)</span>，得到
+</p><!-- l. 90 --><p class="indent">   </p><div class="math-block">\[
+e_1=\frac1{\sqrt2}\begin{pmatrix}1\\1\end{pmatrix},
+\qquad
+e_2=\frac1{\sqrt2}\begin{pmatrix}-1\\1\end{pmatrix}.
+\]</div>
+<p></p><!-- l. 91 --><p class="indent">   令
+                                                                  
+
+                                                                  
+</p><!-- l. 92 --><p class="indent">   </p><div class="math-block">\[
+P=(e_1,e_2)=\frac1{\sqrt2}
+\begin{pmatrix}1&amp;-1\\1&amp;1\end{pmatrix}.
+\]</div>
+<p></p><!-- l. 93 --><p class="indent">   它的列向量构成规范正交基，故 <span class="inline-math">\(P^TP=I\)</span>； 并且
+</p><!-- l. 95 --><p class="indent">   </p><div class="math-block">\[
+\det P=\frac12
+\begin{vmatrix}1&amp;-1\\1&amp;1\end{vmatrix}=1.
+\]</div>
+<p></p><!-- l. 96 --><p class="indent">   于是 <span class="inline-math">\(P\)</span> 是行列式为 <span class="inline-math">\(1\)</span> 的正交矩阵，
+</p><!-- l. 97 --><p class="indent">   </p><div class="math-block">\[
+P^TAP=\begin{pmatrix}8&amp;0\\0&amp;18\end{pmatrix}.
+\]</div>
+<p></p><!-- l. 99 --><p class="indent">   先作旋转坐标替换
+</p><!-- l. 100 --><p class="indent">   </p><div class="math-block">\[
+\begin{pmatrix}x\\y\end{pmatrix}
+=P\begin{pmatrix}x'\\y'\end{pmatrix},
+\qquad
+x=\frac{x'-y'}{\sqrt2},\quad
+y=\frac{x'+y'}{\sqrt2}.
+\]</div>
+<p></p><!-- l. 101 --><p class="indent">   二次项变为 <span class="inline-math">\(8x'^2+18y'^2\)</span>，一次项变为
+</p><!-- l. 102 --><p class="indent">   </p><div class="math-block">\[
+-62x+46y=-8\sqrt2\,x'+54\sqrt2\,y'.
+\]</div>
+<p></p><!-- l. 103 --><p class="indent">   因此原方程变为
+</p><!-- l. 104 --><p class="indent">   </p><div class="math-block">\[
+8x'^2+18y'^2-8\sqrt2\,x'+54\sqrt2\,y'+13=0.
+\]</div>
+<p></p><!-- l. 105 --><p class="indent">   再配方，得到
+</p><!-- l. 106 --><p class="indent">   </p><div class="math-block">\[
+8\left(x'-\frac1{\sqrt2}\right)^2
++18\left(y'+\frac3{\sqrt2}\right)^2=72.
+\]</div>
+<p></p><!-- l. 107 --><p class="indent">   令
+</p><!-- l. 108 --><p class="indent">   </p><div class="math-block">\[
+u=x'-\frac1{\sqrt2},\qquad
+v=y'+\frac3{\sqrt2},
+\]</div>
+<p></p><!-- l. 109 --><p class="indent">   便得到标准方程
+</p><!-- l. 110 --><p class="indent">   </p><div class="math-block">\[
+8u^2+18v^2=72,
+\qquad
+\frac{u^2}{9}+\frac{v^2}{4}=1.
+\]</div>
+<p></p><!-- l. 112 --><p class="indent">   将两次替换合并，
+<a id="x1-3003r4"></a>
+</p><!-- l. 113 --><p class="indent">   </p><div class="math-block">\[
+\begin{pmatrix}x\\y\end{pmatrix}
+=\begin{pmatrix}2\\-1\end{pmatrix}
++P\begin{pmatrix}u\\v\end{pmatrix}.
+\tag{1.4}\]</div>
+<p></p><!-- l. 114 --><p class="indent">   因此，题目中的椭圆可以由标准椭圆 <span class="inline-math">\(u^2/9+v^2/4=1\)</span> 绕原点逆时针旋转 <span class="inline-math">\(45^\circ\)</span>，再平移向量 <span class="inline-math">\((2,-1)^T\)</span> 得到。 同样也可以固定曲线，把坐标原点移到 <span class="inline-math">\((2,-1)\)</span>， 并把两条坐标轴的正方向分别取为 <span class="inline-math">\(e_1,e_2\)</span>； 曲线在这套新坐标中便具有上述标准方程。                                                                                 □
+</p>
+   </div>
+   <figure class="figure" id="-t3"> 
+
+                                                                  
+
+                                                                  
+<a id="x1-30041"></a>
+                                                                  
+
+                                                                  
+<!-- l. 125 --><p class="noindent"></p><div class="tex-diagram"><a href="__ASSET__/d0000.svg" target="_blank" rel="noopener" aria-label="文章图示"><img src="__ASSET__/d0000.svg" alt="文章图示" loading="lazy"></a></div>
+<p></p>
+<figcaption class="caption"><span class="id">图 1: </span><span class="content">变换前后的示意图</span></figcaption><!-- tex4ht:label?: x1-30041  -->
+                                                                  
+
+                                                                  
+   </figure>
+<!-- l. 130 --><p class="indent">   依旧是矩阵对角化。但是这里处理的是二次型的矩阵。线性代数中会提到两种矩阵的等价关系：相似和合同。也有两种对角化、标准型。这里将两种对角化杂糅到一起了。正交矩阵的转置等于逆，这个矩阵同时扮演了两种角色。这是一个疑点：为什么可以这么做、为什么必须这么做？
+</p>
+   <h3 class="sectionHead" id="section-4"><span class="titlemark">2   </span> <a id="x1-40002"></a>回顾</h3>
+<!-- l. 134 --><p class="noindent">
+</p>
+   <h4 class="subsectionHead" id="section-5"><span class="titlemark">2.1   </span> <a id="x1-50002.1"></a>矩阵的定义及运算</h4>
+<!-- l. 136 --><p class="noindent">许多教材从解方程组出发介绍矩阵，不加铺垫地给出了矩阵的乘法定义（加法是很自然的）。这里从向量空间的线性映射说起，矩阵的定义和其乘法的出现会自然得多。
+</p>
+   <div class="newtheorem">
+<!-- l. 138 --><p class="noindent"><span class="head">
+<a id="x1-5001r1"></a>
+<span class="ec-lmbx-10">定义 2.1 </span>(线性映射)<span class="ec-lmbx-10">.</span>  </span>设 <span class="inline-math">\(V,W\)</span> 为域 <span class="inline-math">\(F\)</span> 上的向量空间， <span class="inline-math">\(\sigma:V\to W\)</span> 为一个映射。如果对任意 <span class="inline-math">\(\xi,\eta\in V\)</span> 及 <span class="inline-math">\(a\in F\)</span>，都有
+</p><!-- l. 142 --><p class="indent">   </p><div class="math-block">\[
+\sigma(\xi+\eta)=\sigma(\xi)+\sigma(\eta),
+\qquad
+\sigma(a\xi)=a\sigma(\xi),
+\]</div>
+<p></p><!-- l. 143 --><p class="indent">   则称 <span class="inline-math">\(\sigma\)</span> 为线性映射。特别地，<span class="inline-math">\(V=W\)</span> 时， 称 <span class="inline-math">\(\sigma\)</span> 为 <span class="inline-math">\(V\)</span> 上的线性变换。 双射的线性映射称为向量空间的同构。
+</p>
+   </div>
+<!-- l. 146 --><p class="indent">
+</p><!-- l. 148 --><p class="indent">   设 <span class="inline-math">\(V\)</span> 的一组基为 <span class="inline-math">\(\alpha_1,\ldots,\alpha_n\)</span>， <span class="inline-math">\(W\)</span> 的一组基为 <span class="inline-math">\(\beta_1,\ldots,\beta_m\)</span>。 每个 <span class="inline-math">\(\sigma(\alpha_j)\)</span> 都能唯一表示为
+</p><!-- l. 151 --><p class="indent">   </p><div class="math-block">\[
+\sigma(\alpha_j)=a_{1j}\beta_1+\cdots+a_{mj}\beta_m
+\qquad(1\leqslant j\leqslant n).
+\]</div>
+<p></p><!-- l. 152 --><p class="indent">   把这 <span class="inline-math">\(n\)</span> 个等式合写为
+<a id="x1-5002r1"></a>
+</p><!-- l. 153 --><p class="indent">   </p><div class="math-block">\[
+\bigl(\sigma(\alpha_1),\ldots,\sigma(\alpha_n)\bigr)
+=(\beta_1,\ldots,\beta_m)A,
+\qquad A=(a_{ij})_{m\times n}.
+\tag{2.1}\]</div>
+<p></p>
+   <div class="newtheorem">
+<!-- l. 155 --><p class="noindent"><span class="head">
+<a id="x1-5003r2"></a>
+<span class="ec-lmbx-10">定义 2.2 </span>(线性映射的矩阵)<span class="ec-lmbx-10">.</span>  </span>式 (<a href="#x1-5002r1">2.1<!-- tex4ht:ref: eq:map-matrix  --></a>) 中的矩阵 <span class="inline-math">\(A\)</span>，称为 <span class="inline-math">\(\sigma\)</span> 关于基 <span class="inline-math">\(\alpha_1,\ldots,\alpha_n\)</span> 与 <span class="inline-math">\(\beta_1,\ldots,\beta_m\)</span> 的矩阵。 <span class="inline-math">\(A\)</span> 的第 <span class="inline-math">\(j\)</span> 列，就是 <span class="inline-math">\(\sigma(\alpha_j)\)</span> 关于后一组基的坐标列。 当 <span class="inline-math">\(V=W\)</span> 且前后使用同一组基时，便称 <span class="inline-math">\(A\)</span> 为线性变换 <span class="inline-math">\(\sigma\)</span> 在这组基下的矩阵。
+</p>
+   </div>
+<!-- l. 163 --><p class="indent">
+</p>
+   <div class="newtheorem">
+<!-- l. 165 --><p class="noindent"><span class="head">
+<a id="x1-5004r3"></a>
+                                                                  
+
+                                                                  
+<span class="ec-lmbx-10">引理 2.3 </span>(向量的坐标变换)<span class="ec-lmbx-10">.</span>  </span> 设 <span class="inline-math">\(\sigma:V\to W\)</span> 在上述两组基下的矩阵为 <span class="inline-math">\(A\)</span>。 若
+</p><!-- l. 168 --><p class="indent">   </p><div class="math-block">\[
+\xi=x_1\alpha_1+\cdots+x_n\alpha_n,\qquad
+\sigma(\xi)=y_1\beta_1+\cdots+y_m\beta_m,
+\]</div>
+<p></p><!-- l. 169 --><p class="indent">   则
+</p><!-- l. 170 --><p class="indent">   </p><div class="math-block">\[
+\begin{pmatrix}y_1\\\vdots\\y_m\end{pmatrix}
+=A\begin{pmatrix}x_1\\\vdots\\x_n\end{pmatrix}.
+\]</div>
+<p></p>
+   </div>
+<!-- l. 171 --><p class="indent">
+</p>
+   <div class="proof">
+<!-- l. 173 --><p class="indent">   <span class="head">
+<span class="ec-lmri-10">证明.</span> </span>由线性性及式 (<a href="#x1-5002r1">2.1<!-- tex4ht:ref: eq:map-matrix  --></a>)，
+</p><!-- l. 174 --><p class="indent">   </p><div class="math-block">\[\begin{aligned}
+\sigma(\xi)
+&amp;=x_1\sigma(\alpha_1)+\cdots+x_n\sigma(\alpha_n)\\
+&amp;=\bigl(\sigma(\alpha_1),\ldots,\sigma(\alpha_n)\bigr)
+  \begin{pmatrix}x_1\\\vdots\\x_n\end{pmatrix}\\
+&amp;=(\beta_1,\ldots,\beta_m)
+  A\begin{pmatrix}x_1\\\vdots\\x_n\end{pmatrix}.
+\end{aligned}\]</div>
+<p></p><!-- l. 175 --><p class="indent">   比较 <span class="inline-math">\(\beta_1,\ldots,\beta_m\)</span> 的系数即可。                                                                                               □
+</p>
+   </div>
+<!-- l. 178 --><p class="indent">   这里 <span class="inline-math">\(Ax\)</span> 表示把 <span class="inline-math">\(A\)</span> 的各列按 <span class="inline-math">\(x_1,\ldots,x_n\)</span> 作线性组合。反过来，给定任意 <span class="inline-math">\(m\times n\)</span> 矩阵 <span class="inline-math">\(A\)</span>，先用它的各列指定 <span class="inline-math">\(\sigma(\alpha_j)\)</span>， 再按线性性延拓，就唯一确定一个线性映射。 因此，基固定以后，线性映射与矩阵一一对应。
+</p><!-- l. 184 --><p class="indent">   设 <span class="inline-math">\(\sigma,\tau:V\to W\)</span> 的矩阵分别为 <span class="inline-math">\(A,B\)</span>。 逐个考察基向量的像，就有
+</p><!-- l. 186 --><p class="indent">   </p><div class="math-block">\[
+(\sigma+\tau)(\alpha_j)=\sigma(\alpha_j)+\tau(\alpha_j),
+\qquad
+(a\sigma)(\alpha_j)=a\sigma(\alpha_j).
+\]</div>
+<p></p><!-- l. 187 --><p class="indent">   由此得到矩阵的逐项加法 <span class="inline-math">\(A+B\)</span> 和数乘 <span class="inline-math">\(aA\)</span>。
+</p><!-- l. 189 --><p class="indent">   再看复合。设 <span class="inline-math">\(\sigma:V\to W\)</span>、 <span class="inline-math">\(\tau:W\to U\)</span>，在三组基下的矩阵分别为 <span class="inline-math">\(A=(a_{ij})_{m\times n}\)</span>、 <span class="inline-math">\(B=(b_{ki})_{l\times m}\)</span>。若 <span class="inline-math">\(U\)</span> 的基为 <span class="inline-math">\(\gamma_1,\ldots,\gamma_l\)</span>，则
+</p><!-- l. 194 --><p class="indent">   </p><div class="math-block">\[\begin{aligned}
+(\tau\circ\sigma)(\alpha_j)
+&amp;=\tau\!\left(\sum_{i=1}^{m}a_{ij}\beta_i\right)\\
+&amp;=\sum_{i=1}^{m}a_{ij}
+       \left(\sum_{k=1}^{l}b_{ki}\gamma_k\right)
+=\sum_{k=1}^{l}
+       \left(\sum_{i=1}^{m}b_{ki}a_{ij}\right)\gamma_k.
+\end{aligned}\]</div>
+<p></p><!-- l. 195 --><p class="indent">   所以复合映射的矩阵 <span class="inline-math">\(C=(c_{kj})_{l\times n}\)</span> 必须满足
+</p><!-- l. 197 --><p class="indent">   </p><div class="math-block">\[
+c_{kj}=\sum_{i=1}^{m}b_{ki}a_{ij}.
+\]</div>
+<p></p><!-- l. 198 --><p class="indent">   这就导出了矩阵乘法 <span class="inline-math">\(C=BA\)</span> 的定义。 先施行 <span class="inline-math">\(\sigma\)</span>，再施行 <span class="inline-math">\(\tau\)</span>，在矩阵中 便写成先由右边的 <span class="inline-math">\(A\)</span> 作用，再由左边的 <span class="inline-math">\(B\)</span> 作用。 中间指标 <span class="inline-math">\(i\)</span> 的范围，正好是中间空间 <span class="inline-math">\(W\)</span> 的维数。
+</p><!-- l. 203 --><p class="indent">   另一类自然产生矩阵的对象是二次型。 以下涉及二次型时，假定 <span class="inline-math">\(\operatorname{char}F\ne2\)</span>。
+</p>
+   <div class="newtheorem">
+<!-- l. 207 --><p class="noindent"><span class="head">
+<a id="x1-5005r4"></a>
+<span class="ec-lmbx-10">定义 2.4 </span>(二次型)<span class="ec-lmbx-10">.</span>  </span> 设 <span class="inline-math">\(x_1,\ldots,x_n\)</span> 是域 <span class="inline-math">\(F\)</span> 上的无关未定元。 多项式
+</p><!-- l. 210 --><p class="indent">   </p><div class="math-block">\[
+q(x_1,\ldots,x_n)
+=\sum_{i=1}^{n}\sum_{j=1}^{n}a_{ij}x_ix_j,
+\qquad a_{ij}=a_{ji},
+\]</div>
+<p></p><!-- l. 211 --><p class="indent">   称为 <span class="inline-math">\(F\)</span> 上的一个 <span class="inline-math">\(n\)</span> 元二次型。 对称矩阵 <span class="inline-math">\(A=(a_{ij})\)</span> 称为它的矩阵。 记 <span class="inline-math">\(x=(x_1,\ldots,x_n)^T\)</span>，则
+</p><!-- l. 214 --><p class="indent">   </p><div class="math-block">\[
+q(x_1,\ldots,x_n)=x^TAx.
+\]</div>
+<p></p>
+   </div>
+<!-- l. 215 --><p class="indent">
+</p><!-- l. 218 --><p class="indent">   因为 <span class="inline-math">\(i&lt;j\)</span> 时 <span class="inline-math">\(x_ix_j\)</span> 的系数是 <span class="inline-math">\(2a_{ij}\)</span>， 每个二次齐次多项式都唯一确定这样一个对称矩阵。 例如 <span class="inline-math">\(13x^2-10xy+13y^2\)</span> 对应的非对角元是 <span class="inline-math">\(-5\)</span>，而不是 <span class="inline-math">\(-10\)</span>。
+</p>
+                                                                  
+
+                                                                  
+   <div class="newtheorem">
+<!-- l. 223 --><p class="noindent"><span class="head">
+<a id="x1-5006r5"></a>
+<span class="ec-lmbx-10">定义 2.5 </span>(双线性函数)<span class="ec-lmbx-10">.</span>  </span> 设 <span class="inline-math">\(V\)</span> 为域 <span class="inline-math">\(F\)</span> 上的向量空间。 映射 <span class="inline-math">\(f:V\times V\to F\)</span> 若对两个变量分别线性， 即对任意 <span class="inline-math">\(\xi,\eta,\zeta\in V\)</span> 及 <span class="inline-math">\(a\in F\)</span>， 满足
+</p><!-- l. 228 --><p class="indent">   </p><div class="math-block">\[
+\begin{aligned}
+f(\xi+\eta,\zeta)&amp;=f(\xi,\zeta)+f(\eta,\zeta),
+&amp;f(a\xi,\zeta)&amp;=a f(\xi,\zeta),\\
+f(\zeta,\xi+\eta)&amp;=f(\zeta,\xi)+f(\zeta,\eta),
+&amp;f(\zeta,a\xi)&amp;=a f(\zeta,\xi),
+\end{aligned}
+\]</div>
+<p></p><!-- l. 229 --><p class="indent">   则称 <span class="inline-math">\(f\)</span> 为 <span class="inline-math">\(V\)</span> 上的双线性函数。 若还有 <span class="inline-math">\(f(\xi,\eta)=f(\eta,\xi)\)</span>，则称 <span class="inline-math">\(f\)</span> 对称。
+</p>
+   </div>
+<!-- l. 231 --><p class="indent">
+</p><!-- l. 233 --><p class="indent">   取 <span class="inline-math">\(V\)</span> 的一组基 <span class="inline-math">\(\alpha_1,\ldots,\alpha_n\)</span>，令 <span class="inline-math">\(a_{ij}=f(\alpha_i,\alpha_j)\)</span>。 对 <span class="inline-math">\(\xi=\sum_i x_i\alpha_i\)</span>、 <span class="inline-math">\(\eta=\sum_j y_j\alpha_j\)</span>，有
+</p><!-- l. 238 --><p class="indent">   </p><div class="math-block">\[
+f(\xi,\eta)=\sum_{i,j}a_{ij}x_i y_j
+=(x_1,\ldots,x_n)A
+\begin{pmatrix}y_1\\\vdots\\y_n\end{pmatrix}.
+\]</div>
+<p></p><!-- l. 239 --><p class="indent">   称 <span class="inline-math">\(A=(a_{ij})\)</span> 为 <span class="inline-math">\(f\)</span> 关于这组基的矩阵。 反过来，任意 <span class="inline-math">\(n\)</span> 阶矩阵都通过这个公式 唯一确定一个双线性函数；<span class="inline-math">\(f\)</span> 对称当且仅当 <span class="inline-math">\(A\)</span> 对称。
+</p><!-- l. 244 --><p class="indent">   当 <span class="inline-math">\(f\)</span> 对称，把两个输入取成同一个向量， 就得到二次型
+</p><!-- l. 246 --><p class="indent">   </p><div class="math-block">\[
+q(\xi)=f(\xi,\xi)=x^TAx.
+\]</div>
+<p></p><!-- l. 247 --><p class="indent">   因此，对称双线性函数与二次型共用一个对称矩阵。 这里双线性函数有两个独立的向量变量， 二次型则是将这两个变量限制为同一向量后得到的函数。 这些矩阵表示和记号也可参见文献 <span class="cite">[<a href="#Xzhang">1</a>]</span>。
+</p><!-- l. 252 --><p class="noindent">
+</p>
+   <h4 class="subsectionHead" id="section-6"><span class="titlemark">2.2   </span> <a id="x1-60002.2"></a>相似标准型</h4>
+<!-- l. 253 --><p class="noindent">设 <span class="inline-math">\(\sigma\)</span> 是 <span class="inline-math">\(V\)</span> 上的线性变换。 它在一组基下的矩阵，并不只由 <span class="inline-math">\(\sigma\)</span> 决定， 还取决于所选的基。要比较不同的矩阵表示， 先要写清楚换基时究竟发生了什么。
+</p><!-- l. 258 --><p class="indent">   设 <span class="inline-math">\(\alpha_1,\ldots,\alpha_n\)</span> 与 <span class="inline-math">\(\beta_1,\ldots,\beta_n\)</span> 是 <span class="inline-math">\(V\)</span> 的两组基，且
+</p><!-- l. 260 --><p class="indent">   </p><div class="math-block">\[
+(\beta_1,\ldots,\beta_n)
+=(\alpha_1,\ldots,\alpha_n)P.
+\]</div>
+<p></p><!-- l. 261 --><p class="indent">   这里 <span class="inline-math">\(P\)</span> 的第 <span class="inline-math">\(j\)</span> 列是 <span class="inline-math">\(\beta_j\)</span> 关于原来那组基的坐标；因此 <span class="inline-math">\(P\)</span> 可逆。 若同一向量 <span class="inline-math">\(\xi\)</span> 关于两组基的坐标列分别为 <span class="inline-math">\(x,x'\)</span>，则 <span class="inline-math">\(x=Px'\)</span>。
+</p>
+   <div class="newtheorem">
+<!-- l. 266 --><p class="noindent"><span class="head">
+<a id="x1-6001r6"></a>
+<span class="ec-lmbx-10">命题 2.6 </span>(换基公式)<span class="ec-lmbx-10">.</span>  </span> 若 <span class="inline-math">\(\sigma\)</span> 在基 <span class="inline-math">\(\alpha_1,\ldots,\alpha_n\)</span> 和基 <span class="inline-math">\(\beta_1,\ldots,\beta_n\)</span> 下的矩阵分别为 <span class="inline-math">\(A,B\)</span>，则
+</p><!-- l. 270 --><p class="indent">   </p><div class="math-block">\[
+B=P^{-1}AP.
+\]</div>
+<p></p>
+   </div>
+<!-- l. 271 --><p class="indent">
+</p>
+   <div class="proof">
+<!-- l. 273 --><p class="indent">   <span class="head">
+<span class="ec-lmri-10">证明.</span> </span>由矩阵的定义，
+</p><!-- l. 274 --><p class="indent">   </p><div class="math-block">\[
+\bigl(\sigma(\alpha_1),\ldots,\sigma(\alpha_n)\bigr)
+=(\alpha_1,\ldots,\alpha_n)A.
+\]</div>
+                                                                  
+
+                                                                  
+<p></p><!-- l. 275 --><p class="indent">   对等式 <span class="inline-math">\((\beta_1,\ldots,\beta_n)
+=(\alpha_1,\ldots,\alpha_n)P\)</span> 的每一个分量施行 <span class="inline-math">\(\sigma\)</span>，并利用线性性，得到
+</p><!-- l. 277 --><p class="indent">   </p><div class="math-block">\[\begin{aligned}
+\bigl(\sigma(\beta_1),\ldots,\sigma(\beta_n)\bigr)
+&amp;=\bigl(\sigma(\alpha_1),\ldots,\sigma(\alpha_n)\bigr)P\\
+&amp;=(\alpha_1,\ldots,\alpha_n)AP.
+\end{aligned}\]</div>
+<p></p><!-- l. 278 --><p class="indent">   另一方面，按新基下的矩阵表示，同一个式子又等于
+</p><!-- l. 279 --><p class="indent">   </p><div class="math-block">\[
+(\beta_1,\ldots,\beta_n)B
+=(\alpha_1,\ldots,\alpha_n)PB.
+\]</div>
+<p></p><!-- l. 280 --><p class="indent">   由于 <span class="inline-math">\(\alpha_1,\ldots,\alpha_n\)</span> 线性无关， 比较各列的系数，便有 <span class="inline-math">\(AP=PB\)</span>，从而 <span class="inline-math">\(B=P^{-1}AP\)</span>。                                                                                      □
+</p>
+   </div>
+   <div class="newtheorem">
+<!-- l. 285 --><p class="noindent"><span class="head">
+<a id="x1-6002r7"></a>
+<span class="ec-lmbx-10">定义 2.7 </span>(相似)<span class="ec-lmbx-10">.</span>  </span>若同阶矩阵 <span class="inline-math">\(A,B\)</span> 满足 <span class="inline-math">\(B=P^{-1}AP\)</span>， 其中 <span class="inline-math">\(P\)</span> 可逆，就称 <span class="inline-math">\(A,B\)</span> 相似。
+</p>
+   </div>
+<!-- l. 288 --><p class="indent">
+</p><!-- l. 290 --><p class="indent">   相似是一个等价关系：取 <span class="inline-math">\(P=I\)</span> 得到自反性； 把 <span class="inline-math">\(B=P^{-1}AP\)</span> 改写为 <span class="inline-math">\(A=PBP^{-1}\)</span> 得到对称性；若再有 <span class="inline-math">\(C=Q^{-1}BQ\)</span>，则 <span class="inline-math">\(C=(PQ)^{-1}A(PQ)\)</span>，得到传递性。 因此，可以把所有同阶矩阵按相似分成等价类。 每个类包含同一个线性变换在不同基下的全部矩阵表示。 寻找相似标准型，就是要在每个类中选取一种 能清楚显示这个变换如何作用的代表。
+</p>
+   <div class="newtheorem">
+<!-- l. 299 --><p class="noindent"><span class="head">
+<a id="x1-6003r8"></a>
+<span class="ec-lmbx-10">定义 2.8 </span>(不变子空间)<span class="ec-lmbx-10">.</span>  </span>若子空间 <span class="inline-math">\(U\subseteq V\)</span> 满足 <span class="inline-math">\(\sigma(U)\subseteq U\)</span>，则称 <span class="inline-math">\(U\)</span> 为 <span class="inline-math">\(\sigma\)</span> 的不变子空间。
+</p>
+   </div>
+<!-- l. 303 --><p class="indent">
+</p><!-- l. 305 --><p class="indent">   如果 <span class="inline-math">\(V=U_1\oplus\cdots\oplus U_s\)</span>，且每个 <span class="inline-math">\(U_i\)</span> 都不变，那么分别取各 <span class="inline-math">\(U_i\)</span> 的基， 再合并为 <span class="inline-math">\(V\)</span> 的基，矩阵就成为分块对角矩阵。 所以寻找简单的矩阵表示，可以转化为把空间拆成 更小的不变子空间，并分别考察限制在其上的变换。
+</p>
+   <div class="newtheorem">
+<!-- l. 311 --><p class="noindent"><span class="head">
+<a id="x1-6004r9"></a>
+<span class="ec-lmbx-10">定义 2.9 </span>(特征子空间)<span class="ec-lmbx-10">.</span>  </span>若 <span class="inline-math">\(\lambda\in F\)</span> 且存在非零向量 <span class="inline-math">\(\xi\)</span> 满足 <span class="inline-math">\(\sigma(\xi)=\lambda\xi\)</span>，称 <span class="inline-math">\(\lambda\)</span> 为特征值，<span class="inline-math">\(\xi\)</span> 为对应的特征向量。 所有满足这个等式的向量构成特征子空间
+</p><!-- l. 316 --><p class="indent">   </p><div class="math-block">\[
+E_\lambda=\ker(\sigma-\lambda\mathrm{id}_V).
+\]</div>
+<p></p>
+   </div>
+<!-- l. 317 --><p class="indent">
+</p><!-- l. 319 --><p class="indent">   一维不变子空间上的线性变换只能是数乘。 因此，当空间能分解为一维不变子空间的直和时， 合并各方向的基就得到对角矩阵；其对角元正是 这些方向上的特征值。
+</p>
+   <div class="newtheorem">
+<!-- l. 324 --><p class="noindent"><span class="head">
+<a id="x1-6005r10"></a>
+                                                                  
+
+                                                                  
+<span class="ec-lmbx-10">定理 2.10 </span>(对角化判据)<span class="ec-lmbx-10">.</span>  </span> 线性变换 <span class="inline-math">\(\sigma\)</span> 在 <span class="inline-math">\(F\)</span> 上可对角化， 当且仅当 <span class="inline-math">\(V\)</span> 有一组由特征向量组成的基， 也等价于
+</p><!-- l. 328 --><p class="indent">   </p><div class="math-block">\[
+V=\bigoplus_\lambda E_\lambda.
+\]</div>
+<p></p>
+   </div>
+<!-- l. 329 --><p class="indent">
+</p><!-- l. 331 --><p class="indent">   如果特征子空间还不足以填满 <span class="inline-math">\(V\)</span>，就不能继续 要求每一个方向都单独不变。此时需要保留一个 特征值附近不能拆开的部分。
+</p>
+   <div class="newtheorem">
+<!-- l. 335 --><p class="noindent"><span class="head">
+<a id="x1-6006r11"></a>
+<span class="ec-lmbx-10">定义 2.11 </span>(根子空间)<span class="ec-lmbx-10">.</span>  </span>设 <span class="inline-math">\(n=\dim V\)</span>。对应特征值 <span class="inline-math">\(\lambda\)</span> 的根子空间为
+</p><!-- l. 337 --><p class="indent">   </p><div class="math-block">\[
+V_\lambda=\ker(\sigma-\lambda\mathrm{id}_V)^n.
+\]</div>
+<p></p><!-- l. 338 --><p class="indent">   特征子空间 <span class="inline-math">\(E_\lambda\)</span> 包含在 <span class="inline-math">\(V_\lambda\)</span> 中， 而 <span class="inline-math">\(\sigma-\lambda\mathrm{id}_V\)</span> 限制在 <span class="inline-math">\(V_\lambda\)</span> 上是一个幂零变换。
+</p>
+   </div>
+<!-- l. 341 --><p class="indent">
+</p>
+   <div class="newtheorem">
+<!-- l. 343 --><p class="noindent"><span class="head">
+<a id="x1-6007r12"></a>
+<span class="ec-lmbx-10">定理 2.12 </span>(若尔当标准型)<span class="ec-lmbx-10">.</span>  </span> 若 <span class="inline-math">\(\sigma\)</span> 的特征多项式在 <span class="inline-math">\(F\)</span> 上分裂， 则 <span class="inline-math">\(V=\bigoplus_\lambda V_\lambda\)</span>。 每个 <span class="inline-math">\(V_\lambda\)</span> 中可以选取若干根向量链， 把所有链合并为基以后，<span class="inline-math">\(\sigma\)</span> 的矩阵为 若尔当块
+</p><!-- l. 349 --><p class="indent">   </p><div class="math-block">\[
+J_r(\lambda)=
+\begin{pmatrix}
+\lambda&amp;1&amp;&amp;0\\
+&amp;\lambda&amp;\ddots&amp;\\
+&amp;&amp;\ddots&amp;1\\
+0&amp;&amp;&amp;\lambda
+\end{pmatrix}
+\]</div>
+<p></p><!-- l. 350 --><p class="indent">   的直和。块的排列次序可以改变，各特征值对应的 块的大小及个数则唯一确定。
+</p>
+   </div>
+<!-- l. 352 --><p class="indent">
+</p><!-- l. 354 --><p class="indent">   长度为 <span class="inline-math">\(r\)</span> 的根向量链 <span class="inline-math">\(\xi_1,\ldots,\xi_r\)</span> 满足
+</p><!-- l. 356 --><p class="indent">   </p><div class="math-block">\[
+(\sigma-\lambda\mathrm{id}_V)\xi_1=0,\qquad
+(\sigma-\lambda\mathrm{id}_V)\xi_j=\xi_{j-1}
+\quad(2\leqslant j\leqslant r).
+\]</div>
+<p></p><!-- l. 357 --><p class="indent">   沿着一条链，变换除了作 <span class="inline-math">\(\lambda\)</span> 倍伸缩， 还会把后一个向量送向前一个向量。 若尔当块中的 <span class="inline-math">\(1\)</span> 正是这些不能消除的联系。 所有链都只有一个向量时，若尔当标准型就退化为 对角矩阵。
+</p><!-- l. 363 --><p class="indent">   这一条路径始终围绕同一个线性变换： 先把空间分解为不变子空间；特征子空间能完成 分解时得到对角型，不能完成时再用根子空间和 根向量链记录剩余的幂零部分。 矩阵的简化来自空间结构被基显现出来。
+</p>
+   <div class="newtheorem">
+<!-- l. 369 --><p class="noindent"><span class="head">
+<a id="x1-6008r13"></a>
+<span class="ec-lmbx-10">推论 2.13 </span>(极小多项式判据)<span class="ec-lmbx-10">.</span>  </span>若 <span class="inline-math">\(\sigma\)</span> 的极小多项式在 <span class="inline-math">\(F\)</span> 上分裂， 则 <span class="inline-math">\(\sigma\)</span> 可对角化当且仅当极小多项式没有重根。 更具体地，若 <span class="inline-math">\(\lambda\)</span> 对应的最大若尔当块 长度为 <span class="inline-math">\(r_\lambda\)</span>，则
+</p><!-- l. 374 --><p class="indent">   </p><div class="math-block">\[
+m_\sigma(t)=\prod_\lambda(t-\lambda)^{r_\lambda}.
+\]</div>
+                                                                  
+
+                                                                  
+<p></p>
+   </div>
+<!-- l. 375 --><p class="indent">
+</p><!-- l. 377 --><p class="noindent">
+</p>
+   <h4 class="subsectionHead" id="section-7"><span class="titlemark">2.3   </span> <a id="x1-70002.3"></a>合同标准型</h4>
+<!-- l. 378 --><p class="noindent">双线性函数也有换基问题，但它的两个输入都要 作坐标替换。仍设
+</p><!-- l. 380 --><p class="indent">   </p><div class="math-block">\[
+(\beta_1,\ldots,\beta_n)
+=(\alpha_1,\ldots,\alpha_n)P.
+\]</div>
+<p></p><!-- l. 381 --><p class="indent">   若 <span class="inline-math">\(\xi,\eta\)</span> 在旧基下的坐标列为 <span class="inline-math">\(x,y\)</span>， 在新基下为 <span class="inline-math">\(x',y'\)</span>，则 <span class="inline-math">\(x=Px'\)</span>、<span class="inline-math">\(y=Py'\)</span>。 设双线性函数 <span class="inline-math">\(f\)</span> 在旧基下的矩阵为 <span class="inline-math">\(A\)</span>，便有
+</p><!-- l. 384 --><p class="indent">   </p><div class="math-block">\[
+f(\xi,\eta)=x^TAy
+=x'^T(P^TAP)y'.
+\]</div>
+<p></p><!-- l. 385 --><p class="indent">   所以它在新基下的矩阵是 <span class="inline-math">\(B=P^TAP\)</span>。 对二次型令 <span class="inline-math">\(\eta=\xi\)</span>，得到同样的换基公式。
+</p>
+   <div class="newtheorem">
+<!-- l. 388 --><p class="noindent"><span class="head">
+<a id="x1-7001r14"></a>
+<span class="ec-lmbx-10">定义 2.14 </span>(合同)<span class="ec-lmbx-10">.</span>  </span>若同阶矩阵 <span class="inline-math">\(A,B\)</span> 满足 <span class="inline-math">\(B=P^TAP\)</span>， 其中 <span class="inline-math">\(P\)</span> 可逆，就称 <span class="inline-math">\(A,B\)</span> 合同。
+</p>
+   </div>
+<!-- l. 391 --><p class="indent">
+</p><!-- l. 393 --><p class="indent">   合同也是等价关系。它把同一个双线性函数在 不同基下的矩阵放在同一等价类中； 对称矩阵的合同类则描述二次型的换基分类。
+</p><!-- l. 397 --><p class="indent">   这里的对角化与相似对角化有不同的含义。 对线性变换，对角化要求 <span class="inline-math">\(\sigma(\alpha_i)=\lambda_i\alpha_i\)</span>， 也就是各基向量所张成的直线分别不变。 对对称双线性函数，对角化要求
+</p><!-- l. 402 --><p class="indent">   </p><div class="math-block">\[
+f(\alpha_i,\alpha_j)=0\qquad(i\ne j),
+\]</div>
+<p></p><!-- l. 403 --><p class="indent">   也就是不同基方向在 <span class="inline-math">\(f\)</span> 中没有交叉项。 这种关于 <span class="inline-math">\(f\)</span> 的正交，并不自动等于背景 欧氏内积下的垂直。
+</p>
+   <div class="newtheorem">
+<!-- l. 407 --><p class="noindent"><span class="head">
+<a id="x1-7002r15"></a>
+<span class="ec-lmbx-10">定理 2.15 </span>(惯性定理)<span class="ec-lmbx-10">.</span>  </span> 每个实对称 <span class="inline-math">\(n\)</span> 阶矩阵都合同于
+</p><!-- l. 409 --><p class="indent">   </p><div class="math-block">\[
+\operatorname{diag}(I_p,-I_q,0_r),
+\qquad p+q+r=n.
+\]</div>
+<p></p><!-- l. 410 --><p class="indent">   其中正、负惯性指数 <span class="inline-math">\(p,q\)</span> 及零空间维数 <span class="inline-math">\(r\)</span> 不依赖于基的选择。 因此两个同阶实对称矩阵合同，当且仅当它们的 <span class="inline-math">\(p,q,r\)</span> 分别相同；矩阵的秩为 <span class="inline-math">\(p+q\)</span>。
+</p>
+   </div>
+<!-- l. 414 --><p class="indent">
+</p><!-- l. 416 --><p class="indent">   相似变换保留特征多项式、极小多项式、特征值 以及各若尔当块的大小；这些量描述线性变换的作用。 一般合同变换则不保留特征值，例如
+</p><!-- l. 419 --><p class="indent">   </p><div class="math-block">\[
+\begin{pmatrix}1/\sqrt2&amp;0\\0&amp;1/\sqrt3\end{pmatrix}^{T}
+\begin{pmatrix}2&amp;0\\0&amp;3\end{pmatrix}
+\begin{pmatrix}1/\sqrt2&amp;0\\0&amp;1/\sqrt3\end{pmatrix}
+=I.
+\]</div>
+<p></p><!-- l. 420 --><p class="indent">   实对称矩阵的合同分类所保留的是正、负、零方向的 数目，而不要求保留各方向上系数的具体大小。 在复数域上，对称矩阵还可合同化为 <span class="inline-math">\(\operatorname{diag}(I_s,0)\)</span>，其中 <span class="inline-math">\(s\)</span> 是秩； 非零系数的正负之分在这里不再存在。
+</p><!-- l. 426 --><p class="indent">   如果还要讨论长度与角度，就必须另外给定内积。
+</p>
+                                                                  
+
+                                                                  
+   <div class="newtheorem">
+<!-- l. 428 --><p class="noindent"><span class="head">
+<a id="x1-7003r16"></a>
+<span class="ec-lmbx-10">定义 2.16 </span>(内积与规范正交基)<span class="ec-lmbx-10">.</span>  </span>实向量空间 <span class="inline-math">\(V\)</span> 上的对称、正定双线性函数 <span class="inline-math">\(\langle\cdot,\cdot\rangle\)</span> 称为欧氏内积。 向量 <span class="inline-math">\(\xi\)</span> 的模长为 <span class="inline-math">\(\|\xi\|=\sqrt{\langle\xi,\xi\rangle}\)</span>。 满足 <span class="inline-math">\(\langle\alpha_i,\alpha_j\rangle=\delta_{ij}\)</span> 的基称为规范正交基。 一般基的 <span class="ec-lmri-10">Gram </span>矩阵为 <span class="inline-math">\(G=(\langle\alpha_i,\alpha_j\rangle)\)</span>； 规范正交基下 <span class="inline-math">\(G=I\)</span>。
+</p>
+   </div>
+<!-- l. 439 --><p class="indent">
+</p>
+   <div class="newtheorem">
+<!-- l. 441 --><p class="noindent"><span class="head">
+<a id="x1-7004r17"></a>
+<span class="ec-lmbx-10">定义 2.17 </span>(自伴变换)<span class="ec-lmbx-10">.</span>  </span>欧氏空间上的线性变换 <span class="inline-math">\(\sigma\)</span> 若满足
+</p><!-- l. 443 --><p class="indent">   </p><div class="math-block">\[
+\langle\sigma(\xi),\eta\rangle
+=\langle\xi,\sigma(\eta)\rangle
+\qquad(\xi,\eta\in V),
+\]</div>
+<p></p><!-- l. 444 --><p class="indent">   则称 <span class="inline-math">\(\sigma\)</span> 自伴。
+</p>
+   </div>
+<!-- l. 445 --><p class="indent">
+</p>
+   <div class="newtheorem">
+<!-- l. 447 --><p class="noindent"><span class="head">
+<a id="x1-7005r18"></a>
+<span class="ec-lmbx-10">定理 2.18 </span>(实谱定理)<span class="ec-lmbx-10">.</span>  </span> 有限维欧氏空间上的自伴变换有一组 规范正交特征向量基。 等价地，每个实对称矩阵 <span class="inline-math">\(A\)</span> 都存在正交矩阵 <span class="inline-math">\(P\)</span>，使
+</p><!-- l. 452 --><p class="indent">   </p><div class="math-block">\[
+P^TAP=P^{-1}AP
+=\operatorname{diag}(\lambda_1,\ldots,\lambda_n).
+\]</div>
+<p></p>
+   </div>
+<!-- l. 453 --><p class="indent">
+</p><!-- l. 455 --><p class="indent">   在这个公式中，两种对角化恰好使用同一个 <span class="inline-math">\(P\)</span>。 原因是正交矩阵满足 <span class="inline-math">\(P^{-1}=P^T\)</span>， 而正交性的几何条件来自已经给定的欧氏内积。 因此，正交合同既保留二次型的表示关系， 又保留内积；其特征值也因同时构成相似变换而不变。 它与只允许一般可逆矩阵的合同分类有不同的要求。 下一节将具体说明内积怎样把对称双线性函数 与自伴变换联系起来。
+</p><!-- l. 464 --><p class="noindent">
+</p>
+   <h3 class="sectionHead" id="section-8"><span class="titlemark">3   </span> <a id="x1-80003"></a>疑点解答</h3>
+<!-- l. 465 --><p class="noindent">下面分别说明两个例题中使用矩阵方法所依赖的 线性算子与欧氏几何结构。
+                                                                  
+
+                                                                  
+</p><!-- l. 468 --><p class="noindent">
+</p>
+   <h4 class="subsectionHead" id="section-9"><span class="titlemark">3.1   </span> <a id="x1-90003.1"></a>关于用特征方程求数列</h4>
+<!-- l. 469 --><p class="noindent">先把初值条件放到一边，考察所有满足同一个 递推式的实数列，而不只考察斐波那契数列本身。
+</p>
+   <div class="newtheorem">
+<!-- l. 472 --><p class="noindent"><span class="head">
+<a id="x1-9001r1"></a>
+<span class="ec-lmbx-10">定义 3.1 </span>(递推解空间)<span class="ec-lmbx-10">.</span>  </span>令
+</p><!-- l. 474 --><p class="indent">   </p><div class="math-block">\[
+V=\left\{(a_0,a_1,a_2,\ldots)\ \middle|\
+a_n\in\mathbb R,\quad a_{n+2}=a_{n+1}+a_n
+\quad(n\geqslant0)\right\}.
+\]</div>
+<p></p><!-- l. 475 --><p class="indent">   在 <span class="inline-math">\(V\)</span> 中逐项定义数列的加法与数乘， 称 <span class="inline-math">\(V\)</span> 为这个递推式的解空间。
+</p>
+   </div>
+<!-- l. 477 --><p class="indent">
+</p><!-- l. 479 --><p class="indent">   若两个数列满足递推，它们的和以及任意数倍 仍满足递推，所以 <span class="inline-math">\(V\)</span> 确实是实向量空间。 一个数列只要给定 <span class="inline-math">\(a_0,a_1\)</span>，以后每一项 就都唯一确定；反过来，这两个初值又可以任意指定。 因此这个空间恰有两个独立的自由参数，维数为 <span class="inline-math">\(2\)</span>。
+</p><!-- l. 485 --><p class="indent">   更具体地，分别取初值 <span class="inline-math">\((a_0,a_1)=(0,1)\)</span> 与 <span class="inline-math">\((1,0)\)</span> 得到两个数列
+</p><!-- l. 487 --><p class="indent">   </p><div class="math-block">\[
+\alpha_1=(0,1,1,2,3,5,\ldots),\qquad
+\alpha_2=(1,0,1,1,2,3,\ldots).
+\]</div>
+<p></p><!-- l. 488 --><p class="indent">   它们线性无关；对任意 <span class="inline-math">\(\xi=(a_0,a_1,\ldots)\in V\)</span>， 由初值的唯一性，有
+</p><!-- l. 490 --><p class="indent">   </p><div class="math-block">\[
+\xi=a_1\alpha_1+a_0\alpha_2.
+\]</div>
+<p></p><!-- l. 491 --><p class="indent">   所以 <span class="inline-math">\(\alpha_1,\alpha_2\)</span> 是 <span class="inline-math">\(V\)</span> 的一组基， <span class="inline-math">\(\xi\)</span> 在这组基下的坐标就是 <span class="inline-math">\((a_1,a_0)^T\)</span>。 这里并没有先求出任何数列的通项。
+</p>
+   <div class="newtheorem">
+<!-- l. 495 --><p class="noindent"><span class="head">
+<a id="x1-9002r2"></a>
+<span class="ec-lmbx-10">定义 3.2 </span>(移位算子)<span class="ec-lmbx-10">.</span>  </span>在递推解空间 <span class="inline-math">\(V\)</span> 上定义
+</p><!-- l. 497 --><p class="indent">   </p><div class="math-block">\[
+\sigma(a_0,a_1,a_2,\ldots)=(a_1,a_2,a_3,\ldots),
+\]</div>
+<p></p><!-- l. 498 --><p class="indent">   称为移位算子。
+</p>
+   </div>
+<!-- l. 499 --><p class="indent">
+</p><!-- l. 501 --><p class="indent">   移位后的数列仍满足同一递推，所以它仍在 <span class="inline-math">\(V\)</span> 中。 移位又与逐项加法、数乘相容，故 <span class="inline-math">\(\sigma:V\to V\)</span> 是线性变换。它并不是为了凑出矩阵才增加的运算， 而是对所有递推数列都能进行的同一个操作。
+</p><!-- l. 506 --><p class="indent">   现在计算这个变换在上述基下的矩阵。由
+</p><!-- l. 507 --><p class="indent">   </p><div class="math-block">\[
+\sigma(\alpha_1)=\alpha_1+\alpha_2,\qquad
+\sigma(\alpha_2)=\alpha_1,
+\]</div>
+<p></p><!-- l. 508 --><p class="indent">   得到
+</p><!-- l. 509 --><p class="indent">   </p><div class="math-block">\[
+\bigl(\sigma(\alpha_1),\sigma(\alpha_2)\bigr)
+=(\alpha_1,\alpha_2)
+\begin{pmatrix}1&amp;1\\1&amp;0\end{pmatrix}.
+\]</div>
+<p></p><!-- l. 510 --><p class="indent">   这正是第一例中的矩阵 <span class="inline-math">\(A\)</span>。也可以直接从坐标看：
+</p><!-- l. 511 --><p class="indent">   </p><div class="math-block">\[
+\begin{pmatrix}a_1\\a_0\end{pmatrix}
+\longmapsto
+\begin{pmatrix}a_2\\a_1\end{pmatrix}
+=\begin{pmatrix}a_1+a_0\\a_1\end{pmatrix}
+=A\begin{pmatrix}a_1\\a_0\end{pmatrix}.
+\]</div>
+<p></p><!-- l. 513 --><p class="indent">   单独的一项不足以确定下一项。例如斐波那契数列中 <span class="inline-math">\(F_1=F_2=1\)</span>，但它们后面的项分别是 <span class="inline-math">\(1,2\)</span>。 连续两项才构成完整的状态。 矩阵第二行把旧状态的第一项保留下来， 使它在下一步成为第二项；它没有声称增加了新的 递推规律。原来那条 <span class="inline-math">\(F_n=F_n\)</span> 之所以出现， 是在表达移位如何重新排列已有信息。
+</p><!-- l. 521 --><p class="indent">   这样，构造的次序就是先有二维解空间， 再有自然的移位变换，最后才选基写出矩阵。 这也解释了为什么这个问题应该用二维线性代数， 而不只是用一条递推等式来作形式上的拼接。
+</p><!-- l. 526 --><p class="indent">   再直接考察 <span class="inline-math">\(\sigma\)</span> 的特征向量。 设非零数列 <span class="inline-math">\(\xi=(a_0,a_1,\ldots)\)</span> 满足 <span class="inline-math">\(\sigma(\xi)=\lambda\xi\)</span>，则逐项有
+</p><!-- l. 529 --><p class="indent">   </p><div class="math-block">\[
+a_{n+1}=\lambda a_n,\qquad a_n=a_0\lambda^n.
+\]</div>
+                                                                  
+
+                                                                  
+<p></p><!-- l. 530 --><p class="indent">   因为 <span class="inline-math">\(\xi\ne0\)</span>，所以 <span class="inline-math">\(a_0\ne0\)</span>。 将它代入 <span class="inline-math">\(a_2=a_1+a_0\)</span>，便得到
+</p><!-- l. 532 --><p class="indent">   </p><div class="math-block">\[
+\lambda^2-\lambda-1=0.
+\]</div>
+<p></p><!-- l. 533 --><p class="indent">   这就是特征方程：它要求一个等比数列既是移位的 特征向量，又属于原递推的解空间。
+</p><!-- l. 536 --><p class="indent">   方程的两根为 <span class="inline-math">\(\alpha,\beta\)</span>，对应特征数列
+</p><!-- l. 537 --><p class="indent">   </p><div class="math-block">\[
+\xi_\alpha=(1,\alpha,\alpha^2,\ldots),\qquad
+\xi_\beta=(1,\beta,\beta^2,\ldots).
+\]</div>
+<p></p><!-- l. 538 --><p class="indent">   它们对应不同特征值，因而线性无关； 而 <span class="inline-math">\(V\)</span> 已知是二维的，所以它们构成 <span class="inline-math">\(V\)</span> 的基。 于是每个递推解都唯一写成
+</p><!-- l. 541 --><p class="indent">   </p><div class="math-block">\[
+a_n=k_1\alpha^n+k_2\beta^n.
+\]</div>
+<p></p><!-- l. 542 --><p class="indent">   取 <span class="inline-math">\(a_0=0,a_1=1\)</span>，解出 <span class="inline-math">\(k_1=1/\sqrt5,\ k_2=-1/\sqrt5\)</span>， 便是式 (<a href="#x1-2003r2">1.2<!-- tex4ht:ref: eq:binet  --></a>)。 所谓特征方程法，就是在这个解空间中选取 移位算子的特征向量基。
+</p><!-- l. 548 --><p class="indent">   递推本身还给出 <span class="inline-math">\(\sigma^2-\sigma-\mathrm{id}_V=0\)</span>。 因为 <span class="inline-math">\(\sigma\)</span> 不是数乘变换，它的极小多项式 恰为 <span class="inline-math">\(t^2-t-1\)</span>。这个多项式有两个不同实根， 正好与前面得到的相似对角化一致。
+</p><!-- l. 554 --><p class="noindent">
+</p>
+   <h4 class="subsectionHead" id="section-10"><span class="titlemark">3.2   </span> <a id="x1-100003.2"></a>关于二次曲线的正交对角化</h4>
+<!-- l. 555 --><p class="noindent">前面的疑问有两个层次：为什么一个二次型的问题， 可以转而计算线性变换的特征值；为什么计算出 特征向量后，还要把它们组成规范正交基。 决定这两个步骤的，是平面上已经给定的欧氏内积。
+</p><!-- l. 560 --><p class="indent">   先区分两个双线性函数。一个是背景内积 <span class="inline-math">\(\langle\xi,\eta\rangle\)</span>，它规定长度与夹角； 另一个是曲线方程中出现的对称双线性函数 <span class="inline-math">\(f(\xi,\eta)\)</span>，其对角取值 <span class="inline-math">\(q(\xi)=f(\xi,\xi)\)</span> 给出二次型。 后者不必正定，也不必等于前者。 研究曲线时，这两者同时存在。
+</p><!-- l. 568 --><p class="noindent">
+</p>
+   <h5 class="subsubsectionHead" id="section-11"><span class="titlemark">3.2.1   </span> <a id="x1-110003.2.1"></a>内积为什么允许我们引入线性变换</h5>
+<!-- l. 569 --><p class="noindent">固定第二个变量 <span class="inline-math">\(\eta\)</span> 后，<span class="inline-math">\(f(\xi,\eta)\)</span> 是关于 <span class="inline-math">\(\xi\)</span> 的线性函数。 内积使这个线性函数能唯一写成与某个向量的内积。 把这个向量记为 <span class="inline-math">\(\sigma(\eta)\)</span>，就有
+<a id="x1-11001r1"></a>
+</p><!-- l. 573 --><p class="indent">   </p><div class="math-block">\[
+f(\xi,\eta)=\langle\xi,\sigma(\eta)\rangle.
+\tag{3.1}\]</div>
+<p></p><!-- l. 575 --><p class="indent">   这个对应可以直接构造。任取背景内积下的一组 规范正交基 <span class="inline-math">\(e_1,\ldots,e_n\)</span>，令
+</p><!-- l. 577 --><p class="indent">   </p><div class="math-block">\[
+\sigma(\eta)=\sum_{i=1}^{n} f(e_i,\eta)e_i.
+\]</div>
+<p></p><!-- l. 578 --><p class="indent">   若 <span class="inline-math">\(\xi=\sum_i x_i e_i\)</span>，则
+</p><!-- l. 579 --><p class="indent">   </p><div class="math-block">\[
+\langle\xi,\sigma(\eta)\rangle
+=\sum_i x_i f(e_i,\eta)=f(\xi,\eta).
+\]</div>
+<p></p><!-- l. 580 --><p class="indent">   由 <span class="inline-math">\(f\)</span> 对第二个变量的线性性，<span class="inline-math">\(\sigma\)</span> 线性； 又因为内积非退化，式 (<a href="#x1-11001r1">3.1<!-- tex4ht:ref: eq:metric-association  --></a>) 唯一确定 <span class="inline-math">\(\sigma(\eta)\)</span>，所以这个构造不依赖 用于计算的规范正交基。 由 <span class="inline-math">\(f\)</span> 的对称性，还有
+</p><!-- l. 585 --><p class="indent">   </p><div class="math-block">\[
+\langle\xi,\sigma(\eta)\rangle
+=f(\xi,\eta)=f(\eta,\xi)
+=\langle\sigma(\xi),\eta\rangle.
+\]</div>
+<p></p><!-- l. 586 --><p class="indent">   因此 <span class="inline-math">\(\sigma\)</span> 是自伴变换。
+</p><!-- l. 588 --><p class="indent">   这就是二次型与特征值理论之间的联系。 双线性函数本来有两个输入，线性变换只有一个输入； 背景内积把后者的输出转成一个线性函数， 才使式 (<a href="#x1-11001r1">3.1<!-- tex4ht:ref: eq:metric-association  --></a>) 成为可能。
+</p><!-- l. 593 --><p class="indent">   这个联系在矩阵上也可以看得很清楚。 设某组基下 <span class="inline-math">\(f\)</span> 的矩阵为 <span class="inline-math">\(A\)</span>， 内积的 Gram 矩阵为 <span class="inline-math">\(G\)</span>，<span class="inline-math">\(\sigma\)</span> 的矩阵为 <span class="inline-math">\(C\)</span>。 则
+</p><!-- l. 597 --><p class="indent">   </p><div class="math-block">\[
+x^TAy=f(\xi,\eta)
+=\langle\xi,\sigma(\eta)\rangle=x^TGCy,
+\]</div>
+<p></p><!-- l. 598 --><p class="indent">   所以 <span class="inline-math">\(A=GC\)</span>，即 <span class="inline-math">\(C=G^{-1}A\)</span>。 在规范正交基下 <span class="inline-math">\(G=I\)</span>，才有 <span class="inline-math">\(C=A\)</span>。 椭圆例子使用的正是直角坐标，因而它的对称 矩阵 <span class="inline-math">\(A\)</span> 同时表示二次型和这个自伴变换； 可以对它求特征值并应用实谱定理。
+</p><!-- l. 604 --><p class="noindent">
+</p>
+   <h5 class="subsubsectionHead" id="section-12"><span class="titlemark">3.2.2   </span> <a id="x1-120003.2.2"></a>特征向量为什么能消去交叉项</h5>
+<!-- l. 605 --><p class="noindent">取自伴变换 <span class="inline-math">\(\sigma\)</span> 的规范正交特征向量基 <span class="inline-math">\(e_1,\ldots,e_n\)</span>，其中 <span class="inline-math">\(\sigma(e_j)=\lambda_j e_j\)</span>。由 式 (<a href="#x1-11001r1">3.1<!-- tex4ht:ref: eq:metric-association  --></a>)，
+</p><!-- l. 609 --><p class="indent">   </p><div class="math-block">\[
+f(e_i,e_j)=\langle e_i,\sigma(e_j)\rangle
+=\lambda_j\langle e_i,e_j\rangle
+=\lambda_j\delta_{ij}.
+\]</div>
+<p></p><!-- l. 610 --><p class="indent">   所以若 <span class="inline-math">\(\xi=\sum_i y_i e_i\)</span>，便有
+</p><!-- l. 611 --><p class="indent">   </p><div class="math-block">\[
+q(\xi)=\sum_i\lambda_i y_i^2.
+\]</div>
+<p></p><!-- l. 612 --><p class="indent">   同一组基既是线性变换的特征向量基， 又使双线性函数的非对角项为零。 两种对角化在此使用同一组基，是内积对应与 自伴性的结果。
+                                                                  
+
+                                                                  
+</p><!-- l. 617 --><p class="indent">   对不同特征值，特征向量本来就互相垂直。 对重特征值，要在同一个特征子空间内部选取 规范正交基；仅把任意一组特征向量各自归一化， 还不能保证它们彼此垂直。 在平面例子中，两条特征方向互相垂直， 再把模长化为 <span class="inline-math">\(1\)</span>，便得到正交矩阵 <span class="inline-math">\(P\)</span>。 若还要求坐标变换只含旋转而不含反射， 可以调整其中一个向量的符号，使 <span class="inline-math">\(\det P=1\)</span>； 这不影响对角化。
+</p><!-- l. 627 --><p class="noindent">
+</p>
+   <h5 class="subsubsectionHead" id="section-13"><span class="titlemark">3.2.3   </span> <a id="x1-130003.2.3"></a>为什么几何问题要求正交变换</h5>
+<!-- l. 628 --><p class="noindent">解析几何中的新旧坐标都要用通常的直角坐标 来读出长度、角度和半轴。 若 <span class="inline-math">\(x=Py\)</span>，原有欧氏长度在新坐标中满足
+</p><!-- l. 631 --><p class="indent">   </p><div class="math-block">\[
+\|\xi\|^2=x^Tx=y^TP^TPy.
+\]</div>
+<p></p><!-- l. 632 --><p class="indent">   要让它仍等于 <span class="inline-math">\(y^Ty\)</span>，对所有 <span class="inline-math">\(y\)</span> 都成立， 必须且只须 <span class="inline-math">\(P^TP=I\)</span>。 这正是要求新坐标基仍为规范正交基， 也是特征向量的单位长度不能随意省去的原因。
+</p><!-- l. 637 --><p class="indent">   一般可逆合同变换当然仍可消去交叉项； 它得到的坐标却可能有不同单位长度，甚至是斜坐标。 这时同一曲线仍然存在，但度量矩阵也要随之改变。 如果只保留变换后的方程，而继续把新变量当作 单位相同的直角坐标，就改变了几何量的解释。
+</p><!-- l. 643 --><p class="indent">   最后，一次项与二次型的对角化是两个步骤。 旋转先确定主轴方向、消去交叉项； 配方再把原点移到中心，这个平移也保持欧氏距离。 本例中两步合成式 (<a href="#x1-3003r4">1.4<!-- tex4ht:ref: eq:ellipse-coordinates  --></a>)， 因而同时得到标准方程和正确的几何解释。 对没有中心的抛物线，则不能指望通过平移 消去所有一次项，标准方程本来就要保留一次项。
+</p><!-- l. 651 --><p class="indent">   <a id="likesection.1"></a><a id="x1-13001x1"></a>
+</p><!-- l. 656 --><p class="noindent">
+</p>
+   <h3 class="likesectionHead" id="section-14">参考文献</h3>
+<!-- l. 656 --><p class="noindent">
+   </p><div class="thebibliography">
+   <p class="bibitem"><span class="biblabel">
+ [1]<span class="bibsp">&nbsp;&nbsp;&nbsp;</span></span><a id="Xzhang"></a>张英伯，王恺顺. 代数学基础：上册[M]. 2版. 北京：北京师范大学出版社，2019.
+   </p>
+   <p class="bibitem"><span class="biblabel">
+ [2]<span class="bibsp">&nbsp;&nbsp;&nbsp;</span></span><a id="Xtang"></a>唐仲伟，胡维，张勇. 高等数学：线性代数[M]. 北京：北京师范大学出版社，2025.</p></div>
+    
+ 

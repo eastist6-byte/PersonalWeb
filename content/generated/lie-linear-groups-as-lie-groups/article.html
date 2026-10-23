@@ -1,41 +1,41 @@
 
    <h3 class="sectionHead" id="section-1"><span class="titlemark">1   </span> <a id="x1-10001"></a>李群及其表示</h3>
-<!-- l. 29 --><p class="noindent">
+<!-- l. 30 --><p class="noindent">
 </p>
    <h4 class="subsectionHead" id="section-2"><span class="titlemark">1.5   </span> <a id="x1-20001.5"></a>闭线性群作为李群</h4>
-<!-- l. 30 --><p class="noindent">首先来看两个具体的例子.
+<!-- l. 31 --><p class="noindent">首先来看两个具体的例子.
 </p>
    <div class="newtheorem">
-<!-- l. 32 --><p class="noindent"><span class="head">
+<!-- l. 33 --><p class="noindent"><span class="head">
 <a id="x1-2001r5"></a>
 <span class="ec-lmbx-10">例 1.5.</span>  </span>验证<span class="inline-math">\(SL(2,\mathbb{R})\)</span>是李群<span class="ec-lmri-10">.</span>
-</p><!-- l. 34 --><p class="indent">   </p><div class="math-block">\[
+</p><!-- l. 35 --><p class="indent">   </p><div class="math-block">\[
     SL(2,\mathbb{R}) = \left\{ \begin{pmatrix} w &amp; x \\ y &amp; z \end{pmatrix} \;\middle|\; \det =1, \text{即} wx-yz=1 \right\}.
     \]</div>
-<p></p><!-- l. 36 --><p class="indent">   <span class="inline-math">\(G\)</span>可以看作由一个多项式方程<span class="inline-math">\(P(w,x,y,z)=wz-yx-1\)</span>定义的超曲面，记作<span class="inline-math">\(P\)</span><span class="ec-lmri-10">. </span>曲面上任意一点，其全微分<span class="inline-math">\(P^{\prime}=\left (\frac{\partial P}{\partial w},\frac{\partial P}{\partial x},\frac{\partial P}{\partial y},\frac{\partial P}{\partial z}\right )\ne 0\)</span><span class="ec-lmri-10">. </span>由隐函数定理，<span class="inline-math">\(G\)</span>中任意一点的一个邻域可将<span class="inline-math">\(4\)</span>个变量用<span class="inline-math">\(3\)</span>个自由变量表出<span class="ec-lmri-10">.</span>
-</p><!-- l. 38 --><p class="indent">   考虑<span class="inline-math">\(I\)</span>的邻域，映射<span class="inline-math">\(\begin{pmatrix} w &amp; x \\ y &amp; z \end{pmatrix} \longmapsto (w,x,y)\)</span>是局部同胚，因为其光滑且有光滑逆<span class="inline-math">\((w,x,y)\longmapsto \begin{pmatrix} w &amp; x \\ y &amp; w^{-1}(1+xy) \end{pmatrix}\)</span><span class="ec-lmri-10">. </span>对于<span class="inline-math">\(G\)</span>中<span class="inline-math">\(w\ne0\)</span>的点都可如此讨论，从而得到局部坐标卡<span class="ec-lmri-10">. </span>容易想到有<span class="inline-math">\(4\)</span>种表示方式，每种要求四个变元中至少有一个非零，又因为行列式为<span class="inline-math">\(1\)</span>，四变元不可能同时有<span class="inline-math">\(3\)</span>个及以上为<span class="inline-math">\(0\)</span>，所以总可以为一点选出表示<span class="ec-lmri-10">. </span>分别取 <span class="inline-math">\(w \neq 0\)</span>，<span class="inline-math">\(x \neq 0\)</span>，<span class="inline-math">\(y \neq 0\)</span>，<span class="inline-math">\(z \neq 0\)</span> 可构造四个开集覆盖 <span class="inline-math">\(SL(2,\mathbb{R})\)</span>，每个开集上可解出另一个变量得到局部坐标卡<span class="ec-lmri-10">. </span>这些局部坐标卡之间是相容的，因为它们在可表示范围内都是由有理函数给出，且在交集上分母非零，转换函数光滑<span class="ec-lmri-10">. </span>由此得到一个光滑图册，<span class="inline-math">\(SL(2,\mathbb{R})\)</span>是光滑流形<span class="ec-lmri-10">.</span>
-</p><!-- l. 40 --><p class="indent">   直接在局部坐标卡上可以验证<span class="inline-math">\(G\)</span>的乘法也是光滑的，对于<span class="inline-math">\(I\times I\)</span>的邻域验证，直接作矩阵乘法
-</p><!-- l. 41 --><p class="indent">   </p><div class="math-block">\[
+<p></p><!-- l. 37 --><p class="indent">   <span class="inline-math">\(G\)</span>可以看作由一个多项式方程<span class="inline-math">\(P(w,x,y,z)=wz-yx-1\)</span>定义的超曲面，记作<span class="inline-math">\(P\)</span><span class="ec-lmri-10">. </span>曲面上任意一点，其全微分<span class="inline-math">\(P^{\prime}=\left (\frac{\partial P}{\partial w},\frac{\partial P}{\partial x},\frac{\partial P}{\partial y},\frac{\partial P}{\partial z}\right )\ne 0\)</span><span class="ec-lmri-10">. </span>由隐函数定理，<span class="inline-math">\(G\)</span>中任意一点的一个邻域可将<span class="inline-math">\(4\)</span>个变量用<span class="inline-math">\(3\)</span>个自由变量表出<span class="ec-lmri-10">.</span>
+</p><!-- l. 39 --><p class="indent">   考虑<span class="inline-math">\(I\)</span>的邻域，映射<span class="inline-math">\(\begin{pmatrix} w &amp; x \\ y &amp; z \end{pmatrix} \longmapsto (w,x,y)\)</span>是局部同胚，因为其光滑且有光滑逆<span class="inline-math">\((w,x,y)\longmapsto \begin{pmatrix} w &amp; x \\ y &amp; w^{-1}(1+xy) \end{pmatrix}\)</span><span class="ec-lmri-10">. </span>对于<span class="inline-math">\(G\)</span>中<span class="inline-math">\(w\ne0\)</span>的点都可如此讨论，从而得到局部坐标卡<span class="ec-lmri-10">. </span>容易想到有<span class="inline-math">\(4\)</span>种表示方式，每种要求四个变元中至少有一个非零，又因为行列式为<span class="inline-math">\(1\)</span>，四变元不可能同时有<span class="inline-math">\(3\)</span>个及以上为<span class="inline-math">\(0\)</span>，所以总可以为一点选出表示<span class="ec-lmri-10">. </span>分别取 <span class="inline-math">\(w \neq 0\)</span>，<span class="inline-math">\(x \neq 0\)</span>，<span class="inline-math">\(y \neq 0\)</span>，<span class="inline-math">\(z \neq 0\)</span> 可构造四个开集覆盖 <span class="inline-math">\(SL(2,\mathbb{R})\)</span>，每个开集上可解出另一个变量得到局部坐标卡<span class="ec-lmri-10">. </span>这些局部坐标卡之间是相容的，因为它们在可表示范围内都是由有理函数给出，且在交集上分母非零，转换函数光滑<span class="ec-lmri-10">. </span>由此得到一个光滑图册，<span class="inline-math">\(SL(2,\mathbb{R})\)</span>是光滑流形<span class="ec-lmri-10">.</span>
+</p><!-- l. 41 --><p class="indent">   直接在局部坐标卡上可以验证<span class="inline-math">\(G\)</span>的乘法也是光滑的，对于<span class="inline-math">\(I\times I\)</span>的邻域验证，直接作矩阵乘法
+</p><!-- l. 42 --><p class="indent">   </p><div class="math-block">\[
 (w_1,x_1,y_1,w_2,x_2,y_2)\longmapsto \begin{pmatrix} w_1 &amp; x_1 \\ y_1 &amp; w_1^{-1}(1+x_1y_1) \end{pmatrix} \cdot \begin{pmatrix} w_2 &amp; x_2 \\ y_2 &amp; w_2^{-1}(1+x_2y_2) \end{pmatrix}.
 \]</div>
-<p></p><!-- l. 43 --><p class="indent">   计算后仍是有理函数，从而光滑<span class="ec-lmri-10">. </span>逆运算同理光滑<span class="ec-lmri-10">. </span>因此<span class="inline-math">\(SL(2,\mathbb{R})\)</span>是李群<span class="ec-lmri-10">.</span>
+<p></p><!-- l. 44 --><p class="indent">   计算后仍是有理函数，从而光滑<span class="ec-lmri-10">. </span>逆运算同理光滑<span class="ec-lmri-10">. </span>因此<span class="inline-math">\(SL(2,\mathbb{R})\)</span>是李群<span class="ec-lmri-10">.</span>
 </p>
    </div>
-<!-- l. 44 --><p class="indent">
+<!-- l. 45 --><p class="indent">
 </p>
    <div class="newtheorem">
-<!-- l. 46 --><p class="noindent"><span class="head">
+<!-- l. 47 --><p class="noindent"><span class="head">
 <a id="x1-2002r6"></a>
 <span class="ec-lmbx-10">例 1.6.</span>  </span><span class="ec-lmri-10">n</span>维环面<span class="inline-math">\(\mathbb{R}^n/\mathbb{Z}^n \cong (\mathbb{R}/\mathbb{Z})^n \cong (S^1)^n\)</span>作为乘法群是李群<span class="ec-lmri-10">.</span>
-</p><!-- l. 49 --><p class="indent">   考虑<span class="inline-math">\(S^1=\{z\in \mathbb{C}| |z|=1\}\)</span>，映射<span class="inline-math">\(\mathbb{R}^n \to S^1, t\longmapsto e^{2\pi i t}\)</span>满射，得李群同构<span class="inline-math">\(\mathbb{R}/\mathbb{Z} \cong S^1\)</span><span class="ec-lmri-10">.</span>
-</p><!-- l. 51 --><p class="indent">   事实上，每个连通交换李群<span class="inline-math">\(G\)</span>，都有<span class="inline-math">\(G\cong \mathbb{R}^m \times (S^1)^n\)</span><span class="ec-lmri-10">. </span>其中<span class="inline-math">\(\mathbb{R}^m\)</span>为非紧的加法群，<span class="inline-math">\(S^1\)</span>如上是乘法群<span class="ec-lmri-10">.</span>
+</p><!-- l. 50 --><p class="indent">   考虑<span class="inline-math">\(S^1=\{z\in \mathbb{C}| |z|=1\}\)</span>，映射<span class="inline-math">\(\mathbb{R}^n \to S^1, t\longmapsto e^{2\pi i t}\)</span>满射，得李群同构<span class="inline-math">\(\mathbb{R}/\mathbb{Z} \cong S^1\)</span><span class="ec-lmri-10">.</span>
+</p><!-- l. 52 --><p class="indent">   事实上，每个连通交换李群<span class="inline-math">\(G\)</span>，都有<span class="inline-math">\(G\cong \mathbb{R}^m \times (S^1)^n\)</span><span class="ec-lmri-10">. </span>其中<span class="inline-math">\(\mathbb{R}^m\)</span>为非紧的加法群，<span class="inline-math">\(S^1\)</span>如上是乘法群<span class="ec-lmri-10">.</span>
 </p>
    </div>
-<!-- l. 52 --><p class="indent">
-</p><!-- l. 54 --><p class="indent">   下面是本节的主要定理，给出了一类李群，这说明李群还是相当多的.
+<!-- l. 53 --><p class="indent">
+</p><!-- l. 55 --><p class="indent">   下面是本节的主要定理，给出了一类李群，这说明李群还是相当多的.
 </p>
    <div class="newtheorem">
-<!-- l. 56 --><p class="noindent"><span class="head">
+<!-- l. 57 --><p class="noindent"><span class="head">
 <a id="x1-2003r11"></a>
                                                                   
 
@@ -43,36 +43,36 @@
 <span class="ec-lmbx-10">定理 1.11.</span>  </span>设<span class="inline-math">\(G\)</span>是<span class="inline-math">\(\mathrm{GL}(n, \mathbb{C})\)</span>的闭线性子群，按其相对拓扑，<span class="inline-math">\(G\)</span>是李群<span class="ec-lmri-10">.</span>
 </p>
    </div>
-<!-- l. 58 --><p class="indent">
-</p><!-- l. 60 --><p class="indent">   为证明该定理需要如下的引理.
+<!-- l. 59 --><p class="indent">
+</p><!-- l. 61 --><p class="indent">   为证明该定理需要如下的引理.
 </p>
    <div class="newtheorem">
-<!-- l. 62 --><p class="noindent"><span class="head">
+<!-- l. 63 --><p class="noindent"><span class="head">
 <a id="x1-2004r12"></a>
 <span class="ec-lmbx-10">引理 1.12.</span>  </span>设<span class="inline-math">\(\mathfrak{gl}(n,\mathbb{C})=\mathfrak{a}\oplus \mathfrak{b}\)</span>（作为实向量空间），则存在<span class="inline-math">\(\mathfrak{a}\)</span>的<span class="inline-math">\(0\)</span>点开邻域<span class="inline-math">\(U_1\)</span>，<span class="inline-math">\(\mathfrak{b}\)</span>的<span class="inline-math">\(0\)</span>点开邻域<span class="inline-math">\(U_2\)</span>以及<span class="inline-math">\(\mathrm{GL}(n,\mathbb{C})\)</span>的单位矩阵<span class="inline-math">\(I\)</span>的开邻域<span class="inline-math">\(V\)</span>，使得映射<span class="inline-math">\(U_1\times U_2 \to V, (a,b) \longmapsto e^a e^b\)</span>是光滑可逆的<span class="ec-lmri-10">.</span>
 </p>
    </div>
-<!-- l. 64 --><p class="indent">
+<!-- l. 65 --><p class="indent">
 </p>
    <div class="proof">
-<!-- l. 67 --><p class="indent">   <span class="head">
+<!-- l. 68 --><p class="indent">   <span class="head">
 <span class="ec-lmri-10">证明.</span> </span>类似引理1.7的证明，取<span class="inline-math">\(\mathfrak{a}\)</span>和<span class="inline-math">\(\mathfrak{b}\)</span>的一组基，与前计算相同可得<span class="inline-math">\(0\)</span>处Jacobi矩阵为单位阵.                                                                               □
 </p>
    </div>
-<!-- l. 70 --><p class="indent">   再证明定理1.11.
+<!-- l. 71 --><p class="indent">   再证明定理1.11.
 </p>
    <div class="proof">
-<!-- l. 73 --><p class="indent">   <span class="head">
+<!-- l. 74 --><p class="indent">   <span class="head">
 <span class="ec-lmri-10">证明.</span> </span><span class="inline-math">\(\mathrm{GL}(n, \mathbb{C})\)</span>本身是李群，指数映射给出了一个单位阵附近的局部坐标卡，可以通过群的左乘不变性质得到任意一点的局部坐标卡. 要验证子群<span class="inline-math">\(G\)</span>的流形结构，同样只需找到单位阵附近的一个局部坐标卡. 设<span class="inline-math">\(\mathfrak{g}\)</span>是<span class="inline-math">\(G\)</span>的李代数，则存在<span class="inline-math">\(\mathfrak{gl}(n,\mathbb{C})\)</span>的子空间<span class="inline-math">\(S\)</span>使得<span class="inline-math">\(\mathfrak{gl}(n,\mathbb{C})=\mathfrak{g} \oplus S\)</span>.
-</p><!-- l. 75 --><p class="indent">   从而存在<span class="inline-math">\(\mathfrak{g}\)</span>的<span class="inline-math">\(0\)</span>点开邻域<span class="inline-math">\(U_1\)</span>和<span class="inline-math">\(S\)</span>的<span class="inline-math">\(0\)</span>点开邻域<span class="inline-math">\(U_2\)</span>和<span class="inline-math">\(\mathrm{GL}(n, \mathbb{C})\)</span>的单位矩阵<span class="inline-math">\(I\)</span>的开邻域，使得映射<span class="inline-math">\(U_1\times U_2 \to V, (X,Y) \longmapsto e^X e^Y\)</span>是光滑可逆的<span class="footnote-mark"><a href="#fn1x0" id="fn1x0-bk"><sup class="textsuperscript">1</sup></a></span><a id="x1-2005f1"></a>.
-</p><!-- l. 77 --><p class="indent">   精确地，要证明：对于充分大的正整数<span class="inline-math">\(k\)</span>，如果<span class="inline-math">\(X_k\in U_1\)</span>，<span class="inline-math">\(Y\in (k+1)^{-1}U_2\)</span>，由<span class="inline-math">\(e^Xe^Y \in G\)</span>一定能推出<span class="inline-math">\(Y=0\)</span>. 这样就可以将映射限制到<span class="inline-math">\(U_1\)</span>上，得到局部坐标卡.
-</p><!-- l. 79 --><p class="indent">   若不然，对任意<span class="inline-math">\(k\ge 1\)</span>(只要有一个子序列即可)，存在<span class="inline-math">\(X_k\in U_1\)</span>，<span class="inline-math">\(Y_k\in (k+1)^{-1}U_2\)</span>，<span class="inline-math">\(Y_k\ne 0\)</span>，使<span class="inline-math">\(e^{X_k}e^{Y_k}\in G\)</span>. 由于<span class="inline-math">\(e^{X_k}\in G\)</span>，由群的逆元左乘给出<span class="inline-math">\(e^{Y_k}\in G\)</span>，另外<span class="inline-math">\(e^{Y_k}\ne I\)</span>若不然<span class="inline-math">\(Y_k=0\)</span>.
-</p><!-- l. 81 --><p class="indent">   设<span class="inline-math">\(2\epsilon\)</span>是<span class="inline-math">\(U_2\)</span>的直径，可选取正整数<span class="inline-math">\(n_k\)</span>使<span class="inline-math">\(\frac{\epsilon}{2}\le n_k ||Y_k||\le \epsilon\)</span>，由<span class="inline-math">\(k\)</span>任意性，存在<span class="inline-math">\(\{n_kY_k\}\)</span>的收敛子列，不妨设<span class="inline-math">\(k\to \infty\)</span>时收敛到<span class="inline-math">\(Y\)</span>，<span class="inline-math">\(Y\ne 0\)</span>. 因为<span class="inline-math">\(e^{n_kY_k}\in G\)</span>，<span class="inline-math">\(G\)</span>是闭子群，所以<span class="inline-math">\(e^Y\in G\)</span>，进一步地对任意分数<span class="inline-math">\(\frac{p}{q}\)</span>，有<span class="inline-math">\(e^{\frac{p}{q}Y}\in G\)</span>，下面来说明.
-</p><!-- l. 83 --><p class="indent">   不妨设<span class="inline-math">\(q&gt;0\)</span>，设<span class="inline-math">\(n_k=m_kq+r_k\)</span>，<span class="inline-math">\(0\le r_k\le q-1\)</span>，那么<span class="inline-math">\(\frac{r_k}{q}Y_k \to 0\)</span>因为<span class="inline-math">\(Y_k\to 0\)</span>. 从而<span class="inline-math">\(\frac{n_k p}{q}Y_k\to \frac{p}{q}Y (k\to \infty)\)</span>，所以<span class="inline-math">\(e^{m_kY_k}\to e^{\frac{p}{q}Y}\)</span>，进而<span class="inline-math">\(e^{m_kY_k}e^{\frac{r_k}{q}Y_k}\to e^{\frac{p}{q}Y}\cdot I=e^{\frac{p}{q}Y}\)</span>，由<span class="inline-math">\(G\)</span>闭，<span class="inline-math">\(e^{\frac{p}{q}Y}\in G\)</span>.
-</p><!-- l. 85 --><p class="indent">   再由闭性质，对任意<span class="inline-math">\(t\in \mathbb{R}\)</span>，<span class="inline-math">\(e^{tY}\in G\)</span>，由命题1.9知<span class="inline-math">\(Y\in \mathfrak{g}\)</span>，从而<span class="inline-math">\(Y\in \mathfrak{g} \cap S\)</span>，<span class="inline-math">\(Y=0\)</span>，矛盾.
-</p><!-- l. 87 --><p class="indent">   那么存在<span class="inline-math">\(\mathfrak{g}\)</span>的<span class="inline-math">\(0\)</span>点开邻域<span class="inline-math">\(U_1\)</span>和<span class="inline-math">\(S\)</span>的<span class="inline-math">\(0\)</span>点开邻域<span class="inline-math">\(U_2\)</span>和<span class="inline-math">\(\mathrm{GL}(n, \mathbb{C})\)</span>的单位矩阵<span class="inline-math">\(I\)</span>的开邻域，使得映射<span class="inline-math">\(U_1\times U_2 \to V, (X,Y) \longmapsto e^X e^Y =e^X\)</span>. 其在<span class="inline-math">\(U_1\)</span>上的限制<span class="inline-math">\(\mathfrak{g}\supset U_1 \to V\cap G\)</span>，正是指数映射，是光滑可逆的. 这就是单位阵附近的一个局部坐标卡.
-</p><!-- l. 89 --><p class="indent">   记李群中元素<span class="inline-math">\(g\)</span>的左乘作用为<span class="inline-math">\(L_g\)</span>，是光滑的，相容性按下图容易验证.
-</p><!-- l. 90 --><p class="indent">   </p><figure class="tex-diagram"><a href="__ASSET__/d0000.svg" target="_blank" rel="noopener" aria-label="在新窗口放大交换图"><img src="__ASSET__/d0000.svg" alt="交换图" loading="lazy"></a></figure>
+</p><!-- l. 76 --><p class="indent">   从而存在<span class="inline-math">\(\mathfrak{g}\)</span>的<span class="inline-math">\(0\)</span>点开邻域<span class="inline-math">\(U_1\)</span>和<span class="inline-math">\(S\)</span>的<span class="inline-math">\(0\)</span>点开邻域<span class="inline-math">\(U_2\)</span>和<span class="inline-math">\(\mathrm{GL}(n, \mathbb{C})\)</span>的单位矩阵<span class="inline-math">\(I\)</span>的开邻域，使得映射<span class="inline-math">\(U_1\times U_2 \to V, (X,Y) \longmapsto e^X e^Y\)</span>是光滑可逆的<span class="footnote-mark"><a href="#fn1x0" id="fn1x0-bk"><sup class="textsuperscript">1</sup></a></span><a id="x1-2005f1"></a>.
+</p><!-- l. 78 --><p class="indent">   精确地，要证明：对于充分大的正整数<span class="inline-math">\(k\)</span>，如果<span class="inline-math">\(X_k\in U_1\)</span>，<span class="inline-math">\(Y\in (k+1)^{-1}U_2\)</span>，由<span class="inline-math">\(e^Xe^Y \in G\)</span>一定能推出<span class="inline-math">\(Y=0\)</span>. 这样就可以将映射限制到<span class="inline-math">\(U_1\)</span>上，得到局部坐标卡.
+</p><!-- l. 80 --><p class="indent">   若不然，对任意<span class="inline-math">\(k\ge 1\)</span>(只要有一个子序列即可)，存在<span class="inline-math">\(X_k\in U_1\)</span>，<span class="inline-math">\(Y_k\in (k+1)^{-1}U_2\)</span>，<span class="inline-math">\(Y_k\ne 0\)</span>，使<span class="inline-math">\(e^{X_k}e^{Y_k}\in G\)</span>. 由于<span class="inline-math">\(e^{X_k}\in G\)</span>，由群的逆元左乘给出<span class="inline-math">\(e^{Y_k}\in G\)</span>，另外<span class="inline-math">\(e^{Y_k}\ne I\)</span>若不然<span class="inline-math">\(Y_k=0\)</span>.
+</p><!-- l. 82 --><p class="indent">   设<span class="inline-math">\(2\epsilon\)</span>是<span class="inline-math">\(U_2\)</span>的直径，可选取正整数<span class="inline-math">\(n_k\)</span>使<span class="inline-math">\(\frac{\epsilon}{2}\le n_k ||Y_k||\le \epsilon\)</span>，由<span class="inline-math">\(k\)</span>任意性，存在<span class="inline-math">\(\{n_kY_k\}\)</span>的收敛子列，不妨设<span class="inline-math">\(k\to \infty\)</span>时收敛到<span class="inline-math">\(Y\)</span>，<span class="inline-math">\(Y\ne 0\)</span>. 因为<span class="inline-math">\(e^{n_kY_k}\in G\)</span>，<span class="inline-math">\(G\)</span>是闭子群，所以<span class="inline-math">\(e^Y\in G\)</span>，进一步地对任意分数<span class="inline-math">\(\frac{p}{q}\)</span>，有<span class="inline-math">\(e^{\frac{p}{q}Y}\in G\)</span>，下面来说明.
+</p><!-- l. 84 --><p class="indent">   不妨设<span class="inline-math">\(q&gt;0\)</span>，设<span class="inline-math">\(n_k=m_kq+r_k\)</span>，<span class="inline-math">\(0\le r_k\le q-1\)</span>，那么<span class="inline-math">\(\frac{r_k}{q}Y_k \to 0\)</span>因为<span class="inline-math">\(Y_k\to 0\)</span>. 从而<span class="inline-math">\(\frac{n_k p}{q}Y_k\to \frac{p}{q}Y (k\to \infty)\)</span>，所以<span class="inline-math">\(e^{m_kY_k}\to e^{\frac{p}{q}Y}\)</span>，进而<span class="inline-math">\(e^{m_kY_k}e^{\frac{r_k}{q}Y_k}\to e^{\frac{p}{q}Y}\cdot I=e^{\frac{p}{q}Y}\)</span>，由<span class="inline-math">\(G\)</span>闭，<span class="inline-math">\(e^{\frac{p}{q}Y}\in G\)</span>.
+</p><!-- l. 86 --><p class="indent">   再由闭性质，对任意<span class="inline-math">\(t\in \mathbb{R}\)</span>，<span class="inline-math">\(e^{tY}\in G\)</span>，由命题1.9知<span class="inline-math">\(Y\in \mathfrak{g}\)</span>，从而<span class="inline-math">\(Y\in \mathfrak{g} \cap S\)</span>，<span class="inline-math">\(Y=0\)</span>，矛盾.
+</p><!-- l. 88 --><p class="indent">   那么存在<span class="inline-math">\(\mathfrak{g}\)</span>的<span class="inline-math">\(0\)</span>点开邻域<span class="inline-math">\(U_1\)</span>和<span class="inline-math">\(S\)</span>的<span class="inline-math">\(0\)</span>点开邻域<span class="inline-math">\(U_2\)</span>和<span class="inline-math">\(\mathrm{GL}(n, \mathbb{C})\)</span>的单位矩阵<span class="inline-math">\(I\)</span>的开邻域，使得映射<span class="inline-math">\(U_1\times U_2 \to V, (X,Y) \longmapsto e^X e^Y =e^X\)</span>. 其在<span class="inline-math">\(U_1\)</span>上的限制<span class="inline-math">\(\mathfrak{g}\supset U_1 \to V\cap G\)</span>，正是指数映射，是光滑可逆的. 这就是单位阵附近的一个局部坐标卡.
+</p><!-- l. 90 --><p class="indent">   记李群中元素<span class="inline-math">\(g\)</span>的左乘作用为<span class="inline-math">\(L_g\)</span>，是光滑的，相容性按下图容易验证.
+</p><!-- l. 91 --><p class="indent">   </p><div class="tex-diagram"><a href="__ASSET__/d0000.svg" target="_blank" rel="noopener" aria-label="交换图"><img src="__ASSET__/d0000.svg" alt="交换图" loading="lazy"></a></div>
                                                                  □
                                                                   
 
@@ -80,6 +80,6 @@
 <p></p>
    </div>
    <div class="footnotes"><a id="x1-2006x1.5"></a>
-<!-- l. 75 --><p class="indent">     <span class="footnote-mark"><a href="#fn1x0-bk" id="fn1x0"><sup class="textsuperscript">1</sup></a></span>直观地，这个映射在任何一个小范围内不会全部落入<span class="inline-math">\(G\)</span>当中，这是说<span class="inline-math">\(\mathfrak{gl}(n,\mathbb{C})\)</span>不会携带<span class="inline-math">\(S\)</span>的分量同胚地嵌入到<span class="inline-math">\(G\)</span>当中去，因为<span class="inline-math">\(G\)</span>是闭子群<span class="ec-lmr-8">.</span> </p>                                                                                                             </div>
+<!-- l. 76 --><p class="indent">     <span class="footnote-mark"><a href="#fn1x0-bk" id="fn1x0"><sup class="textsuperscript">1</sup></a></span>直观地，这个映射在任何一个小范围内不会全部落入<span class="inline-math">\(G\)</span>当中，这是说<span class="inline-math">\(\mathfrak{gl}(n,\mathbb{C})\)</span>不会携带<span class="inline-math">\(S\)</span>的分量同胚地嵌入到<span class="inline-math">\(G\)</span>当中去，因为<span class="inline-math">\(G\)</span>是闭子群<span class="ec-lmr-8">.</span> </p>                                                                                                             </div>
  
  

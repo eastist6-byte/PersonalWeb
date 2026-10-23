@@ -1,13 +1,18 @@
 {
   "id": "lie-homomorphisms",
-  "hash": "0809682b631f980e40e6cdda6929d963e0faeea49e4bcbc57d1553e4968074c3",
+  "hash": "bbf289e90daed8bb1646cd290766c929f26a22a4641c36bd0c6ed8d583557e9b",
+  "pdfHash": "f67d2e73e2d2b1057419ef394b3d69a125037e40a8f0baed7d9ed860cda9d299",
+  "pdfReferences": {},
   "validatedMaths": 107,
   "validationVersion": "mathjax-4.1.3-adapter-1",
   "sections": 2,
+  "sectionHeadings": 2,
+  "bibliographies": 0,
   "definitions": 1,
   "actualDefinitions": 1,
   "maths": 107,
   "diagrams": 1,
+  "numberingVerified": true,
   "converted": true,
-  "generatedAt": "2026-10-11T09:11:51.494Z"
+  "generatedAt": "2026-10-23T15:07:09.999Z"
 }

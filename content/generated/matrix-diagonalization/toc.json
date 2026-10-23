@@ -1,0 +1,72 @@
+[
+  {
+    "id": "section-1",
+    "title": "1 两个例子",
+    "level": 1
+  },
+  {
+    "id": "section-2",
+    "title": "1.1 求斐波那契数列的通项",
+    "level": 2
+  },
+  {
+    "id": "section-3",
+    "title": "1.2 椭圆的旋转与平移",
+    "level": 2
+  },
+  {
+    "id": "section-4",
+    "title": "2 回顾",
+    "level": 1
+  },
+  {
+    "id": "section-5",
+    "title": "2.1 矩阵的定义及运算",
+    "level": 2
+  },
+  {
+    "id": "section-6",
+    "title": "2.2 相似标准型",
+    "level": 2
+  },
+  {
+    "id": "section-7",
+    "title": "2.3 合同标准型",
+    "level": 2
+  },
+  {
+    "id": "section-8",
+    "title": "3 疑点解答",
+    "level": 1
+  },
+  {
+    "id": "section-9",
+    "title": "3.1 关于用特征方程求数列",
+    "level": 2
+  },
+  {
+    "id": "section-10",
+    "title": "3.2 关于二次曲线的正交对角化",
+    "level": 2
+  },
+  {
+    "id": "section-11",
+    "title": "3.2.1 内积为什么允许我们引入线性变换",
+    "level": 3
+  },
+  {
+    "id": "section-12",
+    "title": "3.2.2 特征向量为什么能消去交叉项",
+    "level": 3
+  },
+  {
+    "id": "section-13",
+    "title": "3.2.3 为什么几何问题要求正交变换",
+    "level": 3
+  },
+  {
+    "id": "section-14",
+    "title": "参考文献",
+    "level": 1
+  }
+]
